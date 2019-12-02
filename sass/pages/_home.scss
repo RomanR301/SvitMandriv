@@ -1,0 +1,10 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+body {
+  height: 200vh;
+}
+.header-top {
+  position: sticky;
+  top: 0;
+}
