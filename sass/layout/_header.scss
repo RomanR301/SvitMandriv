@@ -1,2 +1,23 @@
 @import "../abstracts/mixins";
 @import "../abstracts/variables";
+
+.header {
+  background: url('../../img/primary-screen-background.jpg') no-repeat;
+  background-size: cover;
+  height: 100vh;
+  color: $whiteColor;
+  &:after {
+    content: '';
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.2);
+  }
+  &-top {
+    z-index: 2;
+  }
+}
