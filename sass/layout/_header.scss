@@ -18,6 +18,144 @@
     background: rgba(0, 0, 0, 0.2);
   }
   &-top {
-    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  & .column {
+    z-index: 11;
+  }
+  &-payment {
+    padding: 16px;
+    background: $darkBrownColor;
+    & img {
+      margin-right: 7px;
+    }
+  }
+  &-phones {
+    &__item {
+      & img {
+        margin-right: 5px;
+      }
+    }
+  }
+  &-search {
+    position: relative;
+    &__input {
+      border: none;
+      padding: 13px 18px;
+      background: $lightBrownColor;
+      color: $darkBrownColor;
+      font-weight: 600;
+      line-height: 22px;
+      @include fontSize(14, 18);
+      &::placeholder {
+        color: $darkBrownColor;
+        font-weight: 600;
+        line-height: 22px;
+        @include fontSize(14, 18)
+      }
+      &::-webkit-input-placeholder {
+        color: $darkBrownColor;
+      }
+    }
+    &-btn {
+      border: none;
+      background: url('../../img/vektor/search.svg') no-repeat center;
+      position: absolute;
+      top: 0;
+      right: 15px;
+      height: 100%;
+    }
   }
 }
+
+.lang-select-wrapper {
+  position: relative;
+  user-select: none;
+  width: 100%;
+}
+.lang-select {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border: none;
+}
+.lang-select__trigger {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 22px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  cursor: pointer;
+}
+.lang-options {
+  position: absolute;
+  display: block;
+  top: 100%;
+  left: 0;
+  right: 0;
+  transition: all 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 2;
+}
+.lang-select.open .lang-options {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+.lang-option {
+  position: relative;
+  display: block;
+  padding: 0 22px 0 22px;
+  font-size: 18px;
+  font-weight: 500;
+  color: $defaultTextColor;
+  line-height: 30px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.lang-option:hover {
+  cursor: pointer;
+  background-color: #b2b2b2;
+}
+.lang-option.selected {
+  color: #ffffff;
+}
+
+// .arrow {
+//   position: relative;
+//   height: 15px;
+//   width: 15px;
+// }
+// .arrow::before, .arrow::after {
+//   content: "";
+//   position: absolute;
+//   bottom: 0px;
+//   width: 0.15rem;
+//   height: 100%;
+//   transition: all 0.5s;
+// }
+// .arrow::before {
+//   left: -5px;
+//   transform: rotate(45deg);
+//   background-color: #394a6d;
+// }
+// .arrow::after {
+//   left: 5px;
+//   transform: rotate(-45deg);
+//   background-color: #394a6d;
+// }
+// .open .arrow::before {
+//   left: -5px;
+//   transform: rotate(-45deg);
+// }
+// .open .arrow::after {
+//   left: 5px;
+//   transform: rotate(45deg);
+// }

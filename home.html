@@ -18,7 +18,7 @@
     <div class="header-primary">
       <div class="container">
         <div class="header-top">
-          <div class="m-row d-flex align-middle align-justify">
+          <div class="m-row d-flex align-middle align-justify full-height">
             <div class="column col-md-6">
               <div class="header-phones d-flex align-justify">
                 <div class="header-phones__item d-flex align-middle">
@@ -44,8 +44,8 @@
                 </div>
               </div>
             </div>
-            <div class="column col-md-6 d-flex align-justify">
-              <div class="header-payment">
+            <div class="column col-md-6 d-flex align-justify align-middle full-height">
+              <div class="header-payment full-height d-flex align-middle">
                 <a href="#" class="d-flex">
                   <img src="/img/vektor/visa.svg" alt="visa">
                   <img src="/img/vektor/masterCard.svg" alt="master card">
@@ -54,21 +54,41 @@
               </div>
               <div class="header-search">
                 <form role="search" method="get" class="search" action="">
-                  <input type="search" class="header-search-input" placeholder="Пошук по турам" value=""
+                  <input type="search" class="header-search__input form-control" placeholder="Пошук по турам" value=""
                     name="header-search">
-                  <button type="submit" class="header-search-btn"></button>
+                  <button type="submit" class="header-search-btn">
+                    <!-- <i class="icon-search"></i> -->
+                  </button>
                 </form>
               </div>
               <div class="header-lang">
-                UA
+                <div class="lang-select-wrapper">
+                  <div class="lang-select">
+                    <div class="lang-select__trigger"><span>UA</span>
+                      <i class="icon-down-open-big"></i>
+                    </div>
+                    <div class="lang-options">
+                      <span class="lang-option selected" data-value="uk"> <a lang="uk" hreflang="uk"
+                          href="#">UA</a>
+                      </span>
+                      <span class="lang-option" data-value="ru"> <a lang="ru-RU" hreflang="ru-RU"
+                          href="#">RUS</a>
+                      </span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="header-logo">
+      </div>
+      <div class="header-logo d-flex align-center">
+        <div class="column col-xs-12 d-flex align-center">
           <img src="../img/vektor/mainLogo.svg" alt="Все санатории">
         </div>
+
       </div>
+    </div>
     </div>
 
     <div class="header-center">

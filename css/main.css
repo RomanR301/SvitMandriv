@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .fade-in {
   animation: fade-in 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
@@ -222,24 +223,27 @@ img {
 }
 
 @font-face {
-  font-family: 'icomoon';
-  src: url("../fonts/icomoon.eot?j4w0mi");
-  src: url("../fonts/icomoon.eot?j4w0mi#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?j4w0mi") format("truetype"), url("../fonts/icomoon.woff?j4w0mi") format("woff"), url("../fonts/icomoon.svg?j4w0mi#icomoon") format("svg");
+  font-family: 'fontello';
+  src: url("../fonts/fontello.eot?84654477");
+  src: url("../fonts/fontello.eot?84654477#iefix") format("embedded-opentype"), url("../fonts/fontello.woff2?84654477") format("woff2"), url("../fonts/fontello.woff?84654477") format("woff"), url("../fonts/fontello.ttf?84654477") format("truetype"), url("../fonts/fontello.svg?84654477#fontello") format("svg");
   font-weight: normal;
   font-style: normal;
-  font-display: block;
 }
 
-[class^="icon-"], [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
-  speak: none;
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
   font-style: normal;
   font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
   font-variant: normal;
   text-transform: none;
-  line-height: 1;
-  /* Better Font Rendering =========== */
+  line-height: 1em;
+  margin-left: .2em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -384,160 +388,41 @@ table {
   line-height: 1.6;
 }
 
-.icon-arrow-bottom:before {
-  content: "\e900";
+.icon-left-open-big:before {
+  content: '\e800';
 }
 
-.icon-buvette:before {
-  content: "\e901";
-  color: #b78131;
+/* '' */
+.icon-right-open-big:before {
+  content: '\e801';
 }
 
-.icon-checkmark:before {
-  content: "\e902";
+/* '' */
+.icon-down-open-big:before {
+  content: '\e802';
 }
 
-.icon-drop:before {
-  content: "\e910";
-  color: #a97456;
+/* '' */
+.icon-up-open-big:before {
+  content: '\e803';
 }
 
-.icon-envelope:before {
-  content: "\e911";
+/* '' */
+.icon-angle-down:before {
+  content: '\f107';
 }
 
-.icon-footerAboutUs:before {
-  content: "\e912";
+/* '' */
+.icon-left:before {
+  content: '\f177';
 }
 
-.icon-footerCategories:before {
-  content: "\e913";
-  color: #8e6954;
+/* '' */
+.icon-right:before {
+  content: '\f178';
 }
 
-.icon-footerTours:before {
-  content: "\e914";
-  color: #8e6954;
-}
-
-.icon-headerSliderLeft:before {
-  content: "\e915";
-  color: #8e6954;
-}
-
-.icon-headerSliderRight:before {
-  content: "\e916";
-  color: #8e6954;
-}
-
-.icon-kidsRoom:before {
-  content: "\e917";
-  color: #b78131;
-}
-
-.icon-lifecell:before {
-  content: "\e919";
-  color: #f8bd11;
-}
-
-.icon-location:before {
-  content: "\e91a";
-  color: #777;
-}
-
-.icon-parking:before {
-  content: "\e924";
-  color: #b78131;
-}
-
-.icon-person:before {
-  content: "\e925";
-  color: #fff;
-}
-
-.icon-phone:before {
-  content: "\e926";
-}
-
-.icon-pool:before {
-  content: "\e927";
-  color: #b78131;
-}
-
-.icon-primarySliderLeft:before {
-  content: "\e928";
-  color: #fff;
-}
-
-.icon-primarySliderRight:before {
-  content: "\e929";
-  color: #fff;
-}
-
-.icon-quotesDown:before {
-  content: "\e92a";
-  color: #fff;
-}
-
-.icon-quotesUp:before {
-  content: "\e92b";
-  color: #fff;
-}
-
-.icon-restaurant:before {
-  content: "\e92c";
-  color: #b78131;
-}
-
-.icon-sauna:before {
-  content: "\e92d";
-  color: #b78131;
-}
-
-.icon-search:before {
-  content: "\e92e";
-}
-
-.icon-solarium:before {
-  content: "\e935";
-  color: #b78131;
-}
-
-.icon-spa:before {
-  content: "\e936";
-  color: #b78131;
-}
-
-.icon-unorderedListDot:before {
-  content: "\e937";
-  color: #8e6954;
-}
-
-.icon-viber:before {
-  content: "\e938";
-  color: #fff;
-}
-
-.icon-wifi:before {
-  content: "\e948";
-}
-
-.icon-visa:before {
-  content: '';
-  display: inline-block;
-  width: 49px;
-  height: 15px;
-  background: url("../../img/vektor/visa.svg") no-repeat center center;
-}
-
-.icon-mts:before {
-  content: '';
-  display: inline-block;
-  width: 18px;
-  height: 18px;
-  background: url("../../img/vektor/mts.svg") no-repeat center center;
-}
-
+/* '' */
 .icon-kyivstar:before {
   content: '';
   display: inline-block;
@@ -891,6 +776,17 @@ table {
   top: -15px;
   left: 25px;
   background: url("../../img/vektor/quoteUp.svg") no-repeat center center;
+}
+
+.form-control {
+  font-family: inherit;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
 }
 
 .container {
@@ -1599,7 +1495,131 @@ table {
 }
 
 .header-top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header .column {
+  z-index: 11;
+}
+
+.header-payment {
+  padding: 16px;
+  background: #4A1F07;
+}
+
+.header-payment img {
+  margin-right: 7px;
+}
+
+.header-phones__item img {
+  margin-right: 5px;
+}
+
+.header-search {
+  position: relative;
+}
+
+.header-search__input {
+  border: none;
+  padding: 13px 18px;
+  background: #8E6954;
+  color: #4A1F07;
+  font-weight: 600;
+  line-height: 22px;
+  font-size: 18px;
+  font-size: -webkit-calc(14px + (18 - 14) * ((100vw - 300px) / (1900 - 300)));
+  font-size: -moz-calc(14px + (18 - 14) * ((100vw - 300px) / (1900 - 300)));
+  font-size: calc(14px + (18 - 14) * ((100vw - 300px) / (1900 - 300)));
+}
+
+.header-search__input::placeholder {
+  color: #4A1F07;
+  font-weight: 600;
+  line-height: 22px;
+  font-size: 18px;
+  font-size: -webkit-calc(14px + (18 - 14) * ((100vw - 300px) / (1900 - 300)));
+  font-size: -moz-calc(14px + (18 - 14) * ((100vw - 300px) / (1900 - 300)));
+  font-size: calc(14px + (18 - 14) * ((100vw - 300px) / (1900 - 300)));
+}
+
+.header-search__input::-webkit-input-placeholder {
+  color: #4A1F07;
+}
+
+.header-search-btn {
+  border: none;
+  background: url("../../img/vektor/search.svg") no-repeat center;
+  position: absolute;
+  top: 0;
+  right: 15px;
+  height: 100%;
+}
+
+.lang-select-wrapper {
+  position: relative;
+  user-select: none;
+  width: 100%;
+}
+
+.lang-select {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border: none;
+}
+
+.lang-select__trigger {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 22px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  cursor: pointer;
+}
+
+.lang-options {
+  position: absolute;
+  display: block;
+  top: 100%;
+  left: 0;
+  right: 0;
+  transition: all 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
   z-index: 2;
+}
+
+.lang-select.open .lang-options {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+
+.lang-option {
+  position: relative;
+  display: block;
+  padding: 0 22px 0 22px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #333333;
+  line-height: 30px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.lang-option:hover {
+  cursor: pointer;
+  background-color: #b2b2b2;
+}
+
+.lang-option.selected {
+  color: #ffffff;
 }
 
 .flickity-enabled {
