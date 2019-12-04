@@ -23,26 +23,9 @@ let front = {
       return new Flickity(document.querySelector(selector), options);
   },
 
-  toggleLang: function(){
-    document.querySelector('.lang-select-wrapper').addEventListener('click', function() {
-        this.querySelector('.lang-select').classList.toggle('open');
-    })
-    for (const option of document.querySelectorAll(".lang-option")) {
-        option.addEventListener('click', function() {
-            if (!this.classList.contains('selected')) {
-                this.parentNode.querySelector('.lang-option.selected').classList.remove('selected');
-                this.classList.add('selected');
-                this.closest('.lang-select').querySelector('.lang-select__trigger span').textContent = this.textContent;
-            }
-        })
-    }
-    window.addEventListener('click', function(e) {
-        const select = document.querySelector('.lang-select')
-        if (!select.contains(e.target)) {
-            select.classList.remove('open');
-        }
-    });
-  },
+//   toggleLang: function(){
+
+//   },
 
   toggleNav: function () {
       if (!this.hamburger.hasClass('open')) {
@@ -97,10 +80,6 @@ let front = {
       $(document).on('click', '.hamburger', function () {
           self.toggleNav();
       });
-
-      $(document).on('click', '.coupon-btn', function () {
-          self.copyText();
-      });
       $(document).on('click', '.header-nav__link', function (e) {
           e.preventDefault();
           console.log($(window).width());
@@ -115,10 +94,29 @@ let front = {
               $(this).toggleClass('active');
           }
       });
+      let langToggle = document.querySelector('.lang-select-wrapper') !== null;
+      if (langToggle) {
+          (document).querySelector('.lang-select-wrapper').addEventListener('click', function() {
+              this.querySelector('.lang-select').classList.toggle('open');
+              for (const option of document.querySelectorAll(".lang-option")) {
+                  option.addEventListener('click', function() {
+                      
+                      if (!this.classList.contains('selected')) {
+                          this.parentNode.querySelector('.lang-option.selected').classList.remove('selected');
+                          this.classList.add('selected');
+                          this.closest('.lang-select').querySelector('.lang-select__trigger span').textContent = this.textContent;
+                      }
+                  })
+              }
+              window.addEventListener('click', function(e) {
+                  const select = document.querySelector('.lang-select')
+                  if (!select.contains(e.target)) {
+                      select.classList.remove('open');
+                  }
+              });
+          })
+      }
 
-      $(document).on('click', '.lang-select-wrapper', function() {
-          self.toggleLang();
-      })
 
       $('.js-scrollLink').on('click', function () {
 
@@ -201,9 +199,21 @@ jQuery(function () {
   });
 });
 
-$(function(){
-  $("#header").load("header.html");
-  $("#footer").load("footer.html");
-});
+// $(function(){
+//   $("#header").load("header.html");
+//   $("#footer").load("footer.html");
+// });
 
 
+// document.querySelector('.custom-select-wrapper').addEventListener('click', function() {
+//     this.querySelector('.custom-select').classList.toggle('open');
+// })
+// for (const option of document.querySelectorAll(".custom-option")) {
+//     option.addEventListener('click', function() {
+//         if (!this.classList.contains('selected')) {
+//             this.parentNode.querySelector('.custom-option.selected').classList.remove('selected');
+//             this.classList.add('selected');
+//             this.closest('.custom-select').querySelector('.custom-select__trigger span').textContent = this.textContent;
+//         }
+//     })
+// }

@@ -390,26 +390,45 @@ table {
 
 .icon-left-open-big:before {
   content: '\e800';
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 
-/* '' */
 .icon-right-open-big:before {
   content: '\e801';
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 
-/* '' */
 .icon-down-open-big:before {
   content: '\e802';
+  transform: rotate(0deg);
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  font-size: 16px;
 }
 
-/* '' */
 .icon-up-open-big:before {
   content: '\e803';
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 
 /* '' */
 .icon-angle-down:before {
   content: '\f107';
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 
 /* '' */
@@ -1494,14 +1513,30 @@ input[type="search"]::-webkit-search-results-decoration {
   background: rgba(0, 0, 0, 0.2);
 }
 
+.header .column {
+  z-index: 11;
+}
+
 .header-top {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
 }
 
-.header .column {
-  z-index: 11;
+.header-top:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #8E6954;
+  opacity: 0.4;
+}
+
+.header-top .column {
+  z-index: 13;
 }
 
 .header-payment {
@@ -1557,69 +1592,86 @@ input[type="search"]::-webkit-search-results-decoration {
   height: 100%;
 }
 
-.lang-select-wrapper {
+.header-lang {
+  padding-left: 30px;
+}
+
+.header-lang .lang-select-wrapper {
   position: relative;
   user-select: none;
   width: 100%;
 }
 
-.lang-select {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  border: none;
-}
-
-.lang-select__trigger {
+.header-lang .lang-select__trigger {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0 22px;
-  font-size: 18px;
   font-weight: 500;
-  color: #fff;
+  color: #ffffff;
+  line-height: 24px;
+  background: transparent;
   cursor: pointer;
+  font-size: 18px;
+  font-size: -webkit-calc(14px + (18 - 14) * ((100vw - 300px) / (1900 - 300)));
+  font-size: -moz-calc(14px + (18 - 14) * ((100vw - 300px) / (1900 - 300)));
+  font-size: calc(14px + (18 - 14) * ((100vw - 300px) / (1900 - 300)));
 }
 
-.lang-options {
+.header-lang .lang-options {
   position: absolute;
   display: block;
-  top: 100%;
-  left: 0;
-  right: 0;
-  transition: all 0.5s;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
   z-index: 2;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 
-.lang-select.open .lang-options {
+.header-lang .lang-select.open .lang-options {
   opacity: 1;
   visibility: visible;
   pointer-events: all;
 }
 
-.lang-option {
+.header-lang .lang-select.open .lang-select__trigger i:before {
+  transform: rotate(-180deg);
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.header-lang .lang-option {
   position: relative;
   display: block;
-  padding: 0 22px 0 22px;
-  font-size: 18px;
   font-weight: 500;
-  color: #333333;
-  line-height: 30px;
-  cursor: pointer;
-  transition: all 0.5s;
-}
-
-.lang-option:hover {
-  cursor: pointer;
-  background-color: #b2b2b2;
-}
-
-.lang-option.selected {
   color: #ffffff;
+  line-height: 24px;
+  cursor: pointer;
+  font-size: 18px;
+  font-size: -webkit-calc(14px + (18 - 14) * ((100vw - 300px) / (1900 - 300)));
+  font-size: -moz-calc(14px + (18 - 14) * ((100vw - 300px) / (1900 - 300)));
+  font-size: calc(14px + (18 - 14) * ((100vw - 300px) / (1900 - 300)));
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  z-index: 99;
+}
+
+.header-lang .lang-option:hover {
+  color: #8E6954;
+}
+
+.header-primary {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.header-logo {
+  padding: 16px 0 30px 0;
 }
 
 .flickity-enabled {
