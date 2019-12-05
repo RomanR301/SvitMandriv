@@ -7,7 +7,7 @@ let front = {
   slider_options_default: {
       wrapAround: true,
       pageDots: false,
-      prevNextButtons: true,
+      prevNextButtons: false,
       autoPlay: false,
       cellAlign: 'left',
       contain: true

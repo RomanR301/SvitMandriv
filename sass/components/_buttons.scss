@@ -40,4 +40,18 @@
       border: 1px solid $darkYellowColor;
     }
   }
+  &-spaced {
+    padding: 20px 46px;
+    background: $whiteColor;
+    text-align: center;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    @include transition(.3);
+    color: $defaultTextColor;
+    z-index: 2;
+    &:hover {
+      // letter-spacing: 4px;
+      border: 1px solid #333;
+    }
+  }
 }

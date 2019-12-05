@@ -4,17 +4,17 @@ window.addEventListener("load", function () {
 
 jQuery(function () {
   /*home*/
-  let primaryScreenCarousel = document.querySelector('.slider-container') !== null;
+  let primaryScreenCarousel = document.querySelector('.primary-screen-carousel') !== null;
   var mainCarousel;
   if (primaryScreenCarousel) {
-      mainCarousel = front.newSlider('.slider-container', {
+      mainCarousel = front.newSlider('.primary-screen-carousel', {
           cellAlign: 'left',
-          contain: false,
-          pageDots: true,
+          // contain: false,
+          // pageDots: true,
           // autoPlay: true,
           // autoPlay: 5000,
-          verticalCells: true,
-          prevNextButtons: true
+          // verticalCells: true,
+          prevNextButtons: false
       });
   }
 });

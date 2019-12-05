@@ -15,12 +15,12 @@
 
 <body>
   <header class="header">
-    <div class="header-primary">
+    <div class="header-top">
       <div class="container">
-        <div class="header-top">
+        <div class="header-top-wrap">
           <div class="m-row d-flex align-middle align-justify full-height">
             <div class="column col-md-6">
-              <div class="header-phones d-flex align-justify">
+              <!-- <div class="header-phones d-flex align-justify">
                 <div class="header-phones__item d-flex align-middle">
                   <a href="tel:+380970577388" class="d-flex align-middle">
                     <img src="/img/vektor/kyivstar.svg" alt="kyivstar">
@@ -42,12 +42,12 @@
                     +38 (093) 686 8677
                   </a>
                 </div>
-              </div>
+              </div> -->
             </div>
             <div class="column col-md-6 d-flex align-middle full-height">
               <a href="#" class="header-payment full-height d-flex align-middle">
-                <img src="/img/vektor/visa.svg" alt="visa">
-                <img src="/img/vektor/masterCard.svg" alt="master card">
+                <img src="../img/vektor/visa.svg" alt="visa">
+                <img src="../img/vektor/masterCard.svg" alt="master card">
                 Оплата онлайн
               </a>
               <div class="header-search">
@@ -55,11 +55,10 @@
                   <input type="search" class="header-search__input form-control" placeholder="Пошук по турам" value=""
                     name="header-search">
                   <button type="submit" class="header-search-btn">
-                    <!-- <i class="icon-search"></i> -->
                   </button>
                 </form>
               </div>
-              <div class="header-lang">
+              <!-- <div class="header-lang">
                 <div class="lang-select-wrapper">
                   <div class="lang-select">
                     <div class="lang-select__trigger"><span>UA</span>
@@ -71,63 +70,432 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
       </div>
       <div class="header-logo d-flex align-center">
         <div class="column col-xs-12 d-flex align-center align-middle">
-          <img src="/img/vektor/main-logo.svg" alt="">
+          <img src="../img/vektor/main-logo.svg" alt="">
         </div>
       </div>
     </div>
-    </div>
-
-    <div class="header-center">
-      <div class="container">
-        <nav class="header-primary-navigation">
-          <ul class="primary-menu">
-            <li class="menu__item"><a href="#">Санаторії та готелі</a></li>
-            <li class="menu__item"><a href="#">Тури та екскурсії</a></li>
-            <li class="menu__item"><a href="#">Оплата онлайн</a></li>
-            <li class="menu__item"><a href="#">Дитячі табори</a></li>
-            <li class="menu__item"><a href="#">Підбір туру</a></li>
-            <li class="menu__item"><a href="#">Новини</a></li>
-            <li class="menu__item"><a href="#">Блог</a></li>
-            <li class="menu__item"><a href="#">Про компанію</a></li>
-          </ul>
-        </nav>
-        <div class="header-primary-screen">
-          <div class="col-md-6">
-            <h1 class="heading-1">ПУТІВКИ НА КРАЩІ КУРОРТИ УКРАЇНИ</h1>
+    <div class="header-primary">
+      <div class="header-primary-nav">
+        <div class="container">
+          <nav class="header-primary-navigation">
+            <ul class="primary-menu d-flex w-100 align-justify">
+              <li class="menu__item"><a href="#">Санаторії та готелі</a></li>
+              <li class="menu__item"><a href="#">Тури та екскурсії</a></li>
+              <li class="menu__item"><a href="#">Оплата онлайн</a></li>
+              <li class="menu__item"><a href="#">Дитячі табори</a></li>
+              <li class="menu__item"><a href="#">Підбір туру</a></li>
+              <li class="menu__item"><a href="#">Новини</a></li>
+              <li class="menu__item"><a href="#">Блог</a></li>
+              <li class="menu__item"><a href="#">Про компанію</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="header-primary-screen">
+        <div class="container">
+          <div class="row m-row align-middle">
+            <div class="column col-md-6">
+              <div class="primary-screen-title heading-1 --uppercase --black">ПУТІВКИ НА КРАЩІ КУРОРТИ УКРАЇНИ</div>
+              <div class="primary-screen-subtitle heading-3 --medium">Безкоштовна консультація <br> Офіційні
+                ціни</div>
+            </div>
+            <div class="column col-md-6">
+              <div class="primary-screen-carousel carousel">
+                <div class="primary-carousel__item">
+                  <div class="primary-carousel__image default-icon">
+                    <img src="../img/main-slider1.jpg" alt="">
+                    <div class="primary-carousel-info">
+                      <div class="primary-carousel__title heading-4 --semibold">Чому варто обирати санаторії Карпат?
+                      </div>
+                      <a href="#" class="primary-carousel__more --relative">
+                        Дізнатися
+                      </a>
+                    </div>
+                    <div class="primary-carousel__nav"></div>
+                  </div>
+                </div>
+                <div class="primary-carousel__item">
+                  <div class="primary-carousel__image default-icon">
+                    <img src="../img/main-screen-background.jpg" alt="">
+                    <div class="primary-carousel-info">
+                      <div class="primary-carousel__title heading-4 --semibold">Чому варто обирати санаторії Карпат?
+                      </div>
+                      <a href="#" class="primary-carousel__more --relative">
+                        Дізнатися
+                      </a>
+                    </div>
+                    <div class="primary-carousel__nav"></div>
+                  </div>
+                </div>
+                <div class="primary-carousel__item">
+                  <div class="primary-carousel__image default-icon">
+                    <img src="../img/main-morshyn.jpg" alt="">
+                    <div class="primary-carousel-info">
+                      <div class="primary-carousel__title heading-4 --semibold">Чому варто обирати санаторії Карпат?
+                      </div>
+                      <a href="#" class="primary-carousel__more --relative">
+                        Дізнатися
+                      </a>
+                    </div>
+                    <div class="primary-carousel__nav"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="col-md-6"><img src="/img/primary-slider-1.jpg" alt="">
-            Чому варто обирати санаторії Карпат?</div>
+        </div>
+      </div>
+      <div class="header-bottom">
+        <div class="container">
+          <nav class="header-secondary-navigation">
+            <ul class="secondary-menu d-flex align-justify">
+              <li class="secondary-menu__item"><a href="#">Трускавець</a></li>
+              <li class="secondary-menu__item"><a href="#">Східниця</a></li>
+              <li class="secondary-menu__item"><a href="#">Моршин</a></li>
+              <li class="secondary-menu__item"><a href="#">Закарпаття</a></li>
+              <li class="secondary-menu__item"><a href="#">Хмельник</a></li>
+              <li class="secondary-menu__item"><a href="#">Миргород</a></li>
+              <li class="secondary-menu__item"><a href="#">Сатанів</a></li>
+              <li class="secondary-menu__item"><a href="#">Карпати</a></li>
+              <li class="secondary-menu__item"><a href="#">Львів</a></li>
+            </ul>
+          </nav>
         </div>
       </div>
     </div>
+  </header>
+  <section class="main-content">
+    <div class="container">
+      <div class="row m-row">
+        <div class="column mb-30 col-lg-4 col-md-6 col-xs-12">
+          <div class="card-item">
+            <div class="card-item__image default-icon">
+              <img src="../img/main-tryskavets.jpg" alt="Трускавець">
+            </div>
+            <div class="card-item__info">
+              <div class="card-item__info_wrap">
+                <div class="card-item-links d-flex">
+                  <a href="#" class="card-item__title heading-4 --bold">
+                    Трускавець
+                  </a>
+                </div>
+                <div class="card-item-links d-flex">
+                  <a href="#" class="card-item-link">
+                    18 санаторіїв
+                  </a>
+                  <a href="#" class="card-item-link">
+                    26 готелів
+                  </a>
+                  <a href="#" class="card-item-link">
+                    16 вілл
+                  </a>
+                </div>
 
-    <div class="header-bottom">
-      <div class="container">
-        <nav class="header-secondary-navigation">
-          <ul class="secondary-menu d-flex">
-            <li class="secondary-menu__item"><a href="#">Трускавець</a></li>
-            <li class="secondary-menu__item"><a href="#">Східниця</a></li>
-            <li class="secondary-menu__item"><a href="#">Моршин</a></li>
-            <li class="secondary-menu__item"><a href="#">Закарпаття</a></li>
-            <li class="secondary-menu__item"><a href="#">Хмельник</a></li>
-            <li class="secondary-menu__item"><a href="#">Миргород</a></li>
-            <li class="secondary-menu__item"><a href="#">Сатанів</a></li>
-            <li class="secondary-menu__item"><a href="#">Карпати</a></li>
-            <li class="secondary-menu__item"><a href="#">Львів</a></li>
-          </ul>
-        </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column mb-30 col-lg-4 col-md-6 col-xs-12">
+          <div class="card-item">
+            <div class="card-item__image default-icon">
+              <img src="../img/main-zakarpattya.jpg" alt="Трускавець">
+            </div>
+            <div class="card-item__info">
+              <div class="card-item__info_wrap">
+                <div class="card-item-links d-flex">
+                  <a href="#1" class="card-item__title heading-4 --bold">
+                    Закарпаття
+                  </a>
+                </div>
+                <div class="card-item-links d-flex">
+                  <a href="#" class="card-item-link">
+                    18 санаторіїв
+                  </a>
+                  <a href="#" class="card-item-link">
+                    26 готелів
+                  </a>
+                  <a href="#" class="card-item-link">
+                    16 вілл
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column mb-30 col-lg-4 col-md-6 col-xs-12">
+          <div class="card-item">
+            <div class="card-item__image default-icon">
+              <img src="../img/main-morshyn.jpg" alt="Трускавець">
+            </div>
+            <div class="card-item__info">
+              <div class="card-item__info_wrap">
+                <div class="card-item-links d-flex">
+                  <a href="#1" class="card-item__title heading-4 --bold">
+                    Моршин
+                  </a>
+                </div>
+                <div class="card-item-links d-flex">
+                  <a href="#" class="card-item-link">
+                    18 санаторіїв
+                  </a>
+                  <a href="#" class="card-item-link">
+                    26 готелів
+                  </a>
+                  <a href="#" class="card-item-link">
+                    16 вілл
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column mb-30 col-lg-4 col-md-6 col-xs-12">
+          <div class="card-item">
+            <div class="card-item__image default-icon">
+              <img src="../img/main-sataniv.jpg" alt="Трускавець">
+            </div>
+            <div class="card-item__info">
+              <div class="card-item__info_wrap">
+                <div class="card-item-links d-flex">
+                  <a href="#1" class="card-item__title heading-4 --bold">
+                    Сатанів
+                  </a>
+                </div>
+                <div class="card-item-links d-flex">
+                  <a href="#" class="card-item-link">
+                    18 санаторіїв
+                  </a>
+                  <a href="#" class="card-item-link">
+                    26 готелів
+                  </a>
+                  <a href="#" class="card-item-link">
+                    16 вілл
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column mb-30 col-lg-4 col-md-6 col-xs-12">
+          <div class="card-item">
+            <div class="card-item__image default-icon">
+              <img src="../img/main-hmelnyk.jpg" alt="Трускавець">
+            </div>
+            <div class="card-item__info">
+              <div class="card-item__info_wrap">
+                <div class="card-item-links d-flex">
+                  <a href="#1" class="card-item__title heading-4 --bold">
+                    Хмельник
+                  </a>
+                </div>
+                <div class="card-item-links d-flex">
+                  <a href="#" class="card-item-link">
+                    18 санаторіїв
+                  </a>
+                  <a href="#" class="card-item-link">
+                    26 готелів
+                  </a>
+                  <a href="#" class="card-item-link">
+                    16 вілл
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column mb-30 col-lg-4 col-md-6 col-xs-12">
+          <div class="card-item">
+            <div class="card-item__image default-icon">
+              <img src="../img/main-myrgorod.jpg" alt="Трускавець">
+            </div>
+            <div class="card-item__info">
+              <div class="card-item__info_wrap">
+                <div class="card-item-links d-flex">
+                  <a href="#1" class="card-item__title heading-4 --bold">
+                    Миргород
+                  </a>
+                </div>
+                <div class="card-item-links d-flex">
+                  <a href="#" class="card-item-link">
+                    18 санаторіїв
+                  </a>
+                  <a href="#" class="card-item-link">
+                    26 готелів
+                  </a>
+                  <a href="#" class="card-item-link">
+                    16 вілл
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column mb-30 col-lg-4 col-md-6 col-xs-12">
+          <div class="card-item">
+            <div class="card-item__image default-icon">
+              <img src="../img/main-shidnytsya.jpg" alt="Трускавець">
+            </div>
+            <div class="card-item__info">
+              <div class="card-item__info_wrap">
+                <div class="card-item-links d-flex">
+                  <a href="#1" class="card-item__title heading-4 --bold">
+                    Східниця
+                  </a>
+                </div>
+                <div class="card-item-links d-flex">
+                  <a href="#" class="card-item-link">
+                    18 санаторіїв
+                  </a>
+                  <a href="#" class="card-item-link">
+                    26 готелів
+                  </a>
+                  <a href="#" class="card-item-link">
+                    16 вілл
+                  </a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column mb-30 col-lg-4 col-md-6 col-xs-12">
+          <div class="card-item">
+            <div class="card-item__image default-icon">
+              <img src="../img/main-karpaty.jpg" alt="Трускавець">
+            </div>
+            <div class="card-item__info">
+              <div class="card-item__info_wrap">
+                <div class="card-item-links d-flex">
+                  <a href="#1" class="card-item__title heading-4 --bold">
+                    Карпати
+                  </a>
+                </div>
+                <div class="card-item-links d-flex">
+                  <a href="#" class="card-item-link">
+                    18 санаторіїв
+                  </a>
+                  <a href="#" class="card-item-link">
+                    26 готелів
+                  </a>
+                  <a href="#" class="card-item-link">
+                    16 вілл
+                  </a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column mb-30 col-lg-4 col-md-6 col-xs-12">
+          <div class="card-item">
+            <div class="card-item__image default-icon">
+              <img src="../img/main-lviv.jpg" alt="Kmds">
+            </div>
+            <div class="card-item__info">
+              <div class="card-item__info_wrap">
+                <div class="card-item-links d-flex">
+                  <a href="#1" class="card-item__title heading-4 --bold">
+                    Львів
+                  </a>
+                </div>
+                <div class="card-item-links d-flex">
+                  <a href="#" class="card-item-link">
+                    18 санаторіїв
+                  </a>
+                  <a href="#" class="card-item-link">
+                    26 готелів
+                  </a>
+                  <a href="#" class="card-item-link">
+                    16 вілл
+                  </a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+  </section>
+  <section class="seo">
+    <div class="container">
+      <div class="row align-center">
+        <div class="col-md-10 col-xs-12 seo-component">
+          <h1 class="seo-component__title heading-5 --bold">Тури Трускавця (SEO Текст)</h1>
+          <div class="entry-content">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum quod est amet corporis voluptate nihil
+              ut quis ipsam, facilis eveniet magnam quos culpa necessitatibus beatae consectetur modi velit sint
+              voluptas maiores dicta voluptatibus nulla delectus. Eligendi, veniam. Qui libero omnis rerum similique,
+              quaerat molestias non, odit explicabo numquam excepturi minus consequuntur, veritatis alias dolorum quo
+              iure tempora inventore asperiores. Voluptate ratione sit doloribus reprehenderit, expedita at. Aliquam,
+              natus soluta? Eveniet repellendus saepe reprehenderit, sunt consequatur nostrum maxime fugit unde corrupti
+              impedit. Tempora nostrum reprehenderit perspiciatis temporibus itaque nisi asperiores pariatur vitae
+              corrupti odit laborum voluptates, dignissimos, adipisci possimus dolore corporis labore incidunt.
+              Obcaecati omnis iusto, aspernatur eveniet dolor, blanditiis a sunt commodi minima sapiente sit, quo
+              ratione odit est ipsum? Reprehenderit quidem eius quos aliquam pariatur voluptatibus maxime iusto
+              expedita! Aliquid est suscipit ex unde dolores! Accusantium ipsum maxime odit illum corrupti, tenetur
+              dicta est beatae iure facilis nostrum asperiores doloribus similique esse facere culpa quae modi odio
+              dolores animi hic, harum ex exercitationem temporibus. Obcaecati dicta similique sed dolore placeat
+              repellat repudiandae vitae veritatis iste aliquam in, temporibus itaque. Blanditiis, cupiditate
+              praesentium. Vel aperiam est corrupti dolorem veritatis, adipisci temporibus possimus perferendis
+              consequuntur recusandae a ipsa saepe magnam incidunt.</p>
+            <h2>Lorem, ipsum. h2</h2>
+            <h3>Lorem, ipsum. h3</h3>
+            <h4>Lorem, ipsum. h4</h4>
+            <h5>Lorem, ipsum. h5</h5>
+          </div>
 
-  </header>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="footer-contacts">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="footer-contacts__heading heading-3 --bold">Потрібна допомога у виборі
+              санаторію чи пансіонату?</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="footer-contacts__subheading app__description --medium">
+              Наші спеціалісти завжди на зв’язку та готові
+              допомогти з вибором!
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+            <div class="footer-contacts__phones">
+              <div class="footer-contacts__phones__item">
+                <a href="tel:+3800970577388">+380 (097) 057 7388</a>
+              </div>
+              <div class="footer-contacts__phones__item">
+                <a href="tel:+3800666791174">+380 (066) 679 1174</a>
+              </div>
+              <div class="footer-contacts__phones__item">
+                <a href="tel:+3800936868677">+380 (093) 686 8677</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-contacts__callback d-flex align-middle align-center">
+          <button class="btn btn-spaced">ЗАМОВИТИ ЗВОРОТНІЙ ДЗВІНОК</button>
+        </div>
+      </div>
 
+    </div>
+    <div class="footer-main"></div>
+  </footer>
 
 
 

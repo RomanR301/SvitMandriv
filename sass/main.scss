@@ -12,13 +12,15 @@
 @import "components/_modals";
 @import "components/_entry-content";
 @import "components/_forms";
+@import "components/_cards";
+@import "components/_seo-component";
 
 // Layout
 @import "layout/_grid";
 @import "layout/_footer";
 @import "layout/_header";
 // Vendor
-@import "vendor/flickity";
+@import "vendor/_flickity";
 // Pages
 @import "pages/_home";
 

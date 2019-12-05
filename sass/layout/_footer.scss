@@ -1,2 +1,37 @@
 @import "../abstracts/mixins";
 @import "../abstracts/variables";
+
+.footer-contacts {
+  padding-top: 80px;
+  color: $defaultTextColor;
+  background: url('../../img/contacts-background.jpg');
+  background-size: cover;
+  min-height: 100vh;
+  &__subheading {
+    padding: 16px 0 24px 0;
+  }
+  &__phones {
+    &__item {
+      margin-bottom: 4px;
+      & a {
+        @include fontSize (18, 24);
+        line-height: 36px;
+        font-weight: 600;
+      }
+    }
+  }
+  &__callback {
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      background: $whiteColor;
+      width: 100%;
+      left: 0;
+      height: 3px;
+      z-index: 0;
+    }
+    &:after {
+      right: 0;
+    }
+  }
+}

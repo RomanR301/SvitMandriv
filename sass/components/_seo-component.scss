@@ -1,0 +1,65 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.seo {
+  margin: 60px 0;
+  &-component {
+    &__title {
+      margin-bottom: 30px;
+    }
+    & .entry-content {
+      height: 315px;
+      padding-right: 16px;
+      overflow-y: scroll;
+      &::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 1px #DDDDDD;
+        border-radius: 0;
+        background-color: #DDDDDD;
+        width: 1px;
+      }
+
+      &::-webkit-scrollbar {
+        width: 3px;
+        background-color: transparent;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        border-radius: 0;
+        -webkit-box-shadow: inset 0 0 6px transparent;
+        background-color: #333333;
+      }
+    }
+    & p {
+      color: #777777;
+    }
+    & ul li, & ol li {
+      color: #777777;
+    }
+    & h2 {
+      @include fontSize(18, 26);
+      line-height: 1.25;
+      margin: 12px 0 16px 0;
+    }
+  
+    & h3 {
+      @include fontSize(16, 24);
+      line-height: 1.22;
+      margin: 12px 0 16px 0;
+    }
+  
+    & h4 {
+      @include fontSize(14, 22);
+      line-height: 1.32;
+      margin: 12px 0 16px 0;
+    }
+  
+    & h5 {
+      @include fontSize(14, 20);
+      line-height: 1.64;
+      margin: 12px 0 16px 0;
+    }
+    & h1, & h2, & h3, & h4, & h5 {
+      font-weight: bold;
+    }
+  }
+}

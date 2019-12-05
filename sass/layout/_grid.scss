@@ -45,6 +45,10 @@
   }
 }
 
+.w-100 {
+  width: 100%;
+}
+
 .p-0 {
   padding: 0 !important;
   @media (max-width: $breakpoint-sm) {
@@ -60,6 +64,9 @@
   margin: 0 !important;
 }
 
+.mb-30 {
+  margin-bottom: 30px;
+}
 
 .column {
   padding: 0 15px;
