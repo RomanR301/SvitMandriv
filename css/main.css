@@ -528,10 +528,7 @@ table {
   transition: all 0.3s ease-out;
   color: #333333;
   z-index: 2;
-}
-
-.btn-spaced:hover {
-  border: 1px solid #333;
+  position: relative;
 }
 
 .modal {
@@ -831,6 +828,22 @@ input[type="search"]::-webkit-search-results-decoration {
   position: relative;
 }
 
+.card-item__image {
+  z-index: 3;
+  overflow: hidden;
+}
+
+.card-item__image img {
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.card-item:hover .card-item__image img {
+  transform: scale(1.05);
+}
+
 .card-item__info {
   position: absolute;
   bottom: 0;
@@ -861,6 +874,10 @@ input[type="search"]::-webkit-search-results-decoration {
   .card-item__info_wrap {
     padding: 14px;
   }
+}
+
+.card-item__info:hover .card-item__image {
+  display: none;
 }
 
 .card-item-links {
@@ -1681,9 +1698,10 @@ input[type="search"]::-webkit-search-results-decoration {
 .footer-contacts {
   padding-top: 80px;
   color: #333333;
-  background: url("../../img/contacts-background.jpg");
+  background: url("../../img/footer-top.jpg");
+  background-repeat: no-repeat;
   background-size: cover;
-  min-height: 100vh;
+  height: 1040px;
 }
 
 .footer-contacts__subheading {
@@ -1703,6 +1721,10 @@ input[type="search"]::-webkit-search-results-decoration {
   font-weight: 600;
 }
 
+.footer-contacts__callback {
+  position: relative;
+}
+
 .footer-contacts__callback:before, .footer-contacts__callback:after {
   content: '';
   position: absolute;
@@ -1711,10 +1733,33 @@ input[type="search"]::-webkit-search-results-decoration {
   left: 0;
   height: 3px;
   z-index: 0;
+  pointer-events: none;
+  user-select: none;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 
 .footer-contacts__callback:after {
   right: 0;
+}
+
+.footer-main {
+  background: url("../../img/1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 680px;
+  position: relative;
+}
+
+.footer-main:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .header {

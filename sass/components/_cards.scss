@@ -3,6 +3,18 @@
 
 .card-item {
   position: relative;
+  &__image {
+    z-index: 3;
+    overflow: hidden;
+    & img {
+      @include transition (.3);
+    }
+  }
+  &:hover {
+    & .card-item__image img {
+      transform: scale(1.05);
+    }
+  }
   &__info {
     position: absolute;
     bottom: 0;
@@ -27,6 +39,9 @@
       @media(max-width: $breakpoint-md) {
         padding: 14px;
       }
+    }
+    &:hover .card-item__image {
+      display: none;
     }
   }
   &-links {

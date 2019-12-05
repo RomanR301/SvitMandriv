@@ -1,12 +1,14 @@
 @import "../abstracts/mixins";
 @import "../abstracts/variables";
 
+
 .footer-contacts {
   padding-top: 80px;
   color: $defaultTextColor;
-  background: url('../../img/contacts-background.jpg');
+  background: url('../../img/footer-top.jpg');
+  background-repeat: no-repeat;
   background-size: cover;
-  min-height: 100vh;
+  height: 1040px;
   &__subheading {
     padding: 16px 0 24px 0;
   }
@@ -21,6 +23,7 @@
     }
   }
   &__callback {
+    position: relative;
     &:before, &:after {
       content: '';
       position: absolute;
@@ -29,9 +32,29 @@
       left: 0;
       height: 3px;
       z-index: 0;
+      pointer-events: none;
+      user-select: none;
+      @include transition (.3);
     }
     &:after {
       right: 0;
     }
   }
+}
+
+.footer-main {
+  background: url('../../img/1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 680px;
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    // background: rgba(52, 45, 52, 0.8);
+  } 
 }
