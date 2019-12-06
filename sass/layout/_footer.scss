@@ -1,60 +1,164 @@
 @import "../abstracts/mixins";
 @import "../abstracts/variables";
 
-
-.footer-contacts {
-  padding-top: 80px;
-  color: $defaultTextColor;
-  background: url('../../img/footer-top.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 1040px;
-  &__subheading {
-    padding: 16px 0 24px 0;
+.footer {
+  &-contacts {
+    padding-top: 80px;
+    color: $defaultTextColor;
+    background: url('../../img/footer-top.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1040px;
+    @media (max-width: $breakpoint-lg) {
+      height: unset;
+    }
+    &__subheading {
+      padding: 16px 0 24px 0;
+    }
+    &__phones {
+      &__item {
+        margin-bottom: 4px;
+        & a {
+          @include fontSize (18, 24);
+          line-height: 36px;
+          font-weight: 600;
+        }
+      }
+    }
+    &__callback {
+      margin-top: 300px;
+      position: relative;
+      @media (max-width: $breakpoint-lg) {
+        margin-top: 0;
+        padding: 80px 0;
+        position: relative;
+      }
+      // &:before, &:after {
+      //   content: '';
+      //   position: absolute;
+      //   background: $whiteColor;
+      //   width: 100%;
+      //   left: 0;
+      //   height: 3px;
+      //   z-index: 0;
+      //   user-select: none;
+      //   @include transition (.3);
+      // }
+      // &:after {
+      //   right: 0;
+      // }
+    }
   }
-  &__phones {
-    &__item {
-      margin-bottom: 4px;
+  &-main {
+    padding: 160px 0 20px 0;
+    background: url('../../img/footer-bottom.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    @media (max-width: $breakpoint-lg) {
+      padding: 40px 0 20px 0;
+    }
+    & a {
+      letter-spacing: 1px;
+      color: #9B989B;
+      position: relative;
+      @include fontSize (14, 16);
+      line-height: 30px;
+      &:before {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 1px;
+        background: #9B989B;
+        left: 0;
+        bottom: -3px;
+        @include transition(.3);
+      }
+      &:hover {
+        &:before {
+          width: 100%;
+        }
+      }
+    }
+    &__contacts {
+      @media (max-width: $breakpoint-lg) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+    }
+    &__logo {
+      padding-bottom: 47px;
+    }
+    &__icon {
+      padding-right: 15px;
+    }
+    &__contract {
+      padding-left: 40px;
+      & a:before {
+        width: 100%;
+      }
+      &:hover a:before {
+        width: 0;
+      }
+    }
+    &__phone_items {
       & a {
-        @include fontSize (18, 24);
-        line-height: 36px;
-        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 1px;
+        padding-bottom: 8px;
+        &:before {
+          bottom: 4px;
+        }
+      }
+    }
+    & .row:first-child {
+      @media (max-width: $breakpoint-sm) {
+        justify-content: center;
       }
     }
   }
-  &__callback {
-    position: relative;
-    &:before, &:after {
-      content: '';
-      position: absolute;
-      background: $whiteColor;
-      width: 100%;
-      left: 0;
-      height: 3px;
-      z-index: 0;
-      pointer-events: none;
-      user-select: none;
-      @include transition (.3);
+  &-category {
+    &__title {
+      color: $whiteColor;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      @include fontSize (14, 16);
+      line-height: 20px;
+      font-weight: 700;
+      padding: 16px 0 12px 0;
     }
-    &:after {
-      right: 0;
+    & .menu-item {
+      text-align: center;
+    }
+  }
+  &-copyright {
+    padding-top: 20px;
+    width: 100%;
+    &__company, &__madeBy {
+      color: #A29FA2;
+      @include fontSize (12, 14);
+    }
+    &__madeBy {
+      & span {
+        font-weight: 700;
+        color: #A29FA2;
+        @include transition(.2);
+        cursor: pointer;
+      }
+      &:hover {
+        span {
+          color: #FFFFFF;
+        }
+      }
     }
   }
 }
 
-.footer-main {
-  background: url('../../img/1.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 680px;
-  position: relative;
-  &:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    // background: rgba(52, 45, 52, 0.8);
-  } 
+.footer-contacts__callback button:hover {
+  & .footer-contacts__callback {
+    display: none;
+  }
 }

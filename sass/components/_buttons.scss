@@ -43,12 +43,38 @@
   &-spaced {
     padding: 20px 46px;
     background: $whiteColor;
+    border: 3px solid $whiteColor;
     text-align: center;
     letter-spacing: 3px;
     text-transform: uppercase;
     @include transition(.3);
+    @include fontSize (9, 11);
+    line-height: 13px;
+    font-weight: 800;
     color: $defaultTextColor;
     z-index: 2;
-    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      background: $whiteColor;
+      width: 100%;
+      left: 0;
+      top: 50%;
+      height: 3px;
+      z-index: -1;
+      @include transition(.2);
+    }
+    &:hover {
+      background: transparent;
+      color: $whiteColor;
+      &:before {
+        width: 0;
+        background: transparent;
+      }
+    }
+    @media (max-width: $breakpoint-md) {
+      padding: 14px;
+      letter-spacing: 2.5px;
+    }
   }
 }
