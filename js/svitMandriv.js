@@ -1,7 +1,8 @@
 let front = {
 
   hamburger: $('.hamburger'),
-  nav: $('.navbar'),
+  hamburgerWrap: $('.hamburger-wrap'),
+  nav: $('.header-mobile'),
   filterGridBtn: $('.filter-grid__btn'),
   header_drop: $('.header-drop'),
   slider_options_default: {
@@ -31,9 +32,11 @@ let front = {
       if (!this.hamburger.hasClass('open')) {
           this.hamburger.addClass('open');
           this.nav.toggleClass('active');
+          this.hamburgerWrap.toggleClass('active')
       } else {
           this.hamburger.removeClass('open');
           this.nav.toggleClass('active');
+          this.hamburgerWrap.toggleClass('active')
       }
   },
   navMouseOver: function () {
@@ -77,7 +80,7 @@ let front = {
 
   events: function () {
       let self = this;
-      $(document).on('click', '.hamburger', function () {
+      $(document).on('click', '.hamburger-wrap', function () {
           self.toggleNav();
       });
       $(document).on('click', '.header-nav__link', function (e) {

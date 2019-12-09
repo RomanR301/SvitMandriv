@@ -6,6 +6,10 @@
   background-size: cover;
   height: 100vh;
   color: $whiteColor;
+  @media (max-width: $breakpoint-xl) {
+    height: unset;
+    padding-bottom: 80px;
+  }
   &:after {
     content: '';
     display: block;
@@ -43,19 +47,35 @@
     padding: 16px;
     background: $darkBrownColor;
     color: $whiteColor;
+    @media (max-width: $breakpoint-xl) {
+      display: none;
+    }
     & img {
       margin-right: 7px;
     }
   }
   &-phones {
+    @media (max-width: $breakpoint-xl) {
+      max-width: calc(100% - 50px);
+      flex-direction: column;
+      &__item {
+        margin-bottom: 10px;
+      }
+    }
     &__item {
       & img {
         margin-right: 5px;
+      }
+      & a {
+        color: $whiteColor;
       }
     }
   }
   &-search {
     position: relative;
+    @media (max-width: $breakpoint-xl) {
+      display: none;
+    }
     &__input {
       border: none;
       padding: 13px 40px 13px 16px;
@@ -86,61 +106,44 @@
   }
   &-lang {
     padding-left: 30px;
-    & .lang-select-wrapper {
-      position: relative;
-      user-select: none;
-      width: 100%;
-    }
-    & .lang-select__trigger {
-      position: relative;
-      display: flex;
-      align-items: center;
-      font-weight: 500;
-      color: $whiteColor;
-      line-height: 24px;
-      background: transparent;
-      cursor: pointer;
-      @include fontSize (14, 18);
-    }
-    & .lang-options {
-      position: absolute;
-      display: block;
-      opacity: 0;
-      visibility: hidden;
-      pointer-events: none;
-      z-index: 2;
-      @include transition (.3);
-    }
-    & .lang-select.open .lang-options {
-      opacity: 1;
-      visibility: visible;
-      pointer-events: all;
-    }
-    & .lang-select.open .lang-select__trigger i:before {
-      transform: rotate(-180deg);
-      @include transition (.3)
-    }
-    & .lang-option {
-      position: relative;
-      display: block;
-      font-weight: 500;
-      color: $whiteColor;
-      line-height: 30px;
-      cursor: pointer;
-      @include fontSize (14, 18);
-      @include transition (.3);
-      z-index: 99;
-    }
-    
-    & .lang-option:hover {
-      color: $lightBrownColor;
+    @media (max-width: $breakpoint-xl) {
+      display: none;
     }
   }
   &-top {
     background: rgba(0, 0, 0, 0.5);
+    @media (max-width: $breakpoint-xl) {
+      padding: 0 0 15px 0;
+      display: flex;
+      flex-direction: column-reverse;
+      position: relative;
+      & .container {
+        margin: 0;
+      }
+    }
+    &-burger {
+      display: none;
+      @media (max-width: $breakpoint-xl) {
+        display: block;
+      }
+
+    }
   }
   &-logo {
     padding: 16px 0 30px 0;
+    @media (max-width: $breakpoint-xl) {
+      position: relative;
+      padding: 16px 0 15px 0;
+      & .column {
+        justify-content: flex-start;
+        & img {
+          display: block;
+          max-width: calc(100% - 80px);
+          object-fit: contain;
+        }
+      }
+      
+    }
   }
   &-primary-navigation {
     & .primary-menu {
@@ -167,19 +170,38 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    @media (max-width: $breakpoint-xl) {
+      height: calc(100% - 197px);
+    }
     & div {
       z-index: 2;
       color: $whiteColor;
     }
+    &-nav {
+      @media (max-width: $breakpoint-xl) {
+        display: none;
+        z-index: 22;
+      }
+    }
     &-screen {
+      @media (max-width: $breakpoint-xl) {
+        margin-top: 40px;
+      }
+      & .primary-screen-subtitle {
+        padding-top: 15px;
+      }
       & .primary-screen-carousel {
-
+        @media (max-width: $breakpoint-xl) {
+          padding: 20px 0;
+        }
+        @media (max-width: $breakpoint-md) {
+          display: none;
+        }
       }
       & .primary-carousel {
         &__item {
           position: relative;
           width: 100%;
-          // margin: 0 20px;
         }
         &__image img {
           height: 360px;
@@ -233,12 +255,11 @@
       }
     }
   }
-
   &-bottom {
     background: rgba(32, 15, 21, .7);
-    & .secondary-menu {
-      
-    } 
+    @media (max-width: $breakpoint-xl) {
+      display: none;
+    }
     & .secondary-menu__item {
       padding: 12px 10px;
       &:first-child {
@@ -255,6 +276,272 @@
       font-weight: 600;
     }
   }
+  &-mobile {
+    display: none;
+    @media (max-width: $breakpoint-xl) {
+      // display: flex;
+      overflow: scroll;
+      padding: 15px 0;
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 100%;
+      height: 100%;
+      display: block;
+      background: #211420;
+      z-index: 99;
+      @include transition(.3);
+      &.active {
+        right: 0;
+      }
+    }
+    @media (min-width: $breakpoint-sm){
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    &-logo {
+      display: flex;
+      justify-content: center;
+      @media (max-width: $breakpoint-sm){
+        max-width: 85%;
+      }
+    }
+    & .menu__item {
+      position: relative;
+      margin-bottom: 16px;
+      & a {
+        font-size: 18px;
+        line-height: 28px;
+        color: #A97456;
+      }
+      &:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        background: #8E6954;
+        left: 0;
+        width: 100%;
+        height: 1px;
+      }
+    }
+    & .primary-menu {
+      padding: 25px 0 0 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      @media (min-width: $breakpoint-sm) {
+        align-items: center;
+      }
+    }
+    & .mobile-secondary-nav {
+      &__button {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        background: $lightBrownColor;
+        border: none;
+        color: $whiteColor;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 28px;
+        padding: 12px 16px;
+        @media (min-width: $breakpoint-sm) {
+          width: 300px;
+          margin: 0 auto;
+        }
+      }
+    }
+    & .mobile-phones {
+      margin-top: 12px;
+    }
+    & .header-payment {
+      margin-top: 16px;
+      display: flex;
+      @media (min-width: $breakpoint-sm) {
+        margin: 0 auto;
+        max-width: 300px;
+      }
+    }
+    & .header-search {
+      display: block;
+      
+      @media (min-width: $breakpoint-sm) {
+        margin: 0 auto;
+        max-width: 300px;
+      }
+      & form {
+        width: 100%;
+        & .header-search__input {
+          width: 100%;
+        }
+      }
+    }
+    & .mobile-lang {
+      position: absolute;
+      right: 15px;
+      top: 25px;
+      & .lang-option {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 28px;
+        color: #A97456;
+        margin-bottom: 16px;
+        &.selected {
+          &:before {
+            content: '';
+            background: #A97456;
+            width: 20px;
+            height: 2px;
+            position: absolute;
+            top: calc(50% - 1px);
+            left: -25px;
+          }
+        }
+      }
+    }
+  }
 }
 
+.lang {
+  &-select {
+    &-wrapper {
+      position: relative;
+      user-select: none;
+      width: 100%;
+    }
+    &__trigger {
+      position: relative;
+      display: flex;
+      align-items: center;
+      font-weight: 500;
+      color: $whiteColor;
+      line-height: 24px;
+      background: transparent;
+      cursor: pointer;
+      @include fontSize (14, 18);
+      & span {
+        color: $whiteColor;
+      }
+    }
+    &.open {
+      & .lang-options {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: all;
+      }
+    }
+    &.open {
+      & .lang-select__trigger i:before {
+        transform: rotate(-180deg);
+        @include transition (.3)
+      }
+    }
+  }
+  &-options {
+    position: absolute;
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: 2;
+    @include transition (.3);
+  }
+  &-option {
+    position: relative;
+    display: block;
+    font-weight: 500;
+    color: $whiteColor;
+    line-height: 30px;
+    cursor: pointer;
+    @include fontSize (14, 18);
+    @include transition (.3);
+    z-index: 99;
+    &:hover {
+      color: $lightBrownColor;
+    }
+  }
+}
+
+.hamburger {
+  display: none;
+  @include transition (.3);
+  @media (max-width: $breakpoint-xl) {
+    width: 25px;
+    height: 25px;
+    right: calc(50% - 12.5px);
+    top: calc(50% - 8px);
+    display: block;
+    position: absolute;
+    &-wrap {
+      background: $lightBrownColor;
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 50px;
+      z-index: 1000;
+      cursor: pointer;
+      transition: 0.3s;
+      &.active {
+        position: fixed;
+        background: transparent;
+        height: 60px;
+      }
+    }
+    & span, & span:first-child {
+      position: absolute;
+      display: block;
+      color: $whiteColor;
+      font-size: 8px;
+      line-height: 6px;
+      font-weight: 600;
+      z-index: 100;
+      @include transition (.3);
+      &:before, &:after {
+        content: '';
+        position: absolute;
+        height: 2px;
+        width: 25px;
+        border-radius: 100px;
+        background: $whiteColor;
+        @include transition (.3);
+        left: 0;
+      }
+      &:before {
+        top: -6px;
+      } 
+      &:after {
+        top: -12px;
+      }
+    }
+    &.open {
+      top: 40px;
+      & span:first-child {
+        &:before, &:after {
+          top: -9px;
+          -webkit-transform: rotateZ(45deg);
+          transform: rotateZ(45deg);
+          background: $lightBrownColor;
+        }
+        &:after {
+          -webkit-transform: rotateZ(-45deg);
+          transform: rotateZ(-45deg);
+        }
+      }
+      & span:last-child {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+  }
+}
+
+.hamburger {
+  &.open {
+    .hamburger-wrap {
+      display: none;
+    }
+  }
+}
 

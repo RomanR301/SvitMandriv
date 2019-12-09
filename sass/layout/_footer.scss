@@ -50,6 +50,7 @@
       position: relative;
       @include fontSize (14, 16);
       line-height: 30px;
+      font-weight: 500;
       &:before {
         content: '';
         position: absolute;
@@ -65,13 +66,19 @@
           width: 100%;
         }
       }
+      @media (max-width: $breakpoint-sm) {
+        line-height: 36px;
+      }
     }
-    &__contacts {
+    &__contacts, &__contacts_box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    &__contacts-box {
       @media (max-width: $breakpoint-lg) {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 20px;
+        align-items: flex-start;
       }
     }
     &__logo {
@@ -82,6 +89,14 @@
     }
     &__contract {
       padding-left: 40px;
+      @media (max-width: $breakpoint-lg) {
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        & a {
+          line-height: 28px;
+        }
+      }
       & a:before {
         width: 100%;
       }
@@ -107,6 +122,9 @@
     }
   }
   &-category {
+    @media (max-width: $breakpoint-sm) {
+      padding-bottom: 24px;
+    }
     &__title {
       color: $whiteColor;
       letter-spacing: 3px;
@@ -123,11 +141,17 @@
   &-copyright {
     padding-top: 20px;
     width: 100%;
+    @media (max-width: $breakpoint-sm) {
+      flex-direction: column;
+    }
     &__company, &__madeBy {
       color: #A29FA2;
       @include fontSize (12, 14);
     }
     &__madeBy {
+      @media (max-width: $breakpoint-sm) {
+        padding-top: 16px;
+      }
       & span {
         font-weight: 700;
         color: #A29FA2;
