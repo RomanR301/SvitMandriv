@@ -9,25 +9,25 @@ jQuery(function () {
   if (primaryScreenCarousel) {
       mainCarousel = front.newSlider('.primary-screen-carousel', {
           cellAlign: 'left',
-          prevNextButtons: false
+          prevNextButtons: true
       });
   }
 });
 
 
-var $carousel = $('.banner-carousel-main').flickity({
+var $bannerCarousel = $('.banner-carousel-main').flickity({
   prevNextButtons: false,
   wrapAround: true,
   pageDots: false
 });
 
 // Flickity instance
-var flkty = $carousel.data('flickity');
+var flkty = $bannerCarousel.data('flickity');
 // elements
 var $cellButtonGroup = $('.banner-carousel-nav');
 var $cellButtons = $cellButtonGroup.find('.button');
 
-$carousel.on( 'select.flickity', function() {
+$bannerCarousel.on( 'select.flickity', function() {
   $cellButtons.filter('.is-selected')
     .removeClass('is-selected');
   $cellButtons.eq( flkty.selectedIndex )
@@ -37,14 +37,14 @@ $carousel.on( 'select.flickity', function() {
 
 $cellButtonGroup.on( 'click', '.button', function() {
   var index = $(this).index();
-  $carousel.flickity( 'select', index );
+  $bannerCarousel.flickity( 'select', index );
 });
 
 $('.banner-previous').on( 'click', function() {
-  $carousel.flickity('previous');
+  $bannerCarousel.flickity('previous');
 });
 
 $('.banner-next').on( 'click', function() {
-  $carousel.flickity('next');
+  $bannerCarousel.flickity('next');
 });
 

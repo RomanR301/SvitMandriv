@@ -45,15 +45,14 @@
 .flickity-prev-next-button {
   position: absolute;
   bottom: 0;
-  width: 40px;
-  height: 40px;
-  margin: 0 10px;
   cursor: pointer;
   border: 0;
   outline: none;
-  // background: rgba(183, 129, 49, 0.1);
-  background: rgba(183, 129, 49, 1);
-  border-radius: 100px;
+  background: #fff;
+  width: 48px;
+  height: 48px;
+  border-radius: 0;
+  z-index: 99;
   @include transition(0.3);
 
   &:focus {
@@ -64,9 +63,9 @@
     display: none;
   }
 
-  &:after {
+  &:after  {
     content: '';
-    font-family: 'icomoon' !important;
+    font-family: 'fontello' !important;
     color: $whiteColor;
     font-size: 10px;
   }
@@ -76,33 +75,30 @@
       content: "";
       @include transition(.3);
     }
-
     &:hover {
-      background: $darkYellowColor;
-
+      // background: $darkYellowColor;
       &:after {
         // color: rgba(183, 129, 49, 0.1);
-        color: rgba(183, 129, 49, 1);
+        // color: rgba(183, 129, 49, 1);
       }
     }
   }
 
-  &.previous {
-    right: 50%;
-
-    &:before {
-      content: "\e928";
-      color: #fff;
+  &.previous, &.next {
+    left: 0;
+    top: calc(50% - 24px);
+    &:after {
+      content: '\e800'; 
+      color: $defaultTextColor;
+      font-size: 20px;
     }
   }
-
   &.next {
-    left: 50%;
-
+    left: unset;
+    right: 0;
     &:after {
-      content: "\e902";
+      content: '\e801';
     }
-
   }
 }
 

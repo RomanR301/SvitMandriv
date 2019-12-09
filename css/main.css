@@ -2849,14 +2849,14 @@ input[type="search"]::-webkit-search-results-decoration {
 .flickity-prev-next-button {
   position: absolute;
   bottom: 0;
-  width: 40px;
-  height: 40px;
-  margin: 0 10px;
   cursor: pointer;
   border: 0;
   outline: none;
-  background: #b78131;
-  border-radius: 100px;
+  background: #fff;
+  width: 48px;
+  height: 48px;
+  border-radius: 0;
+  z-index: 99;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
@@ -2873,7 +2873,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .flickity-prev-next-button:after {
   content: '';
-  font-family: 'icomoon' !important;
+  font-family: 'fontello' !important;
   color: #ffffff;
   font-size: 10px;
 }
@@ -2886,29 +2886,24 @@ input[type="search"]::-webkit-search-results-decoration {
   transition: all 0.3s ease-in-out;
 }
 
-.flickity-prev-next-button.previous:hover, .flickity-prev-next-button.next:hover {
-  background: #B78131;
+.flickity-prev-next-button.previous, .flickity-prev-next-button.next {
+  left: 0;
+  top: calc(50% - 24px);
 }
 
-.flickity-prev-next-button.previous:hover:after, .flickity-prev-next-button.next:hover:after {
-  color: #b78131;
-}
-
-.flickity-prev-next-button.previous {
-  right: 50%;
-}
-
-.flickity-prev-next-button.previous:before {
-  content: "\e928";
-  color: #fff;
+.flickity-prev-next-button.previous:after, .flickity-prev-next-button.next:after {
+  content: '\e800';
+  color: #333333;
+  font-size: 20px;
 }
 
 .flickity-prev-next-button.next {
-  left: 50%;
+  left: unset;
+  right: 0;
 }
 
 .flickity-prev-next-button.next:after {
-  content: "\e902";
+  content: '\e801';
 }
 
 .flickity-page-dots {
@@ -3016,7 +3011,10 @@ input[type="search"]::-webkit-search-results-decoration {
 
 @media (max-width: 767px) {
   .banner-carousel-nav {
-    padding: 0 0 14px 28px;
+    padding: 0 5px 14px 5px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 }
 
@@ -3035,17 +3033,20 @@ input[type="search"]::-webkit-search-results-decoration {
 
 @media (max-width: 767px) {
   .banner-carousel-nav__item {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     border: 2px solid #FFFFFF;
     margin-right: 15px;
+  }
+  .banner-carousel-nav__item:last-child {
+    margin-right: 0;
   }
 }
 
 @media (max-width: 575px) {
   .banner-carousel-nav__item {
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
     margin-right: 10px;
   }
 }
@@ -3092,6 +3093,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .banner-carousel .banner-carousel-buttons button i:before {
+  color: #333333;
   font-size: 22px;
   font-weight: 800;
 }
