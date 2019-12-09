@@ -1754,7 +1754,7 @@ input[type="search"]::-webkit-search-results-decoration {
 .footer-contacts {
   padding-top: 80px;
   color: #333333;
-  background: url("../../img/footer-top.jpg");
+  background: url("../img/footer-top.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   height: 1040px;
@@ -1798,7 +1798,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .footer-main {
   padding: 160px 0 20px 0;
-  background: url("../../img/footer-bottom.jpg");
+  background: url("../img/footer-bottom.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -1974,7 +1974,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .header {
-  background: url("../../img/main-screen-background.jpg") no-repeat;
+  background: url("../img/main-screen-background.jpg") no-repeat;
   background-size: cover;
   height: 100vh;
   color: #ffffff;
