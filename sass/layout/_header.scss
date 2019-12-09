@@ -2,7 +2,7 @@
 @import "../abstracts/variables";
 
 .header {
-  background: url('../img/main-screen-background.jpg') no-repeat;
+  background: url('../../img/main-screen-background.jpg') no-repeat;
   background-size: cover;
   height: 100vh;
   color: $whiteColor;
@@ -147,7 +147,7 @@
   }
   &-primary-navigation {
     & .primary-menu {
-      & .menu__item {
+      & .menu-item {
         z-index: 2;
         padding: 12px 6px;
         &:first-child {
@@ -260,7 +260,7 @@
     @media (max-width: $breakpoint-xl) {
       display: none;
     }
-    & .secondary-menu__item {
+    & .secondary-menu-item {
       padding: 12px 10px;
       &:first-child {
         padding-left: 0;
@@ -269,7 +269,7 @@
         padding-right: 0;
       }
     }
-    & .secondary-menu__item a {
+    & .secondary-menu-item a {
       color: $whiteColor;
       @include fontSize (14, 18);
       line-height: 1.5;
@@ -279,7 +279,6 @@
   &-mobile {
     display: none;
     @media (max-width: $breakpoint-xl) {
-      // display: flex;
       overflow: scroll;
       padding: 15px 0;
       position: fixed;
@@ -307,22 +306,27 @@
         max-width: 85%;
       }
     }
-    & .menu__item {
+    & .menu-item {
+      width: 100%;
       position: relative;
       margin-bottom: 16px;
       & a {
         font-size: 18px;
         line-height: 28px;
         color: #A97456;
-      }
-      &:before {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        background: #8E6954;
-        left: 0;
+        position: relative;
+        display: inline-block;
+        align-items: center;
         width: 100%;
-        height: 1px;
+        &:before {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          background: #8E6954;
+          left: 0;
+          width: 100%;
+          height: 1px;
+        }
       }
     }
     & .primary-menu {
@@ -402,6 +406,137 @@
     }
   }
 }
+
+.header-mobile {
+  & .sub-menu {
+    display: none;
+    &.open {
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      z-index: 109;
+      padding: 0 15px;
+      top: 105px;
+      left: 0;
+      background: #211420;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    & .nav-btn {
+      position: absolute;
+      right: 0;
+      width: 30px;
+      height: 30px;
+    }
+  }
+  & p {
+    display: block;
+    position: relative;
+    margin-bottom: 18px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+    color: $whiteColor;
+  }
+}
+.nav-btn {
+  border: none;
+  background: transparent;
+  position: relative;
+}
+
+.primary-menu li.menu-item-has-children>ul {
+  display:none;
+  padding: 26px 15px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  right: -110%;
+  top: 0;
+  background: #F4F9FF;
+  -webkit-transition: all .3s ease-out;
+  -moz-transition: all .3s ease-out;
+  -o-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+  text-align: left;
+  z-index: 100
+}
+
+.primary-menu li.menu-item-has-children>ul.open {
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  -webkit-transition: all .3s ease-out;
+  -moz-transition: all .3s ease-out;
+  -o-transition: all .3s ease-out;
+  transition: all .3s ease-out
+}
+
+.primary-navigation {
+  padding: 30px 0;
+  @media(max-width: $breakpoint-sm) {
+    padding: 0;
+  }
+  & .menu {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+
+    &-item {
+      @media(max-width: $breakpoint-sm) {
+        display: block;
+        width: 100%;
+        border: none;
+        border-radius: 0;
+      }
+
+      & + .menu-item {
+        @media(max-width: $breakpoint-sm) {
+          margin-top: 5px;
+        }
+      }
+
+      & a {
+        @include fontSize(14, 16);
+        line-height: 1.18;
+        color: $whiteColor;
+        position: relative;
+        padding: 12px 30px;
+        @include transition(0.3);
+        @media(max-width: $breakpoint-sm) {
+          padding: 5px 0;
+        }
+        @media(max-width: $breakpoint-xl) {
+          padding: 12px 20px;
+        }
+      }
+
+      &:hover, &.current-menu-item {
+        background: $whiteColor;
+        @media(max-width: $breakpoint-sm) {
+          background: transparent;
+        }
+        & a {
+          color: $whiteColor;
+          @media(max-width: $breakpoint-sm) {
+            color:red;
+
+          }
+        }
+      }
+    }
+  }
+}
+
 
 .lang {
   &-select {

@@ -2,6 +2,7 @@ let front = {
 
   hamburger: $('.hamburger'),
   hamburgerWrap: $('.hamburger-wrap'),
+  subMenu: $('.sub-menu'),
   nav: $('.header-mobile'),
   filterGridBtn: $('.filter-grid__btn'),
   header_drop: $('.header-drop'),
@@ -23,10 +24,6 @@ let front = {
       // let carousel = new Flickity(document.querySelector(selector), options);
       return new Flickity(document.querySelector(selector), options);
   },
-
-//   toggleLang: function(){
-
-//   },
 
   toggleNav: function () {
       if (!this.hamburger.hasClass('open')) {
@@ -202,21 +199,40 @@ jQuery(function () {
   });
 });
 
-// $(function(){
-//   $("#header").load("header.html");
-//   $("#footer").load("footer.html");
-// });
 
 
-// document.querySelector('.custom-select-wrapper').addEventListener('click', function() {
-//     this.querySelector('.custom-select').classList.toggle('open');
-// })
-// for (const option of document.querySelectorAll(".custom-option")) {
-//     option.addEventListener('click', function() {
-//         if (!this.classList.contains('selected')) {
-//             this.parentNode.querySelector('.custom-option.selected').classList.remove('selected');
-//             this.classList.add('selected');
-//             this.closest('.custom-select').querySelector('.custom-select__trigger span').textContent = this.textContent;
-//         }
-//     })
-// }
+document.addEventListener("DOMContentLoaded", function (event) {
+
+    let childrenItem = document.querySelectorAll('.menu-item-has-children > a');
+    for (let i = 0; i < childrenItem.length; i++) {
+        //console.log(childrenItem[i]);
+        var btn = document.createElement("BUTTON");   // Create a <button> element
+        btn.className = "nav-btn";                    // add class
+        btn.innerHTML = `<i class="icon-right-open-big"></i>`;
+        childrenItem[i].appendChild(btn);
+    }
+});
+$(document).on('click', '.nav-btn', function (e) {
+    e.preventDefault();
+    var navTitle = document.createElement("p");   // Create a <button> element
+    navTitle.className = "nav-title";                    // add class
+    navTitle.innerHTML = '<i class="icon-left-open-big"></i>'  + $(this).parent().text();
+
+
+
+    $(this).parent().next('.sub-menu').prepend( navTitle);
+
+    if (!$(this).parent().next('.sub-menu').hasClass('open')) {
+        $(this).parent().next('.sub-menu').addClass('open');
+
+    } else {
+        $(this).parent().next('.sub-menu').removeClass("open");
+    }
+});
+$(document).on('click', '.nav-title', function (e) {
+    e.preventDefault();
+    if ($(this).parent().hasClass('open')) {
+        $(this).parent().removeClass("open");
+        $(this).remove();
+    }
+});
