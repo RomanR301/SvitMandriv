@@ -217,18 +217,14 @@ $(document).on('click', '.nav-btn', function (e) {
     var navTitle = document.createElement("p");   // Create a <button> element
     navTitle.className = "nav-title";                    // add class
     navTitle.innerHTML = '<i class="icon-left-open-big"></i>'  + $(this).parent().text();
-
-
-
-    $(this).parent().next('.sub-menu').prepend( navTitle);
-
+    $(this).parent().next('.sub-menu').prepend(navTitle);
     if (!$(this).parent().next('.sub-menu').hasClass('open')) {
         $(this).parent().next('.sub-menu').addClass('open');
-
     } else {
         $(this).parent().next('.sub-menu').removeClass("open");
     }
 });
+
 $(document).on('click', '.nav-title', function (e) {
     e.preventDefault();
     if ($(this).parent().hasClass('open')) {
@@ -236,3 +232,19 @@ $(document).on('click', '.nav-title', function (e) {
         $(this).remove();
     }
 });
+
+
+$(document).on('click', '.arrow', function (t) {
+    t.preventDefault(),
+    $(this).parent().parent().hasClass("isOpen") ? $(this).parent().parent().removeClass("isOpen") : ($(".secondary-menu li").removeClass("isOpen"),
+    $(this).parent().parent().addClass("isOpen")),
+    $(".secondary-menu li.has-child").each(function(t) {
+        $(".secondary-menu li.has-child").eq(t).hasClass("isOpen") ? $(".secondary-menu li.has-child").eq(t).find(".sub-menu").addClass('open') : $(".secondary-menu li.has-child .sub-menu").eq(t).removeClass('open')
+    });
+})
+
+$(document).click(function(){
+    if ($('.secondary-menu-item').hasClass('isOpen')){
+        $(this).removeClass('isOpen');
+    }
+})
