@@ -35,9 +35,16 @@ let front = {
       } else {
           this.hamburger.removeClass('open');
           this.nav.toggleClass('active');
-          this.hamburgerWrap.toggleClass('active')
+          this.hamburgerWrap.toggleClass('active');
+          this.subMenu.removeClass('open');
+          this.subMenu.find('p.nav-title').remove();
       }
   },
+//   removeTitle:  function(){
+//       if (this.subMenu.has('p')){
+//           remove('p')
+//       }
+//   },
   navMouseOver: function () {
       $(".primary-navigation .menu-item-has-children").hover(function () {
           $("body").addClass('BackDropped');
@@ -81,21 +88,22 @@ let front = {
       let self = this;
       $(document).on('click', '.hamburger-wrap', function () {
           self.toggleNav();
+        //   self.removeTitle();
       });
-      $(document).on('click', '.header-nav__link', function (e) {
-          e.preventDefault();
-          console.log($(window).width());
-          if ($(window).width() + 16 < 991) {
-              $(this).toggleClass('js-link-active');
-          }
-      });
+    //   $(document).on('click', '.header-nav__link', function (e) {
+    //       e.preventDefault();
+    //       console.log($(window).width());
+    //       if ($(window).width() + 16 < 991) {
+    //           $(this).toggleClass('js-link-active');
+    //       }
+    //   });
 
-      $(document).on('click', '.footer-navigation .menu-item-has-children > a', function (e) {
-          e.preventDefault();
-          if ($(window).width() + 16 < 991) {
-              $(this).toggleClass('active');
-          }
-      });
+    //   $(document).on('click', '.footer-navigation .menu-item-has-children > a', function (e) {
+    //       e.preventDefault();
+    //       if ($(window).width() + 16 < 991) {
+    //           $(this).toggleClass('active');
+    //       }
+    //   });
       let langToggle = document.querySelector('.lang-select-wrapper') !== null;
       if (langToggle) {
           (document).querySelector('.lang-select-wrapper').addEventListener('click', function() {
@@ -234,6 +242,7 @@ $(document).on('click', '.nav-title', function (e) {
         $(this).remove();
     }
 });
+
 
 
 $(document).on('click', '.arrow', function (t) {
