@@ -12,7 +12,9 @@ let front = {
       prevNextButtons: false,
       autoPlay: false,
       cellAlign: 'left',
-      contain: true
+      contain: true,
+      selectedAttraction: 0.01,
+      friction: 0.15
   },
 
   init: function () {
@@ -242,6 +244,7 @@ $(document).on('click', '.arrow', function (t) {
         $(".secondary-menu li.has-child").eq(t).hasClass("isOpen") ? $(".secondary-menu li.has-child").eq(t).find(".sub-menu").addClass('open') : $(".secondary-menu li.has-child .sub-menu").eq(t).removeClass('open')
     });
 })
+
 
 $(document).click(function(){
     if ($('.secondary-menu-item').hasClass('isOpen')){

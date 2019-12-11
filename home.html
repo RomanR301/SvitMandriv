@@ -459,43 +459,80 @@
   <section class="main-banner">
     <div class="container">
       <div class="banner-carousel">
-        <div class="banner-carousel-main carousel">
+        <!-- more than 768px screen image -->
+        <div class="banner-carousel-main banner-carousel-desktop carousel">
           <a href="#" class="banner-carousel-main__item default-icon">
-            <!-- more than 768px screen image -->
             <img src="./img/banner-slider-2.jpg" alt="Міротель">
-            <!-- less than 768px screen image -->
-            <img src="./img/banner-carouse-item.jpg" alt="Міротель">
           </a>
           <a href="#" class="banner-carousel-main__item default-icon">
-            <img src="./img/banner-carouse-item.jpg" alt="Міротель">
             <img src="./img/banner-carouse-item.jpg" alt="Міротель">
           </a>
           <a href="#" class="banner-carousel-main__item default-icon">
             <img src="./img/test.jpg" alt="Міротель">
+          </a>
+          <a href="#" class="banner-carousel-main__item default-icon">
             <img src="./img/test.jpg" alt="Міротель">
           </a>
           <a href="#" class="banner-carousel-main__item default-icon">
-            <img src="./img/test1.png" alt="Міротель">
-            <img src="./img/test1.png" alt="Міротель">
+            <img src="./img/test.jpg" alt="Міротель">
           </a>
         </div>
-        <div class="banner-carousel-nav carousel">
-          <div class="banner-carousel-nav__item button default-icon">
+        <div class="banner-carousel-nav banner-carousel-nav-desktop carousel"
+          data-flickity='{ "asNavFor": ".banner-carousel-desktop", "prevNextButtons": false, 
+          "pageDots": false, "cellAlign": "left", "wrapAround": true, "selectedAttraction": 0.01,
+"friction": 0.15 }'>
+          <div class="banner-carousel-nav__item default-icon">
             <img src="./img/banner-slider-2.jpg" alt="Міротель">
           </div>
-          <div class="banner-carousel-nav__item button default-icon">
+          <div class="banner-carousel-nav__item default-icon">
             <img src="./img/banner-carouse-item.jpg" alt="Міротель">
           </div>
-          <div class="banner-carousel-nav__item button default-icon">
+          <div class="banner-carousel-nav__item default-icon">
             <img src="./img/test.jpg" alt="Міротель">
           </div>
-          <div class="banner-carousel-nav__item button default-icon">
-            <img src="./img/test1.png" alt="Міротель">
+          <div class="banner-carousel-nav__item default-icon">
+            <img src="./img/test.jpg" alt="Міротель">
+          </div>
+          <div class="banner-carousel-nav__item default-icon">
+            <img src="./img/test.jpg" alt="Міротель">
           </div>
         </div>
-        <div class="banner-carousel-buttons">
-          <button class="button banner-previous"><i class="icon-left-open-big"></i></button>
-          <button class="button banner-next"><i class="icon-right-open-big"></i></button>
+        <div class="banner-carousel-main banner-carousel-mobile carousel">
+          <a href="#" class="banner-carousel-main__item default-icon">
+            <img src="./img/banner-slider-2-m.jpg" alt="Міротель">
+          </a>
+          <a href="#" class="banner-carousel-main__item default-icon">
+            <img src="./img/banner-carouse-item.jpg" alt="Міротель">
+          </a>
+          <a href="#" class="banner-carousel-main__item default-icon">
+            <img src="./img/test.jpg" alt="Міротель">
+          </a>
+          <a href="#" class="banner-carousel-main__item default-icon">
+            <img src="./img/test.jpg" alt="Міротель">
+          </a>
+          <a href="#" class="banner-carousel-main__item default-icon">
+            <img src="./img/test.jpg" alt="Міротель">
+          </a>
+        </div>
+        <div class="banner-carousel-nav banner-carousel-nav-mobile carousel"
+          data-flickity='{ "asNavFor": ".banner-carousel-mobile", "prevNextButtons": false, "pageDots": false,
+           "cellAlign": "left", "wrapAround": true, "selectedAttraction": 0.01,
+           "friction": 0.15 }'>
+          <div class="banner-carousel-nav__item button default-icon">
+            <img src="./img/banner-slider-2-m.jpg" alt="Міротель">
+          </div>
+          <div class="banner-carousel-nav__item default-icon">
+            <img src="./img/banner-carouse-item.jpg" alt="Міротель">
+          </div>
+          <div class="banner-carousel-nav__item default-icon">
+            <img src="./img/test.jpg" alt="Міротель">
+          </div>
+          <div class="banner-carousel-nav__item default-icon">
+            <img src="./img/test.jpg" alt="Міротель">
+          </div>
+          <div class="banner-carousel-nav__item default-icon">
+            <img src="./img/test.jpg" alt="Міротель">
+          </div>
         </div>
       </div>
     </div>
@@ -958,8 +995,8 @@
 
   <script src="js/libs/jquery-3.4.1.js"></script>
   <script src="js/libs/jquery.magnific-popup.min.js"></script>
-  <script src="js/libs/flickity.pkgd.js"></script>
   <script src="js/sliders.js"></script>
+  <script src="js/libs/flickity.pkgd.js"></script>
   <script src="js/svitMandriv.js"></script>
 </body>
 

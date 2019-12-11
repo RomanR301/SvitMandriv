@@ -6,10 +6,7 @@
   background-size: cover;
   height: 100vh;
   color: $whiteColor;
-  @media (max-width: $breakpoint-xl) {
-    height: unset;
-    padding-bottom: 80px;
-  }
+  position: relative;
   &:after {
     content: '';
     display: block;
@@ -23,6 +20,10 @@
   }
   & .column {
     z-index: 11;
+    @media (max-width: $breakpoint-xl) {
+      text-align: center;
+    }
+
   }
   &-top-wrap {
     display: flex;
@@ -126,7 +127,6 @@
       @media (max-width: $breakpoint-xl) {
         display: block;
       }
-
     }
   }
   &-logo {
@@ -142,7 +142,6 @@
           object-fit: contain;
         }
       }
-      
     }
   }
   &-primary-navigation {
@@ -171,7 +170,9 @@
     flex-direction: column;
     justify-content: space-between;
     @media (max-width: $breakpoint-xl) {
-      height: calc(100% - 197px);
+      height: calc(100% - 213px);
+      align-items: center;
+      justify-content: center;
     }
     & div {
       z-index: 3;
@@ -192,9 +193,6 @@
       }
       & .primary-screen-carousel {
         @media (max-width: $breakpoint-xl) {
-          padding: 20px 0;
-        }
-        @media (max-width: $breakpoint-md) {
           display: none;
         }
       }
@@ -207,6 +205,9 @@
           height: 360px;
           object-fit: cover;
           border-radius: 5px;
+          @media (max-width: $breakpoint-xl) {
+            height: 450px;
+          }
         }
         &-info {
           padding-left: 22px;
@@ -402,8 +403,10 @@
     visibility: hidden;
     position: absolute;
     width: 100%;
-    right: 0;
-    min-width: 230px;
+    left: 0;
+    min-width: 200px;
+    @include transition(.3);
+    top: 48px;
     &.open {
     opacity: 1;
     visibility: visible;
@@ -413,20 +416,16 @@
     padding: 12px 10px;
     @include transition(.3);
     position: relative;
+    &:last-child {
+      & .sub-menu {
+        left: unset;
+        right: 0;
+      }
+    }
     &.isOpen {
       background: $lightBrownColor;
-      & .sub-menu {
-        left: 0;
-        top: 48px;
-      }
       & > a > i:before {
         transform: rotate(180deg);
-      }
-      &:last-child {
-        & .sub-menu {
-          left: unset;
-          right: 0;
-        }
       }
       & .secondary-menu-item {
         background: $lightBrownColor;
