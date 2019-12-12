@@ -1,0 +1,149 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+
+.categories {
+  &-main {
+    @media (max-width: 575px) {
+      & .column {
+        width: 100%;
+      }
+    }
+  }
+  &-heading {
+    position: relative;
+    padding: 40px 0;
+    &__background { 
+      @media (max-width: $breakpoint-md) {
+        img {
+          height: 60px;
+          object-fit: cover;
+        }
+      }
+    }
+    &__title {
+      @include positionCenter;
+      color: $whiteColor;
+      width: 100%;
+      text-align: center;
+    }
+  }
+  &-item {
+    height: 100%;
+    &__image {
+      display: block;
+      margin-bottom: 12px;
+      overflow: hidden;
+      & img {
+        @include transition (.3);
+        border-radius: 3px;
+      }
+      &:hover {
+        & img {
+          transform: scale(1.05);
+        }
+      }
+    }
+    &__features {
+      & .features-item {
+        margin-right: 16px;
+        margin-bottom: 16px;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+    &__badge {
+      & span {
+        display: inline-block;
+        color: $whiteColor;
+        font-weight: 500;
+        @include fontSize (10, 12);
+        line-height: 18px;
+        border-radius: 5px;
+        padding: 2px 4px;
+        margin: 0 16px 8px 0;
+      }
+    }
+    &__name {
+      margin-bottom: 12px;
+      display: block;
+    }
+    &__description {
+      color: $typographyGrey;
+      @include fontSize (14, 16);
+      line-height: 1.4;
+    }
+    &__top {
+      padding-bottom: 10px;
+      @media (max-width: 575px) {
+        width: 100%;
+      }
+    }
+    &__price, &__price__new {
+      margin-bottom: 4px;
+      & .regular-price {
+        font-weight: bold;
+        @include fontSize(16, 24);
+        line-height: 1.64;
+      }
+    }
+    &__price__new {
+      .new-price {
+        color: $typographyGreen;
+        @include fontSize(16, 24);
+        line-height: 1.64;
+        font-weight: bold;
+        margin-right: 16px;
+      }
+      .old-price {
+        color: $typographyGrey;
+        @include fontSize(16, 24);
+        line-height: 1.64;
+        font-weight: bold;
+        text-decoration: line-through;
+      }
+    }
+    &__people {
+      color: $typographyGrey;
+      @include fontSize (14, 16);
+      line-height: 1.4;
+      margin-bottom: 16px;
+      & span {
+        color: $typographyGrey;
+        @include fontSize (14, 16);
+        line-height: 1.4;
+      }
+    }
+    &__reserve {
+      margin-bottom: 12px;
+      & button {
+        width: 100%;
+      }
+    }
+    &__more {
+      width: 100%;
+    }
+  }
+}
+
+.badge {
+  &-top {
+    background: #C27500;
+  }
+  &-discount {
+    background: $redColor;
+  }
+  &-basin {
+    background: #003C5E;;
+  }
+  &-springs {
+    background: #B14141;
+  }
+  &-spa {
+    background: #85CCAA;
+  }
+} 
+
+
+

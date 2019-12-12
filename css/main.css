@@ -486,6 +486,14 @@ table {
   background: url("../../img/vektor/discount.svg") no-repeat;
 }
 
+.spa {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: url("../../img/vektor/123.svg");
+}
+
 .btn {
   background: transparent;
   border: 1px solid transparent;
@@ -1056,6 +1064,234 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .seo-component h1, .seo-component h2, .seo-component h3, .seo-component h4, .seo-component h5 {
   font-weight: bold;
+}
+
+@media (max-width: 575px) {
+  .categories-main .column {
+    width: 100%;
+  }
+}
+
+.categories-heading {
+  position: relative;
+  padding: 40px 0;
+}
+
+@media (max-width: 767px) {
+  .categories-heading__background img {
+    height: 60px;
+    object-fit: cover;
+  }
+}
+
+.categories-heading__title {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  width: 100%;
+  text-align: center;
+}
+
+.categories-item {
+  height: 100%;
+}
+
+.categories-item__image {
+  display: block;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+
+.categories-item__image img {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  border-radius: 3px;
+}
+
+.categories-item__image:hover img {
+  transform: scale(1.05);
+}
+
+.categories-item__features .features-item {
+  margin-right: 16px;
+  margin-bottom: 16px;
+}
+
+.categories-item__features .features-item:last-child {
+  margin-right: 0;
+}
+
+.categories-item__badge span {
+  display: inline-block;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 12px;
+  font-size: -webkit-calc(10px + (12 - 10) * ((100vw - 300px) / (1900 - 300)));
+  font-size: -moz-calc(10px + (12 - 10) * ((100vw - 300px) / (1900 - 300)));
+  font-size: calc(10px + (12 - 10) * ((100vw - 300px) / (1900 - 300)));
+  line-height: 18px;
+  border-radius: 5px;
+  padding: 2px 4px;
+  margin: 0 16px 8px 0;
+}
+
+.categories-item__name {
+  margin-bottom: 12px;
+  display: block;
+}
+
+.categories-item__description {
+  color: #777777;
+  font-size: 16px;
+  font-size: -webkit-calc(14px + (16 - 14) * ((100vw - 300px) / (1900 - 300)));
+  font-size: -moz-calc(14px + (16 - 14) * ((100vw - 300px) / (1900 - 300)));
+  font-size: calc(14px + (16 - 14) * ((100vw - 300px) / (1900 - 300)));
+  line-height: 1.4;
+}
+
+.categories-item__top {
+  padding-bottom: 10px;
+}
+
+@media (max-width: 575px) {
+  .categories-item__top {
+    width: 100%;
+  }
+}
+
+.categories-item__price, .categories-item__price__new {
+  margin-bottom: 4px;
+}
+
+.categories-item__price .regular-price, .categories-item__price__new .regular-price {
+  font-weight: bold;
+  font-size: 24px;
+  font-size: -webkit-calc(16px + (24 - 16) * ((100vw - 300px) / (1900 - 300)));
+  font-size: -moz-calc(16px + (24 - 16) * ((100vw - 300px) / (1900 - 300)));
+  font-size: calc(16px + (24 - 16) * ((100vw - 300px) / (1900 - 300)));
+  line-height: 1.64;
+}
+
+.categories-item__price__new .new-price {
+  color: #009020;
+  font-size: 24px;
+  font-size: -webkit-calc(16px + (24 - 16) * ((100vw - 300px) / (1900 - 300)));
+  font-size: -moz-calc(16px + (24 - 16) * ((100vw - 300px) / (1900 - 300)));
+  font-size: calc(16px + (24 - 16) * ((100vw - 300px) / (1900 - 300)));
+  line-height: 1.64;
+  font-weight: bold;
+  margin-right: 16px;
+}
+
+.categories-item__price__new .old-price {
+  color: #777777;
+  font-size: 24px;
+  font-size: -webkit-calc(16px + (24 - 16) * ((100vw - 300px) / (1900 - 300)));
+  font-size: -moz-calc(16px + (24 - 16) * ((100vw - 300px) / (1900 - 300)));
+  font-size: calc(16px + (24 - 16) * ((100vw - 300px) / (1900 - 300)));
+  line-height: 1.64;
+  font-weight: bold;
+  text-decoration: line-through;
+}
+
+.categories-item__people {
+  color: #777777;
+  font-size: 16px;
+  font-size: -webkit-calc(14px + (16 - 14) * ((100vw - 300px) / (1900 - 300)));
+  font-size: -moz-calc(14px + (16 - 14) * ((100vw - 300px) / (1900 - 300)));
+  font-size: calc(14px + (16 - 14) * ((100vw - 300px) / (1900 - 300)));
+  line-height: 1.4;
+  margin-bottom: 16px;
+}
+
+.categories-item__people span {
+  color: #777777;
+  font-size: 16px;
+  font-size: -webkit-calc(14px + (16 - 14) * ((100vw - 300px) / (1900 - 300)));
+  font-size: -moz-calc(14px + (16 - 14) * ((100vw - 300px) / (1900 - 300)));
+  font-size: calc(14px + (16 - 14) * ((100vw - 300px) / (1900 - 300)));
+  line-height: 1.4;
+}
+
+.categories-item__reserve {
+  margin-bottom: 12px;
+}
+
+.categories-item__reserve button {
+  width: 100%;
+}
+
+.categories-item__more {
+  width: 100%;
+}
+
+.badge-top {
+  background: #C27500;
+}
+
+.badge-discount {
+  background: #E44242;
+}
+
+.badge-basin {
+  background: #003C5E;
+}
+
+.badge-springs {
+  background: #B14141;
+}
+
+.badge-spa {
+  background: #85CCAA;
+}
+
+.features-item {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.features-item .tooltip {
+  visibility: hidden;
+  color: #333333;
+  text-align: center;
+  position: absolute;
+  z-index: 1;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  border-radius: 3px;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.4);
+  bottom: 130%;
+  left: 0;
+  width: 110px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 8px 16px;
+}
+
+.features-item .tooltip:after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 20%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #ffffff transparent transparent transparent;
+}
+
+.features-item:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
 }
 
 .container {
@@ -2072,7 +2308,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .header-search__input {
   border: none;
-  padding: 13px 40px 13px 16px;
+  padding: 13px 35px 13px 16px;
   background: #8E6954;
   color: #4A1F07;
   font-weight: 600;
@@ -2108,7 +2344,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .header-lang {
-  padding-left: 30px;
+  padding-left: 16px;
 }
 
 @media (max-width: 1280px) {

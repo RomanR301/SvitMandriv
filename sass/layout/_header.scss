@@ -79,7 +79,7 @@
     }
     &__input {
       border: none;
-      padding: 13px 40px 13px 16px;
+      padding: 13px 35px 13px 16px;
       background: $lightBrownColor;
       color: $darkBrownColor;
       font-weight: 600;
@@ -106,7 +106,7 @@
     }
   }
   &-lang {
-    padding-left: 30px;
+    padding-left: 16px;
     @media (max-width: $breakpoint-xl) {
       display: none;
     }
