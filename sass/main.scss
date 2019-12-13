@@ -14,8 +14,10 @@
 @import "components/_forms";
 @import "components/_cards";
 @import "components/_seo-component";
-@import "components/_categories";
 @import "components/_tooltips";
+@import "components/_breadcrumb";
+@import "components/_accordion";
+@import "components/_tab";
 
 // Layout
 @import "layout/_grid";
@@ -25,4 +27,6 @@
 @import "vendor/_flickity";
 // Pages
 @import "pages/_home";
+@import "pages/_categories";
+@import "pages/_single";
 

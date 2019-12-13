@@ -74,58 +74,149 @@
   line-height: 1.6;
 }
 
-.icon-left-open-big:before { 
-  content: '\e800'; 
-  @include transition (.3); 
-  color: $whiteColor;
-} 
-.icon-right-open-big:before { 
-  color: $whiteColor;
-  content: '\e801'; 
-  @include transition (.3); 
-}
-.icon-down-open-big:before {
-  content: '\e802';
-  color: $whiteColor;
-  transform: rotate(0deg); 
-  @include transition (.3); 
-  font-size: 16px;
-} 
-.icon-up-open-big:before { content: '\e803'; @include transition (.3); } /* '' */
-.icon-angle-down:before { content: '\f107'; @include transition (.3); } /* '' */
-.icon-left:before { content: '\f177'; } /* '' */
-.icon-right:before { content: '\f178'; } /* '' */
+// .icon-left-open-big:before { 
+//   content: '\e800'; 
+//   @include transition (.3); 
+//   color: $whiteColor;
+// } 
+// .icon-right-open-big:before { 
+//   color: $whiteColor;
+//   content: '\e801'; 
+//   @include transition (.3); 
+// }
+// .icon-down-open-big:before {
+//   content: '\e802';
+//   color: $whiteColor;
+//   transform: rotate(0deg); 
+//   @include transition (.3); 
+//   font-size: 16px;
+// } 
+// .icon-up-open-big:before { content: '\e803'; @include transition (.3); } /* '' */
+// .icon-angle-down:before { content: '\f107'; @include transition (.3); } /* '' */
+// .icon-left:before { content: '\f177'; } /* '' */
+// .icon-right:before { content: '\f178'; } /* '' */
 
+// .icon-kyivstar:before {
+//   content: '';
+//   display: inline-block;
+//   width: 18px;
+//   height: 18px;
+//   background: url('../../img/vektor/kyivstar.svg') no-repeat center center;
+// }
+
+// .icon-masterCard:before {
+//   content: '';
+//   display: inline-block;
+//   width: 25px;
+//   height: 15px;
+//   background: url('../../img/vektor/masterCard.svg') no-repeat center center;
+// }
+
+// .icon-discount:before {
+//   content: '';
+//   display: inline-block;
+//   width: 42px;
+//   height: 39px;
+//   background: url('../../img/vektor/discount.svg') no-repeat;
+// }
+
+// .spa {
+//   content: '';
+//   display: block;
+//   width: 30px;
+//   height: 30px;
+//   background: url('../../img/vektor/123.svg');
+// }
+
+
+.icon-star:before {
+  content: "\e928";
+  color: #b78131;
+}
+.icon-checkmark:before {
+  content: "\e918";
+  color: #b78131;
+}
+.icon-location:before {
+  content: "\e919";
+  color: #777;
+  font-size: 24px;
+  padding-right: 12px;
+}
+.icon-star-checked:before {
+  content: "\e91b";
+  color: #b78131;
+}
+.icon-basin:before {
+  content: "\e917";
+  color: #b78131;
+}
+.icon-bouvette:before {
+  content: "\e903";
+  color: #b78131;
+}
+.icon-slider-arrow-small:before {
+  content: "\e904";
+}
+.icon-slider-arrow-big:before {
+  content: "\e905";
+}
+.icon-cutlery:before {
+  content: "\e906";
+  color: #777;
+}
+.icon-envelope:before {
+  content: "\e907";
+}
+.icon-footer-categories:before {
+  content: "\e908";
+  color: #8e6954;
+}
+.icon-footer-tours:before {
+  content: "\e909";
+  color: #8e6954;
+}
+.icon-footer-globe:before {
+  content: "\e90a";
+  color: #8e6954;
+}
+.icon-kids:before {
+  content: "\e90b";
+  color: #777;
+}
 .icon-kyivstar:before {
-  content: '';
-  display: inline-block;
-  width: 18px;
-  height: 18px;
-  background: url('../../img/vektor/kyivstar.svg') no-repeat center center;
+  content: "\e90c";
+  color: #00a0ff;
+}
+.icon-lifecell:before {
+  content: "\e90d";
+  color: #f8bd11;
+}
+.icon-parking:before {
+  content: "\e90e";
+  color: #777;
+}
+.icon-phone:before {
+  content: "\e90f";
+}
+.icon-sauna:before {
+  content: "\e910";
+  color: #b78131;
+}
+.icon-solarium:before {
+  content: "\e911";
+  color: #b78131;
+}
+.icon-spa:before {
+  content: "\e912";
+  color: #777;
+}
+.icon-arrow-bottom:before {
+  content: "\e913";
+  color: #fff;
 }
 
-.icon-masterCard:before {
-  content: '';
-  display: inline-block;
-  width: 25px;
-  height: 15px;
-  background: url('../../img/vektor/masterCard.svg') no-repeat center center;
+.icon-wifi:before {
+  content: "\e916";
+  color: #777;
 }
-
-.icon-discount:before {
-  content: '';
-  display: inline-block;
-  width: 42px;
-  height: 39px;
-  background: url('../../img/vektor/discount.svg') no-repeat;
-}
-
-.spa {
-  content: '';
-  display: block;
-  width: 30px;
-  height: 30px;
-  background: url('../../img/vektor/123.svg');
-}
-
-
