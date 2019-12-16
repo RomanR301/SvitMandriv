@@ -30,6 +30,30 @@ jQuery(function () {
       prevNextButtons: true
     })
   }
+
+  let treatmentCarousel = document.querySelector('.single-treatment-carousel') !== null;
+  let treatmentSlider;
+  if (treatmentCarousel) {
+    treatmentSlider = front.newSlider('.single-treatment-carousel', {
+      cellAlign: 'left', 
+      prevNextButtons: true,
+      fullscreen: true,
+      lazyLoad: 2
+    })
+  }
+
+  let roomsMain = document.querySelectorAll('.rooms-main-carousel');
+  for ( var i=0, len = roomsMain.length; i < len; i++ ) {
+      let productSlider = roomsMain[i];
+      new Flickity( productSlider, {
+          cellSelector: '.rooms-main-carousel__item',
+          cellAlign: 'left',
+          contain: true,
+          prevNextButtons: true,
+          pageDots: false,
+          wrapAround: true
+      });
+  }
 });
 
 

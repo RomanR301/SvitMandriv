@@ -16,37 +16,37 @@
   }
 
   & h1 {
-    @include fontSize(34, 56);
+    @include fontSize(30, 48);
     line-height: 1.2;
     margin-bottom: 50px;
   }
 
   & h2 {
-    @include fontSize(28, 48);
+    @include fontSize(20, 24);
     line-height: 1.25;
     margin: 12px 0 16px 0;
   }
 
   & h3 {
-    @include fontSize(22, 36);
+    @include fontSize(18, 20);
     line-height: 1.22;
     margin: 12px 0 16px 0;
   }
 
   & h4 {
-    @include fontSize(18, 28);
+    @include fontSize(16, 18);
     line-height: 1.32;
     margin: 12px 0 16px 0;
   }
 
   & h5 {
-    @include fontSize(16, 24);
+    @include fontSize(14, 16);
     line-height: 1.64;
     margin: 12px 0 16px 0;
   }
 
   & h6 {
-    @include fontSize(14, 18);
+    @include fontSize(12, 14);
     line-height: 1.6;
     margin: 12px 0 16px 0;
   }

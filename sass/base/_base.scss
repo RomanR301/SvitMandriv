@@ -46,6 +46,17 @@ img {
   height: 137px;
 }
 
+.checkmark-list {
+  list-style: none;
+  & li {
+    display: flex;
+    align-items: center;
+    &:before {
+      padding-right: 5px;
+      content: url('../../img/vektor/checkmark.svg');
+    }
+  }
+}
 
 
 

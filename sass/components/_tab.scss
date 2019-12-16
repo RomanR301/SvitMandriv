@@ -3,9 +3,18 @@
 
 .tabs {
   &-list {
-    &-item {
-      &__link {
+    &__item {
+      &_link {
+        padding: 8px 12px;
+        font-weight: 500;
+        line-height: 20px;
         @include transition(0.3);
+        @include fontSize (12, 14);
+        margin: 0 4px 4px 0;
+        &.active {
+          background: $darkYellowColor;
+          color: $whiteColor;
+        }
       }
     }
 

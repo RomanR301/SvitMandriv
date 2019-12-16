@@ -244,8 +244,8 @@
                     <li class="secondary-menu-item"><a href="#">Вілли Трускавця</a></li>
                     <li class="secondary-menu-item"><a href="#">Санаторії Трускавця</a></li>
                   </ul>
+
                 </li>
-                </a></li>
                 <li class="secondary-menu-item has-child">
                   <a href="#">Сатанів
                     <i class="icon-down-open-big arrow"></i>
@@ -260,7 +260,6 @@
                     <li class="secondary-menu-item"><a href="#">Санаторії Трускавця</a></li>
                   </ul>
                 </li>
-                </a></li>
                 <li class="secondary-menu-item has-child">
                   <a href="#">Карпати
                     <i class="icon-down-open-big arrow"></i>
@@ -275,7 +274,6 @@
                     <li class="secondary-menu-item"><a href="#">Санаторії Трускавця</a></li>
                   </ul>
                 </li>
-                </a></li>
                 <li class="secondary-menu-item has-child">
                   <a href="#">Львів
                     <i class="icon-down-open-big arrow"></i>
@@ -290,7 +288,6 @@
                     <li class="secondary-menu-item"><a href="#">Санаторії Трускавця</a></li>
                   </ul>
                 </li>
-                </a></li>
               </ul>
             </nav>
           </div>
@@ -481,58 +478,245 @@
       </div>
       <div class="row m-row">
         <div id="main-content" class="column col-lg-12 col-md-12 d-flex align-center main">
-          <div id="content" class="column col-lg-7 col-md-8 col-sm-12 content d-flex flex-column">
-            <div class="sidebar__inner">
-              <div class="single-categories">
-                <ul class="single-categories-list d-flex">
-                  <li class="single-categories__item d-flex align-middle">
-                    <i class="icon-basin"></i>
-                    <span>Санаторій з басейном</span>
-                  </li>
-                  <li class="single-categories__item d-flex align-middle">
-                    <i class="icon-wifi"></i>
-                    <span>WI-FI та інтернет</span>
-                  </li>
-                  <li class="single-categories__item d-flex align-middle">
-                    <i class="icon-kids"></i>
-                    <span>Дитяча кімната</span>
-                  </li>
-                  <li class="single-categories__item d-flex align-middle">
-                    <i class="icon-parking"></i>
-                    <span>Цілодобовий паркінг</span>
-                  </li>
-                  <li class="single-categories__item d-flex align-middle">
-                    <i class="icon-spa"></i>
-                    <span>SPA-зона</span>
-                  </li>
-                  <li class="single-categories__item d-flex align-middle">
-                    <i class="icon-cutlery"></i>
-                    <span>Ресторан</span>
-                  </li>
-                  <li class="single-categories__item d-flex align-middle">
-                    <i class="icon-sauna"></i>
-                    <span>Сауна</span>
-                  </li>
-                  <li class="single-categories__item d-flex align-middle">
-                    <i class="icon-bouvette"></i>
-                    <span>5 хв. до бювета</span>
-                  </li>
-                  <li class="single-categories__item d-flex align-middle">
-                    <i class="icon-solarium"></i>
-                    <span>Солярій</span>
-                  </li>
-                </ul>
-              </div>
-              <div class="single-location d-flex align-middle">
-                <i class="icon-location"></i>
-                <span class="single-location__address">м. Трускавець, майдан Кобзаря, 1, Львівська область, 82200</span>
+          <div class="column col-lg-7 col-md-12 col-sm-12 d-flex flex-column">
+            <div id="sidebar" class="sidebar">
+              <div class="sidebar__inner">
+                <div class="single-categories">
+                  <ul class="single-categories-list">
+                    <li class="single-categories__item">
+                      <i class="icon-basin"></i>
+                      <span>Санаторій з басейном</span>
+                    </li>
+                    <li class="single-categories__item">
+                      <i class="icon-wifi"></i>
+                      <span>WI-FI та інтернет</span>
+                    </li>
+                    <li class="single-categories__item">
+                      <i class="icon-kids"></i>
+                      <span>Дитяча кімната</span>
+                    </li>
+                    <li class="single-categories__item">
+                      <i class="icon-parking"></i>
+                      <span>Цілодобовий паркінг</span>
+                    </li>
+                    <li class="single-categories__item">
+                      <i class="icon-spa"></i>
+                      <span>SPA-зона</span>
+                    </li>
+                    <li class="single-categories__item">
+                      <i class="icon-cutlery"></i>
+                      <span>Ресторан</span>
+                    </li>
+                    <li class="single-categories__item">
+                      <i class="icon-sauna"></i>
+                      <span>Сауна</span>
+                    </li>
+                    <li class="single-categories__item">
+                      <i class="icon-bouvette"></i>
+                      <span>5 хв. до бювета</span>
+                    </li>
+                    <li class="single-categories__item">
+                      <i class="icon-solarium"></i>
+                      <span>Солярій</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="single-location d-flex align-middle">
+                  <i class="icon-location"></i>
+                  <span class="single-location__address">м. Трускавець, майдан Кобзаря, 1, Львівська область,
+                    82200</span>
+                </div>
+                <div class="single-tabs tabs">
+                  <ul class="tabs-list tabs-ul d-flex align-middle">
+                    <li class="tabs-list__item">
+                      <a onclick="front.openTab(this, 'tab-0','.tabs')"
+                        class="btn btn-transparent tabs-list__item_link tab-links">Опис</a>
+                    </li>
+                    <li class="tabs-list__item">
+                      <a onclick="front.openTab(this, 'tab-1','.tabs')"
+                        class="btn btn-transparent tabs-list__item_link tab-links">Ціни та номери</a>
+                    </li>
+                    <li class="tabs-list__item">
+                      <a onclick="front.openTab(this, 'tab-2','.tabs')"
+                        class="btn btn-transparent tabs-list__item_link tab-links active tab-treatment">Лікування</a>
+                    </li>
+                    <li class="tabs-list__item">
+                      <a onclick="front.openTab(this, 'tab-3','.tabs')"
+                        class="btn btn-transparent tabs-list__item_link tab-links">Інфраструктура</a>
+                    </li>
+                    <li class="tabs-list__item">
+                      <a onclick="front.openTab(this, 'tab-4','.tabs')"
+                        class="btn btn-transparent tabs-list__item_link tab-links">Відгуки</a>
+                    </li>
+                    <li class="tabs-list__item">
+                      <a onclick="front.openTab(this, 'tab-5','.tabs')"
+                        class="btn btn-transparent tabs-list__item_link tab-links">Часті запитання</a>
+                    </li>
+                  </ul>
+                  <div class="tabs-wrap">
+                    <div class="tab-content" id="tab-0">
+                      <div class="single-description entry-content">
+                        <h2>Загальна інформація про готельний комплекс Міротель (Mirotel) Трускавець</h2>
+                        <p>Новий готельний комплекс Міротель (Mirotel)​ Трускавець відкрив свої двері в 2012 році і в
+                          цей же час став одним із найкращих комплексів на курорті та увійшов в список 100 кращих
+                          готелів України. Міротель пропонує своїм гостям комфорті номери, площею від 30м2. Всього
+                          готельний комплекс включає в себе 184 номери з різноманітною інфраструктурою та
+                          лікувально-оздоровчою базою на основі Медичного центру «Мед </p>
+                        <p>Новий готельний комплекс Міротель (Mirotel)​ Трускавець відкрив свої двері в 2012 році і в
+                          цей же час став одним із найкращих комплексів на курорті та увійшов в список 100 кращих
+                          готелів України. Міротель пропонує своїм гостям комфорті номери, площею від 30м2. Всього
+                          готельний комплекс включає в себе 184 номери з різноманітною інфраструктурою та
+                          лікувально-оздоровчою базою на основі Медичного центру «Мед </p>
+                        <h2>Готель Міротель розташування</h2>
+                        <p>Новий готельний комплекс Міротель (Mirotel)​ Трускавець відкрив свої двері в 2012 році і в
+                          цей же час став одним із найкращих комплексів на курорті та увійшов в список 100 кращих
+                          готелів України. Міротель пропонує своїм гостям комфорті номери, площею від 30м2. Всього
+                          готельний комплекс включає в себе 184 номери з різноманітною інфраструктурою та
+                          лікувально-оздоровчою базою на основі Медичного центру «Мед</p>
+                        <p>Територія готелю Міротель Трускавець займає 6200 м2. Номерний фонд обладнаний сучасною
+                          технікою, дизайном, зручними ліжками,сейфом, електрочайниками з горнятами для чаю та кави та
+                          багато іншого. Також до послуг гостей найсучасніша діагностична, лікувальна та рекреаційна
+                          база Медичного центру «Мед палас». Тут працюють одні з найкращих медичних працівників регіону.
+                        </p>
+                        <h2>Харчування та ресторани
+                        </h2>
+                        <ul>
+                          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, neque.</li>
+                          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, neque.</li>
+                        </ul>
+                        <iframe
+                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1094.3520320230064!2d23.505087677095393!3d49.279761542370025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473a49ad2e80b745%3A0xf745ac3f7e6272d4!2z0KLRgNGD0YHQutCw0LLQtdGGLCDQm9GM0LLQvtCy0YHQutCw0Y8g0L7QsdC70LDRgdGC0YwsIDgyMjAw!5e0!3m2!1sru!2sua!4v1576490343899!5m2!1sru!2sua"
+                          style="border:0;" allowfullscreen=""></iframe>
+                      </div>
+                    </div>
+                    <div class="tab-content" id="tab-1">
+                      <div class="heading-2">:(</div>
+                    </div>
+                    <div class="tab-content active" id="tab-2">
+                      <div class="single-treatment">
+                        <div class="single-treatment-carousel carousel">
+                          <img class="carousel-image" data-flickity-lazyload="../img/slider-item1.jpg" />
+                          <img class="carousel-image"
+                            data-flickity-lazyload="https://picsum.photos/640/640/?image=1074" />
+                          <img class="carousel-image" data-flickity-lazyload="../img/slider-item2.jpg" />
+
+                          <img class="carousel-image" data-flickity-lazyload="../img/test.jpg" />
+                          <img class="carousel-image" data-flickity-lazyload="../img/test1.png" />
+                          <img class="carousel-image"
+                            data-flickity-lazyload="https://picsum.photos/720/540/?image=1080" />
+                        </div>
+                        <h2>Основні профілі лікування в санаторії Міротель</h2>
+                        <h3>Хвороби шлунково-кишкового тракту:</h3>
+                        <ul class="single-treatment-list checkmark-list">
+                          <li>Гастрит</li>
+                          <li>Гастродуоденіт</li>
+                          <li>Виразка шлунку</li>
+                        </ul>
+
+                        <h3>Хвороби сечостатевої системи:</h3>
+                        <ul class="single-treatment-list checkmark-list">
+                          <li>Пієлонефрит</li>
+                          <li>Хронічний цистит</li>
+                          <li>Простатит</li>
+                        </ul>
+
+                        <h3>Хвороби печінки та жовчовивідної системи:</h3>
+                        <ul class="single-treatment-list checkmark-list">
+                          <li>Дискензія</li>
+                          <li>Вірусний гепатит</li>
+                          <li>Порушення роботи печінки</li>
+                          <li>Холецистит</li>
+                          <li>Холецистокомія</li>
+                          <li>Калькульозний холецистит</li>
+                          <li>Хронічний гепатит</li>
+                          <li>Пакреатит</li>
+                          <li>Непрохідність жовчних шляхів</li>
+                          <li>Ангіолохоліт</li>
+                        </ul>
+
+                        <h3>Опорно-рухова система</h3>
+                        <ul class="single-treatment-list checkmark-list">
+                          <li>Артрити</li>
+                          <li>Ревматоїдний артрит</li>
+                          <li>Алексити</li>
+                          <li>Поліартрити</li>
+                          <li>Остеохондроз хребта</li>
+                          <li>Міозити</li>
+                          <li>Спондильоз</li>
+                          <li>Неврит</li>
+                          <li>Радикуліти</li>
+                          <li>Артроз</li>
+                          <li>Протрузія диска</li>
+                          <li>Поліневрити</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="tab-content" id="tab-3">
+                      content #4
+                    </div>
+                    <div class="tab-content" id="tab-4">
+                      content #5
+                    </div>
+                    <div class="tab-content" id="tab-5">
+                      content #6
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <div id="sidebar" class="column col-lg-3 col-md-4 col-sm-12 sidebar">
+          <div id="content" class="column col-lg-3 col-md-12 col-sm-12 content">
+            <div class="sidebar-top">
+              <div class="sidebar-info d-flex flex-column">
+                <div class="sidebar-price categories-item__price heading-5 --bold">
+                  від <span class="regular-price">2610</span> грн
+                </div>
+                <div class="sidebar-people categories-item__people">
+                  за <span class="people-quantity">1</span> <span class="people-plural">людину</span>
+                </div>
+                <div class="sidebar-phones d-flex flex-column">
+                  <a href="tel:+380970577388">+38 (097) 057 73 88</a>
+                  <a href="tel:+380936868677">+38 (093) 686 86 77</a>
+                </div>
+                <button class="btn btn-primary sidebar-reserve">
+                  Забронювати тур
+                </button>
+                <div class="sidebar-discount">
+                  <div class="sidebar-discount__image">
+                    <img src="./img/vektor/discount.svg" alt="">
+                  </div>
+                  <div class="sidebar-discount__description">
+                    Знижка <span class="sidebar-discount__amount --bold">5%</span> на всі категорії
+                    номерів при будь-якій кількості днів
+                  </div>
+                </div>
+              </div>
+              <div class="sidebar-treatment">
+                <div class="sidebar-treatment__heading --semibold">
+                  Основні профілі лікування
+                </div>
+                <ul class="sidebar-treatment__list checkmark-list">
+                  <li>
+                    <h2>Порушення обміну травлення</h2>
+                  </li>
+                  <li>
+                    <h2>Нирки та урологія</h2>
+                  </li>
+                  <li>
+                    <h2>Сердцево-судинна система</h2>
+                  </li>
+                  <li>
+                    <h2>Шкіряні захворювання</h2>
+                  </li>
+                </ul>
+                <button class="btn btn-action open-treatment">Усі профілі лікування</button>
+              </div>
+            </div>
+
             <ul class="sidenav">
               <li class="sidenav__section">
-                <a class="sidenav__toggle" href="javascript:void(0);">Санаторії Трускавця <i class="navOpen icon-arrow-bottom navOpen"></i></a>
+                <a class="sidenav__toggle" href="javascript:void(0);">Санаторії Трускавця <i
+                    class="navOpen icon-arrow-bottom navOpen"></i></a>
                 <ul class="sidenav-menu">
                   <li class="sidenav-menu__item"><a href="#">Міротель</a></li>
                   <li class="sidenav-menu__item"><a href="#">Карпати</a></li>
@@ -565,14 +749,15 @@
                 </ul>
               </li>
               <li class="sidenav__section">
-                <a class="sidenav__toggle" href="javascript:void(0);">Готелі Трускавця<i class="icon-arrow-bottom"></i></a>
+                <a class="sidenav__toggle" href="javascript:void(0);">Готелі Трускавця<i
+                    class="icon-arrow-bottom"></i></a>
                 <ul class="sidenav-menu">
                   <li class="sidenav-menu__item"><a href="#">Галант</a>
-                    <span class="on-sale">-10%</span></li></li>
+                    <span class="on-sale">-10%</span></li>
                   <li class="sidenav-menu__item"><a href="#">Афродіта</a></li>
                   <li class="sidenav-menu__item"><a href="#">Дворик Лева</a></li>
                   <li class="sidenav-menu__item"><a href="#">Алькор</a>
-                    <span class="on-sale">-15%</span></li></li>
+                    <span class="on-sale">-15%</span></li>
                   <li class="sidenav-menu__item"><a href="#">Європа</a></li>
                   <li class="sidenav-menu__item"><a href="#">Золота Корона</a></li>
                   <li class="sidenav-menu__item"><a href="#">Клуб РН</a></li>
@@ -595,13 +780,14 @@
                 </ul>
               </li>
               <li class="sidenav__section">
-                <a class="sidenav__toggle" href="javascript:void(0);">Санаторії Трускавця<i class="icon-arrow-bottom "></i></a>
+                <a class="sidenav__toggle" href="javascript:void(0);">Санаторії Трускавця<i
+                    class="icon-arrow-bottom "></i></a>
                 <ul class="sidenav-menu">
                   <li class="sidenav-menu__item"><a href="#">Хижина СПА</a></li>
                   <li class="sidenav-menu__item"><a href="#">Моцарт</a></li>
                   <li class="sidenav-menu__item"><a href="#">Анастасія</a></li>
                   <li class="sidenav-menu__item"><a href="#">Віктор</a>
-                    <span class="on-sale">-120%</span></li></li>
+                    <span class="on-sale">-120%</span></li>
                   <li class="sidenav-menu__item"><a href="#">Жасмін</a></li>
                   <li class="sidenav-menu__item"><a href="#">Калина</a></li>
                   <li class="sidenav-menu__item"><a href="#">Камелія</a></li>
@@ -612,7 +798,6 @@
                   <li class="sidenav-menu__item"><a href="#">Сонячна</a></li>
                   <li class="sidenav-menu__item"><a href="#">Христина</a></li>
                 </ul>
-              </li>
             </ul>
 
           </div>
@@ -796,6 +981,7 @@
   <script src="js/libs/jquery-3.4.1.js"></script>
   <script src="js/libs/jquery.magnific-popup.min.js"></script>
   <script src="js/libs/flickity.pkgd.js"></script>
+  <script src="js/libs/flickity-fullscreen.js"></script>
   <script src="js/libs/sticky-sidebar.min.js"></script>
   <script src="js/libs/ResizeSensor.js"></script>
   <script src="js/sliders.js"></script>

@@ -16,8 +16,7 @@
 @import "components/_seo-component";
 @import "components/_tooltips";
 @import "components/_breadcrumb";
-@import "components/_accordion";
-@import "components/_tab";
+@import "components/_tab"; 
 
 // Layout
 @import "layout/_grid";
@@ -25,6 +24,7 @@
 @import "layout/_header";
 // Vendor
 @import "vendor/_flickity";
+@import "vendor/_flickity-fullscreen";
 // Pages
 @import "pages/_home";
 @import "pages/_categories";

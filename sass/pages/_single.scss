@@ -1,14 +1,212 @@
 @import "../abstracts/mixins";
 @import "../abstracts/variables";
+// SIDEBAR
 
+.sidebar {
+  &-info {
+    padding: 24px;
+    margin-top: 12px;
+    background: rgba(183, 129, 49, 0.1);
+    border-radius: 3px;
+    @media (max-width: $breakpoint-lg) {
+      text-align: center;
+    }
+    @media (max-width: 400px) {
+      text-align: left;
+    }
+  }
+  &-phones {
+    margin-bottom: 12px;
+    & a {
+      font-weight: bold;
+      @include fontSize (12, 14);
+      line-height: 24px;
+      margin-bottom: 4px;
+    }
+  }
+  &-reserve {
+    width: 100%;
+    margin-bottom: 16px;
+    @include fontSize (12, 14);
+  }
+  &-discount {
+    padding: 9px 6px;
+    border: 1px solid $darkYellowColor;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    @media (min-width: 400px) {
+      align-items: center;
+      justify-content: center;
+      &__image {
+        padding-right: 10px;
+      }
+    }
+    &__description {
+      font-size: 14px;
+      line-height: 20px;
+    }
+    &__amount {
+      color: $darkYellowColor;
+    }
+  }
+  &-treatment {
+    margin-top: 15px;
+    padding: 24px;
+    background: rgba(183, 129, 49, 0.1);
+    border-radius: 3px;
+    @include fontSize (14, 16);
+    line-height: 28px;
+    @media (min-width: 400px) {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &__heading {
+      padding-bottom: 12px;
+    }
+    &__list {
+      h2 {
+        display: inline-block;
+        padding-bottom: 4px;
+      }
+    }
+  }
+}
+
+.sidenav {
+  &__toggle {
+    display: block;
+    background: url('../../img/side-nav-categories-background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 10px;
+    pointer-events: none;
+    color: $whiteColor;
+    position: relative;
+    @include fontSize(16, 18);
+    line-height: 1.6;
+    font-weight: bold;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 3px 3px 0px 0px;
+    z-index: 1;
+    position: relative;
+    @media (max-width: $breakpoint-lg) {
+      padding: 14px;
+      pointer-events: all;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    & i {
+      display: none;
+      position: absolute;
+      top: calc(50% - 8px);
+      margin-left: 8px;
+      @media (max-width: $breakpoint-lg){
+        display: inline-block;
+      }
+      &.navOpen {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  &-menu {
+    padding-left: 24px;
+    @media (max-width: $breakpoint-lg) {
+      display: none;
+    }
+  }
+  &__section {
+    margin-top: 15px;
+    overflow: hidden;
+    display: block;
+    &.show {
+      display: block
+    }
+  }
+}
+
+.sidenav-menu {
+  margin-top: 16px;
+  &__item {
+    position: relative;
+    @include fontSize(14, 18);
+    line-height: 1.4;
+    margin-bottom: 15px;
+    & a {
+      position: relative;
+      &:before {
+        content: '';
+        position: absolute;
+        background: $defaultTextColor;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 1px;
+        @include transition(.3);
+      }
+      &:hover {
+        &:before {
+          width: 100%;
+        }
+      }
+    }
+  }
+  & .on-sale {
+    position: absolute;
+    text-align: center;
+    min-width: 40px;
+    margin-left: 8px;
+    @include fontSize(12, 14);
+    line-height: 12px;
+    padding: 4px;
+    background: #E44242;
+    border-radius: 100px;
+    color: $whiteColor;
+  }
+}
+
+.main .content {
+  @media (max-width: $breakpoint-lg) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+.sidebar{
+  will-change: min-height;
+}
+
+.sidebar__inner{
+  transform: translate(0, 0); /* For browsers don't support translate3d. */
+  transform: translate3d(0, 0, 0);
+  will-change: position, transform;
+}
+
+// CONTENT
 .single {
   &-categories {
     padding-top: 12px;
+    &-list {
+      display: flex;
+      flex-flow: row wrap;
+      overflow-x: auto;
+    }
     &__item {
       border: 1px solid $darkYellowColor;
       border-radius: 3px;
-      padding: 5px 12px;
-      margin: 0 12px 12px 0;
+      padding: 5px 8px;
+      margin: 0 8px 8px 0;
       & i:before, & span {
         color: $darkYellowColor;
         font-weight: 500;
@@ -24,22 +222,107 @@
     }
   }
   &-location {
-    margin-bottom: 16px; 
+    margin: 4px 0 16px 0;
+    & i:before {
+      font-size: 24px;
+      padding-right: 10px;
+    }
   }
   & .row:nth-child(3) {
     display: flex;
     flex-direction: column;
   }
   & .single-cover-image {
-    @media (max-width: $breakpoint-md) {
+    @media (max-width: $breakpoint-lg) {
       display: none;
     }
   }
   & .main {
-    @media (max-width: $breakpoint-md) {
+    @media (max-width: $breakpoint-lg) {
       display: flex;
       flex-direction: column-reverse;
     }
   }
 }
 
+
+
+
+// TABS (DESCRIPTION)
+.single-description {
+  & p {
+    color: $typographyGrey;
+  }
+  & iframe {
+    width: 100%;
+    height: 300px;
+  }
+}
+
+// TABS (PRICES AND ROOMS)
+
+.single-rooms {
+
+}
+
+// TABS (TREATMENT)
+
+.single-treatment-carousel__item {
+  width: 24%;
+  height: 120px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+.single-treatment-carousel.is-fullscreen .carousel-image {
+  height: auto;
+  max-height: 100%;
+}
+
+.carousel-image {
+  width: 24%;
+  height: 170px;
+  display: block;
+  object-fit: cover;
+  /* set min-width, allow images to set cell width */
+  min-width: 150px;
+  max-width: 100%;
+  margin-right: 10px;
+  /* vertically center */
+  top: 50%;
+  transform: translateY(-50%)
+}
+
+.carousel.is-fullscreen .carousel-image {
+  height: auto;
+  width: auto;
+  max-height: 100%;
+}
+
+.flickity-enabled.is-fullscreen {
+  z-index: 9;
+}
+
+.single-treatment {
+  & ul {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 12px;
+    & li {
+      width: 33%;
+      margin-bottom: 12px;
+    }
+  }
+  & h2 {
+    @include fontSize(16, 24);
+    line-height: 1.64;
+    margin-bottom: 16px;
+    font-weight: 700;
+  }
+  & h3 {
+    @include fontSize (12, 14);
+    line-height: 1.5;
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+}
