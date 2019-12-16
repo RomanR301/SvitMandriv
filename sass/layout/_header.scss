@@ -44,6 +44,7 @@
       z-index: 13;
     }
   }
+
   &-payment {
     padding: 16px;
     background: $darkBrownColor;
@@ -140,45 +141,6 @@
           display: block;
           max-width: calc(100% - 80px);
           object-fit: contain;
-        }
-      }
-    }
-  }
-  &-primary-navigation {
-    & .primary-menu {
-      & .menu-item {
-        z-index: 2;
-        padding: 12px 6px;
-        position: relative;
-        &:first-child {
-          padding-left: 0;
-        }
-        &:last-child {
-          padding-right: 0;
-        }
-        & a {
-          color: $whiteColor;
-          @include fontSize (14, 18);
-          line-height: 1.5;
-          font-weight: 600;
-          &:before {
-            content: '';
-            position: absolute;
-            bottom: 10px;
-            left: 50%;
-            -webkit-transform: translate(-50%, 0);
-            -ms-transform: translate(-50%, 0);
-            transform: translate(-50%, 0);
-            width: 0;
-            height: 2px;
-            background-color: $whiteColor;
-            @include transition (.3);
-          }
-          &:hover {
-            &:before {
-              width: 100%;
-            }
-          } 
         }
       }
     }
@@ -318,20 +280,6 @@
         display: inline-block;
         align-items: center;
         width: 100%;
-        // &:before {
-        //   content: '';
-        //   position: absolute;
-        //   bottom: 0;
-        //   background: #8E6954;
-        //   left: 0;
-        //   width: 100%;
-        //   height: 1px;
-        // }
-        // & span {
-        //   &:before {
-        //     content: '';
-        //   }
-        // }
       }
     }
     & .primary-menu {
@@ -419,7 +367,52 @@
   }
 }
 
+// TOP MENU ON DESKTOP
+.header-primary-navigation {
+  & .primary-menu {
+    & .menu-item {
+      z-index: 2;
+      padding: 12px 6px;
+      position: relative;
+      &:first-child {
+        padding-left: 0;
+      }
+      &:last-child {
+        padding-right: 0;
+      }
+      & a {
+        color: $whiteColor;
+        @include fontSize (14, 18);
+        line-height: 1.5;
+        font-weight: 600;
+        &:before {
+          content: '';
+          position: absolute;
+          bottom: 10px;
+          left: 50%;
+          -webkit-transform: translate(-50%, 0);
+          -ms-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+          width: 0;
+          height: 2px;
+          background-color: $whiteColor;
+          @include transition (.3);
+        }
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        } 
+      }
+    }
+  }
+}
 
+
+// BOTTOM MENU ON DESKTOP
+.header-secondary-navigation {
+  width: 100%;
+}
 
 .secondary-menu {
   .sub-menu {
@@ -448,7 +441,7 @@
     }
     &.isOpen {
       background: $lightBrownColor;
-      & > a > i:before {
+      & > a > i {
         transform: rotate(180deg);
       }
       & .secondary-menu-item {
@@ -464,13 +457,15 @@
     @include fontSize (14, 18);
     line-height: 1.5;
     font-weight: 600;
+    display: flex;
+    align-items: center;
+    & i {
+      padding-left: 2px;
+    }
   }
 }
 
-.header-secondary-navigation {
-  width: 100%;
-}
-
+// HEADER MOBILE
 .header-mobile {
   & .sub-menu {
     display: none;
@@ -513,10 +508,14 @@
     color: $whiteColor;
   }
 }
+
 .nav-btn {
   border: none;
   background: transparent;
   position: relative;
+  & i {
+    transform: rotate(-90deg);
+  }
 }
 
 .primary-menu li.menu-item-has-children>ul {
@@ -604,7 +603,6 @@
           color: $whiteColor;
           @media(max-width: $breakpoint-sm) {
             color:red;
-
           }
         }
       }
@@ -754,4 +752,3 @@
     }
   }
 }
-

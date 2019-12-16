@@ -40,36 +40,6 @@
   font-display: swap;
 }
 
-// @font-face {
-//   font-family: 'fontello';
-//   src: url('../fonts/fontello.eot?84654477');
-//   src: url('../fonts/fontello.eot?84654477#iefix') format('embedded-opentype'),
-//        url('../fonts/fontello.woff2?84654477') format('woff2'),
-//        url('../fonts/fontello.woff?84654477') format('woff'),
-//        url('../fonts/fontello.ttf?84654477') format('truetype'),
-//        url('../fonts/fontello.svg?84654477#fontello') format('svg');
-//   font-weight: normal;
-//   font-style: normal;
-// }
-
-//  [class^="icon-"]:before, [class*=" icon-"]:before {
-//   font-family: "fontello";
-//   font-style: normal;
-//   font-weight: normal;
-//   speak: none;
-//   display: inline-block;
-//   text-decoration: inherit;
-//   width: 1em;
-//   margin-right: .2em;
-//   text-align: center;
-//   font-variant: normal;
-//   text-transform: none;
-//   line-height: 1em;
-//   margin-left: .2em;
-//   -webkit-font-smoothing: antialiased;
-//   -moz-osx-font-smoothing: grayscale;
-
-// }
 
 @font-face {
   font-family: 'icomoon';
@@ -80,7 +50,7 @@
     url('../fonts/icomoon.svg?ngk2u3#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
-  font-display: block;
+  font-display: inline-block;
 }
 
 [class^="icon-"], [class*=" icon-"] {
@@ -92,6 +62,8 @@
   font-variant: normal;
   text-transform: none;
   line-height: 1;
+  display: inline-block;
+  @include transition(.3);
 
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;

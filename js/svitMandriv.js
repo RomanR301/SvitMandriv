@@ -40,11 +40,6 @@ let front = {
           this.subMenu.find('p.nav-title').remove();
       }
   },
-//   removeTitle:  function(){
-//       if (this.subMenu.has('p')){
-//           remove('p')
-//       }
-//   },
   navMouseOver: function () {
       $(".primary-navigation .menu-item-has-children").hover(function () {
           $("body").addClass('BackDropped');
@@ -90,20 +85,6 @@ let front = {
           self.toggleNav();
         //   self.removeTitle();
       });
-    //   $(document).on('click', '.header-nav__link', function (e) {
-    //       e.preventDefault();
-    //       console.log($(window).width());
-    //       if ($(window).width() + 16 < 991) {
-    //           $(this).toggleClass('js-link-active');
-    //       }
-    //   });
-
-    //   $(document).on('click', '.footer-navigation .menu-item-has-children > a', function (e) {
-    //       e.preventDefault();
-    //       if ($(window).width() + 16 < 991) {
-    //           $(this).toggleClass('active');
-    //       }
-    //   });
       let langToggle = document.querySelector('.lang-select-wrapper') !== null;
       if (langToggle) {
           (document).querySelector('.lang-select-wrapper').addEventListener('click', function() {
@@ -126,25 +107,10 @@ let front = {
               });
           })
       }
-
-
-      $('.js-scrollLink').on('click', function () {
-
-          let target = this.hash;
-          let $target = $(target);
-          $('html, body').stop().animate({
-              'scrollTop': $target.offset().top - 80
-          }, 500, 'swing');
-      });
-
-      $(".scroll-downs").click(function () {
-          $('html,body').animate({
-                  scrollTop: $(".second").offset().top - 120
-              },
-              'slow');
-      });
   }
 };
+
+
 
 let modal = {
   closeButton: $('.modal__close'),
@@ -197,16 +163,16 @@ jQuery(function () {
   front.init();
   modal.init();
 
-
-  // Hide Header on on scroll down
-  let didScroll;
-  let lastScrollTop = 0;
-  let delta = 5;
-  let navbarHeight = $('.header').outerHeight();
-
-  $(window).scroll(function (event) {
-      didScroll = true;
-  });
+  let sidebar = document.querySelector('#content') !== null;
+  if (sidebar) {
+        sidebar = new StickySidebar('#content', {
+        containerSelector: '#main-content',
+        innerWrapperSelector: '.sidebar__inner',
+        topSpacing: 0,
+        minWidth: 768,
+        resizeSensor: true
+        });
+    }
 });
 
 
@@ -217,15 +183,16 @@ document.addEventListener("DOMContentLoaded", function (event) {
         //console.log(childrenItem[i]);
         var btn = document.createElement("BUTTON");   // Create a <button> element
         btn.className = "nav-btn";                    // add class
-        btn.innerHTML = `<i class="icon-right-open-big"></i>`;
+        btn.innerHTML = `<i class="icon-arrow-bottom"></i>`;
         childrenItem[i].appendChild(btn);
     }
 });
+
 $(document).on('click', '.nav-btn', function (e) {
     e.preventDefault();
     var navTitle = document.createElement("p");   // Create a <button> element
     navTitle.className = "nav-title";                    // add class
-    navTitle.innerHTML = '<i class="icon-left-open-big"></i>'  + $(this).parent().text();
+    navTitle.innerHTML = '<i class="icon-cheveron-left"></i>'  + $(this).parent().text();
     $(this).parent().next('.sub-menu').prepend(navTitle);
     if (!$(this).parent().next('.sub-menu').hasClass('open')) {
         $(this).parent().next('.sub-menu').addClass('open');
@@ -260,20 +227,13 @@ $(document).click(function(){
     }
 })
 
-$(document).ready(function() {
-    var sidebar = new StickySidebar('#content', {
-      containerSelector: '#main-content',
-      innerWrapperSelector: '.sidebar__inner',
-      topSpacing: 0,
-      minWidth: 768,
-      resizeSensor: true
-    });
-});
+
 
 $(document).on('click', '.sidenav__toggle', function (e){
     e.preventDefault();
     var $this = $(this);
     if ($this.next().hasClass('show')) {
+        $this.
         $this.next().removeClass('show');
         $this.next().slideUp(350);
     } else {
