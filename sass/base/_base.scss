@@ -80,14 +80,15 @@ img {
 
   &-screen {
     &__title {
-      margin: 0 0 16px 0;
+      font-weight: 500;
       color: $defaultTextColor;
-      @media (max-width: $breakpoint-md) {
-        margin: 0 0 12px 0;
-      }
+      @include fontSize(14, 16);
+      line-height: 24px;
     }
     &__description {
-      margin-bottom: 16px;
+      color: $defaultTextColor;
+      @include fontSize(14, 16);
+      line-height: 24px;
     }
   }
 }

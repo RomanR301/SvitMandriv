@@ -1,0 +1,53 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.news {
+  margin: 36px 0;
+  &-heading {
+    margin-bottom: 36px;
+  }
+  &-item {
+    margin-bottom: 200px;
+    // position: relative;
+    // z-index: -1;
+    & .news-image {
+      // z-index: -1;
+      & img {
+        height: 330px;
+        // z-index: -1;
+      }
+    }
+    & .news-info {
+      padding: 17px 30px 0 30px;
+      width: 80%;
+      background: $whiteColor;
+      margin: -120px auto 0 auto;
+      // position: absolute;
+      // left: calc(0% + 10%);
+      z-index: 999;
+      &__date {
+        margin-bottom: 8px;
+      }
+      &__heading {
+        margin-bottom: 12px;
+      }
+      &__description {
+        margin-bottom: 16px;
+
+      }
+      &__more {
+        display: block;
+        border: 1px solid $defaultTextColor;
+        padding: 20px 100px;
+        z-index: 9999;
+        &:before, &:after {
+          display: none;
+        }
+        &:hover {
+          background: $defaultTextColor;
+          color: $whiteColor;
+        }
+      }
+    }
+  }
+}

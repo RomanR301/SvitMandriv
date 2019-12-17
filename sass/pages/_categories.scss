@@ -74,6 +74,14 @@
       @include fontSize (14, 16);
       line-height: 1.4;
     }
+    &__days {
+      margin-top: 12px; 
+      font-weight: 500;
+      @include fontSize (14, 16);
+      & span {
+        color: $typographyGrey;
+      }
+    }
     &__top {
       padding-bottom: 10px;
       @media (max-width: 575px) {

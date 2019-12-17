@@ -53,6 +53,22 @@
       bottom: 0;
     }
   }
+  &-link {
+    @include fontSize(12, 14);
+    line-height: 24px;
+    background: transparent;
+    position: relative;
+    color: $darkYellowColor;
+    &:before {
+      content: '';
+      position: absolute;
+      background: $darkYellowColor;
+      left: 0;
+      bottom: -2px;
+      width: 0;
+      height: 2px;
+    }
+  }
   &-spaced {
     padding: 20px 46px;
     background: $whiteColor;

@@ -1,0 +1,30 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.contacts {
+  margin: 40px 0;
+  &-form {
+    &__heading {
+      margin-bottom: 24px;
+    }
+    &__inputs {
+      margin-right: 15px;
+      & .form-control:last-child {
+        margin: 0;
+      }
+      @media (max-width: $breakpoint-md) {
+        margin: 0 0 16px 0;
+      }
+    }
+    &__textarea {
+      & textarea {
+        @media (max-width: $breakpoint-md) {
+          height: 200px;
+        }
+      }
+    }
+    &__submit {
+      margin-top: 16px;
+    }
+  }
+}

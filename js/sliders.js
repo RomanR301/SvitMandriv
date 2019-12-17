@@ -9,8 +9,7 @@ jQuery(function () {
   if (primaryScreenCarousel) {
       mainCarousel = front.newSlider('.primary-screen-carousel', {
           cellAlign: 'left',
-          prevNextButtons: true,
-          fullscreen: true,
+          prevNextButtons: true
       });
   }
   let bannerCarousel = document.querySelector('.banner-carousel-desktop') !== null;
@@ -37,8 +36,7 @@ jQuery(function () {
     treatmentSlider = front.newSlider('.single-treatment-carousel', {
       cellAlign: 'left', 
       prevNextButtons: true,
-      fullscreen: true,
-      lazyLoad: 2
+      fullscreen: true
     })
   }
 

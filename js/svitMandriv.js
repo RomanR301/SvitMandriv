@@ -248,3 +248,17 @@ $(document).on('click', '.sidenav__toggle', function (e){
     }
 });
 
+$(document).on('click', '.faq__item_heading', function (){
+    var $this = $(this);
+    $this.parent().parent().parent().find('.faq__item_arrow').removeClass('open');
+    if ($this.parent().find('.faq__item_content').hasClass('show')) {
+        $this.parent().find('.faq__item_content').removeClass('show')
+        $this.parent().find('.faq__item_content').slideUp(350);
+    } else {
+        $this.parent().parent().find('.faq__item_content').removeClass('show');
+        $this.parent().parent().find('.faq__item_content').slideUp(350);
+        $this.parent().find('.faq__item_arrow').addClass('open');
+        $this.next().toggleClass('show');
+        $this.next().slideToggle(350); 
+    }
+});

@@ -2,7 +2,101 @@
 @import "../abstracts/variables";
 
 .form-control {
-  font-family: inherit;
+  margin-bottom: 16px;
+  & p {
+    display: none;
+  }
+}
+.form-input, .form-textarea {
+  padding: 12px 16px;
+  border: 1px solid $typographyGrey;
+  font-family: 'Montserrat', sans-serif;
+  font-size: inherit;
+  border-radius: 3px;
+  width: 100%;
+  outline: none;
+  @include transition(.3);
+  &:focus {
+    border: 1px solid $darkYellowColor;
+  }
+}
+
+.error-ms {
+  & input {
+    border: 1px solid #E44242;
+    &::placeholder {
+      color:#E44242;
+    }
+  }
+  & p {
+    display: block;
+    color: #E44242;
+    padding: 2px 0 0 16px;
+    font-size: 12px;
+  }
+}
+
+.form-textarea {
+  padding: 16px 16px;
+  resize: none;
+}
+
+.form-m-row {
+  margin: 0 -8px;
+}
+
+.form-column {
+  padding: 0 8px;
+  @media (max-width: $breakpoint-grid-sm) {
+    width: 100%;
+  }
+}
+
+
+.rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  display: inline;
+  & > input {
+    display: none;
+    & + label {
+      display: inline-block;
+      overflow: hidden;
+      text-indent: 9999px;
+      width: 18px;
+      white-space: nowrap;
+      cursor: pointer;
+      &:before {
+        display: inline-block;
+        text-indent: -9999px;
+        content: "\e928";
+      }
+    }
+    &:checked ~ label:before,
+      & + label:hover ~ label:before,
+      & + label:hover:before {
+      content: "\e91b";
+    }
+  }
+  
+  /* the hidden clearer */
+  & > .star-cb-clear + label {
+    text-indent: -9999px;
+    width: .5em;
+    margin-left: -.5em;
+  }
+  & > .star-cb-clear + label:before {
+    width: .5em;
+  }
+
+  &:hover > input + label:before {
+    content: "\e928";
+  }
+  &:hover > input + label:hover ~ label:before,
+  &:hover > input + label:hover:before {
+    content: "\e91b";
+    text-shadow: 0 0 1px #333;
+  }
 }
 
 input[type="search"]::-webkit-search-decoration,

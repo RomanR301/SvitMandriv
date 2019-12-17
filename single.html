@@ -52,7 +52,7 @@
               </a>
               <div class="header-search">
                 <form role="search" method="get" class="search" action="">
-                  <input type="search" class="header-search__input form-control" placeholder="Пошук по турам" value=""
+                  <input type="search" class="header-search__input" placeholder="Пошук по турам" value=""
                     name="header-search">
                   <button type="submit" class="header-search-btn">
                   </button>
@@ -538,7 +538,7 @@
                     </li>
                     <li class="tabs-list__item">
                       <a onclick="front.openTab(this, 'tab-2','.tabs')"
-                        class="btn btn-transparent tabs-list__item_link tab-links active tab-treatment">Лікування</a>
+                        class="btn btn-transparent tabs-list__item_link tab-links tab-treatment">Лікування</a>
                     </li>
                     <li class="tabs-list__item">
                       <a onclick="front.openTab(this, 'tab-3','.tabs')"
@@ -550,7 +550,7 @@
                     </li>
                     <li class="tabs-list__item">
                       <a onclick="front.openTab(this, 'tab-5','.tabs')"
-                        class="btn btn-transparent tabs-list__item_link tab-links">Часті запитання</a>
+                        class="btn btn-transparent tabs-list__item_link tab-links active">Часті запитання</a>
                     </li>
                   </ul>
                   <div class="tabs-wrap">
@@ -592,7 +592,7 @@
                     <div class="tab-content" id="tab-1">
                       <div class="heading-2">:(</div>
                     </div>
-                    <div class="tab-content active" id="tab-2">
+                    <div class="tab-content" id="tab-2">
                       <div class="single-treatment">
                         <div class="single-treatment-carousel carousel">
                           <img class="carousel-image" data-flickity-lazyload="../img/slider-item1.jpg" />
@@ -633,7 +633,6 @@
                           <li>Непрохідність жовчних шляхів</li>
                           <li>Ангіолохоліт</li>
                         </ul>
-
                         <h3>Опорно-рухова система</h3>
                         <ul class="single-treatment-list checkmark-list">
                           <li>Артрити</li>
@@ -652,13 +651,266 @@
                       </div>
                     </div>
                     <div class="tab-content" id="tab-3">
-                      content #4
+                      <div class="single-infrastructure">
+                        <div class="entry-content">
+                          <h2>Інфраструктура санаторію Міротель</h2>
+                          <ul>
+                            <li>бювет мінеральних вод</li>
+                            <li>Спа-центр (фіто-бар, спортивний басейн 25 м., 2 басейни 9 і 12м., 2 ванни джакузі, 4
+                            </li>
+                            <li> сауни, дитячий басейн з водоспадом і гірками);</li>
+                            <li> паркінг, WI-FI, послуги пральні;</li>
+                            <li>розважальний центр (караоке, тематичні вечірки);</li>
+                            <li>солярій на терасі, сейф, room-service, служба консьєржа;</li>
+                            <li>екскурсійні програми, 5 кімнат для переговорів;</li>
+                            <li>Дитяча кімната для дітей від 5 до 11 років і від 2 до 4 років;</li>
+                            <li>Конференц-зал на 150 місць, бізнес-центр.</li>
+                          </ul>
+                        </div>
+                        <div class="single-infrastructure__tabs tabs">
+                          <ul class="tabs-list tabs-ul d-flex align-middle">
+                            <li class="tabs-list__item">
+                              <a onclick="front.openTab(this, 'infrastructure-0','.tabs')"
+                                class="btn btn-link tabs-list__item_link tab-links active">Все фотографии</a>
+                            </li>
+                            <li class="tabs-list__item">
+                              <a onclick="front.openTab(this, 'infrastructure-1','.tabs')"
+                                class="btn btn-link tabs-list__item_link tab-links">Отель</a>
+                            </li>
+                            <li class="tabs-list__item">
+                              <a onclick="front.openTab(this, 'infrastructure-2','.tabs')"
+                                class="btn btn-link tabs-list__item_link tab-links tab-treatment">SPA-Центр</a>
+                            </li>
+                            <li class="tabs-list__item">
+                              <a onclick="front.openTab(this, 'infrastructure-3','.tabs')"
+                                class="btn btn-link tabs-list__item_link tab-links">Рестораны и бары</a>
+                            </li>
+                            <li class="tabs-list__item">
+                              <a onclick="front.openTab(this, 'infrastructure-4','.tabs')"
+                                class="btn btn-link tabs-list__item_link tab-links">Детская комната</a>
+                            </li>
+                          </ul>
+                          <div class="tabs-wrap">
+                            <div class="tab-content active" id="infrastructure-0">
+                              <div class="single-infrastructure-gallery">
+                                <div class="single-infrastructure__item default-icon">
+                                  <img src="./img/slider-item2.jpg" alt="">
+                                </div>
+                                <div class="single-infrastructure__item default-icon">
+                                  <img src="./img/slider-item1.jpg" alt="">
+                                </div>
+                                <div class="single-infrastructure__item default-icon">
+                                  <img src="./img/slider-item2.jpg" alt="">
+                                </div>
+                                <div class="single-infrastructure__item default-icon">
+                                  <img src="./img/slider-item1.jpg" alt="">
+                                </div>
+                                <div class="single-infrastructure__item default-icon">
+                                  <img src="./img/slider-item2.jpg" alt="">
+                                </div>
+                                <div class="single-infrastructure__item default-icon">
+                                  <img src="./img/slider-item1.jpg" alt="">
+                                </div>
+                                <div class="single-infrastructure__item default-icon">
+                                  <img src="./img/slider-item2.jpg" alt="">
+                                </div>
+                                <div class="single-infrastructure__item default-icon">
+                                  <img src="./img/slider-item2.jpg" alt="">
+                                </div>
+                                <div class="single-infrastructure__item default-icon">
+                                  <img src="./img/slider-item1.jpg" alt="">
+                                </div>
+                                <div class="single-infrastructure__item default-icon">
+                                  <img src="./img/slider-item2.jpg" alt="">
+                                </div>
+                                <div class="single-infrastructure__item default-icon">
+                                  <img src="./img/slider-item1.jpg" alt="">
+                                </div>
+                                <div class="single-infrastructure__item default-icon">
+                                  <img src="./img/slider-item1.jpg" alt="">
+                                </div>
+                                <div class="single-infrastructure__item default-icon">
+                                  <img src="./img/slider-item2.jpg" alt="">
+                                </div>
+                                <div class="single-infrastructure__item default-icon">
+                                  <img src="./img/slider-item1.jpg" alt="">
+                                </div>
+                              </div>
+                              <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1094.3520320230064!2d23.505087677095393!3d49.279761542370025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473a49ad2e80b745%3A0xf745ac3f7e6272d4!2z0KLRgNGD0YHQutCw0LLQtdGGLCDQm9GM0LLQvtCy0YHQutCw0Y8g0L7QsdC70LDRgdGC0YwsIDgyMjAw!5e0!3m2!1sru!2sua!4v1576490343899!5m2!1sru!2sua"
+                                style="border:0;" allowfullscreen=""></iframe>
+                            </div>
+                            <div class="tab-content" id="infrastructure-1">
+                              <div class="single-infrastructure-gallery">
+                                <div class="single-infrastructure__item default-icon">
+                                  <img src="./img/slider-item2.jpg" alt="">
+                                </div>
+                                <div class="single-infrastructure__item default-icon">
+                                  <img src="./img/slider-item1.jpg" alt="">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="tab-content" id="infrastructure-2">
+                              hi
+                            </div>
+                            <div class="tab-content" id="infrastructure-3">
+                              4
+                            </div>
+                            <div class="tab-content" id="infrastructure-4">
+                              5
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
                     </div>
                     <div class="tab-content" id="tab-4">
-                      content #5
+                      <div class="single-testimonials">
+                        <div class="testimonials-comments">
+                          <div class="testimonials-comments__item d-flex flex-column">
+                            <div class="comment-meta d-flex align-middle">
+                              <div class="comment-author --bold">Олена</div>
+                              <div class="comment-date">27.01.20</div>
+                              <div class="comment-rate">
+
+                              </div>
+                            </div>
+                            <div class="comment-text">
+                              Цей санаторій — просто казка! Одне задоволення було знаходитись тут протягом тих
+                              романтичних 14 днів, які ми були тут з моїм чоловіком. Сподобались номера, нічого не тече,
+                              немає грибка, привітний та приємний персонал, особливо сподобалось, номери прибирали
+                              зранку та ввечері. Одним словом — супер! Обов’язково приїдемо сюди ще не один раз. Хотіла
+                              би передати привіт Оксані — це наша прибиральниця. Дуже мила жіночка, дякуємо за супер
+                              уік-енд!
+                            </div>
+                          </div>
+                        </div>
+                        <div class="testimonials-form">
+                          <form action="">
+                            <div class="testimonials-form__heading --medium">
+                              Для того, щоб залишити відгук, заповніть усі поля відмічені *
+                            </div>
+                            <div class="testimonials-form__rating rating">
+                              <input type="radio" id="rating-5" name="rating" value="5" /><label class="icon-star"
+                                for="rating-5"></label>
+                              <input type="radio" id="rating-4" name="rating" value="4" /><label class="icon-star"
+                                for="rating-4"></label>
+                              <input type="radio" id="rating-3" name="rating" value="3" /><label class="icon-star"
+                                for="rating-3"></label>
+                              <input type="radio" id="rating-2" name="rating" value="2" /><label class="icon-star"
+                                for="rating-2"></label>
+                              <input type="radio" id="rating-1" name="rating" value="1" /><label class="icon-star"
+                                for="rating-1"></label>
+                            </div>
+                            <div class="testimonials-form__inputs">
+                              <div class="form-m-row d-flex">
+                                <div class="form-column col-lg-6 col-sm-12 form-control">
+                                  <input type="text" class="form-input" name="testimonial_pib" placeholder="*ПІБ"
+                                    required>
+                                  <p>*Заповність будь ласка це поле</p>
+                                </div>
+                                <div class="form-column col-lg-6 col-sm-12 form-control">
+                                  <div class="error-ms">
+                                    <input type="email" class="form-input" name="testimonial_email" placeholder="Email"
+                                      required>
+                                    <p>*Введіть будь ласка корректний Email</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="form-control">
+                                <textarea name="testimonial_text" class="form-textarea" cols="40" rows="10"
+                                  placeholder="Коментар" required></textarea>
+                                <p>*Заповність будь ласка це поле</p>
+                              </div>
+                            </div>
+                            <input type="submit" class="testimonials-form__submit btn btn-primary"
+                              value="Залишити відгук">
+                          </form>
+                        </div>
+                      </div>
                     </div>
-                    <div class="tab-content" id="tab-5">
-                      content #6
+                    <div class="tab-content active" id="tab-5">
+                      <ul class="single-faq"> 
+                        <li class="faq__item">
+                          <div class="faq__item_heading">
+                            Як доїхати, чим добратися? 
+                            <i class="faq__item_arrow"></i>
+                          </div>
+                          <div class="faq__item_content">
+                            У Трускавець поїздом Київ Трускавець або Дніпро Трускавець, у вагона Вас зустріне трансфер,
+                            який доставить прямо до готелю. Найближчий аеропорт і обласний центр, Львів-100км. Зі Львова
+                            до Трускавця можна доїхати автобусом (тривалість 1,45 хв) або замовити трансфер.
+                          </div>
+                        </li>
+                        <li class="faq__item">
+                          <div class="faq__item_heading">
+                            Де знаходиться санаторій / отель?
+                            <i class="faq__item_arrow"></i>
+                          </div>
+                          <div class="faq__item_content">
+                            У Трускавець поїздом Київ Трускавець або Дніпро Трускавець, у вагона Вас зустріне трансфер,
+                            який доставить прямо до готелю. Найближчий аеропорт і обласний центр, Львів-100км. Зі Львова
+                            до Трускавця можна доїхати автобусом (тривалість 1,45 хв) або замовити трансфер.
+                          </div>
+                        </li>
+                        <li class="faq__item">
+                          <div class="faq__item_heading">
+                            Що лікують в отелі Міротель?
+                            <i class="faq__item_arrow"></i>
+                          </div>
+                          <div class="faq__item_content">
+                            У Трускавець поїздом Київ Трускавець або Дніпро Трускавець, у вагона Вас зустріне трансфер,
+                            який доставить прямо до готелю. Найближчий аеропорт і обласний центр, Львів-100км. Зі Львова
+                            до Трускавця можна доїхати автобусом (тривалість 1,45 хв) або замовити трансфер.
+                          </div>
+                        </li>
+                        <li class="faq__item">
+                          <div class="faq__item_heading">
+                            Яка вартість путівки?
+                            <i class="faq__item_arrow"></i>
+                          </div>
+                          <div class="faq__item_content">
+                            У Трускавець поїздом Київ Трускавець або Дніпро Трускавець, у вагона Вас зустріне трансфер,
+                            який доставить прямо до готелю. Найближчий аеропорт і обласний центр, Львів-100км. Зі Львова
+                            до Трускавця можна доїхати автобусом (тривалість 1,45 хв) або замовити трансфер.
+                          </div>
+                        </li>
+                        <li class="faq__item">
+                          <div class="faq__item_heading">
+                            Що входить у вартість путівки?
+                            <i class="faq__item_arrow"></i>
+                          </div>
+                          <div class="faq__item_content">
+                            У Трускавець поїздом Київ Трускавець або Дніпро Трускавець, у вагона Вас зустріне трансфер,
+                            який доставить прямо до готелю. Найближчий аеропорт і обласний центр, Львів-100км. Зі Львова
+                            до Трускавця можна доїхати автобусом (тривалість 1,45 хв) або замовити трансфер.
+                          </div>
+                        </li>
+                        <li class="faq__item">
+                          <div class="faq__item_heading">
+                            Чи можна курити у санаторії?
+                            <i class="faq__item_arrow"></i>
+                          </div>
+                          <div class="faq__item_content">
+                            У Трускавець поїздом Київ Трускавець або Дніпро Трускавець, у вагона Вас зустріне трансфер,
+                            який доставить прямо до готелю. Найближчий аеропорт і обласний центр, Львів-100км. Зі Львова
+                            до Трускавця можна доїхати автобусом (тривалість 1,45 хв) або замовити трансфер.
+                          </div>
+                        </li>
+                        <li class="faq__item">
+                          <div class="faq__item_heading">
+                            Яка вартість путівки?
+                            <i class="faq__item_arrow"></i>
+                          </div>
+                          <div class="faq__item_content">
+                            У Трускавець поїздом Київ Трускавець або Дніпро Трускавець, у вагона Вас зустріне
+                            трансфер,
+                            який доставить прямо до готелю. Найближчий аеропорт і обласний центр, Львів-100км. Зі
+                            Львова
+                            до Трускавця можна доїхати автобусом (тривалість 1,45 хв) або замовити трансфер.
+                          </div>
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </div>
@@ -716,7 +968,7 @@
             <ul class="sidenav">
               <li class="sidenav__section">
                 <a class="sidenav__toggle" href="javascript:void(0);">Санаторії Трускавця <i
-                    class="navOpen icon-arrow-bottom navOpen"></i></a>
+                    class="navOpen icon-arrow-bottom"></i></a>
                 <ul class="sidenav-menu">
                   <li class="sidenav-menu__item"><a href="#">Міротель</a></li>
                   <li class="sidenav-menu__item"><a href="#">Карпати</a></li>
