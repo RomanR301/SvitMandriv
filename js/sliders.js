@@ -12,6 +12,15 @@ jQuery(function () {
           prevNextButtons: true
       });
   }
+  let newsSlider = document.querySelector('.news-carousel') !== null;
+  let newsCarousel;
+  if (newsSlider) {
+    newsCarousel = front.newSlider('.news-carousel', {
+      cellAlign: 'left', 
+      prevNextButtons: true,
+    })
+  }
+
   let bannerCarousel = document.querySelector('.banner-carousel-desktop') !== null;
   let bannerSlider;
   if (bannerCarousel) {
