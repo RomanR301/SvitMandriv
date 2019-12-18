@@ -20,6 +20,16 @@ jQuery(function () {
       prevNextButtons: true,
     })
   }
+  let recomendationSlider = document.querySelector('.single-recomendation') !== null;
+  let recomendationCarousel;
+  if (recomendationSlider) {
+    recomendationCarousel = front.newSlider('.single-recomendation', {
+      cellAlign: 'left', 
+      prevNextButtons: true,
+    })
+  }
+
+  
 
   let bannerCarousel = document.querySelector('.banner-carousel-desktop') !== null;
   let bannerSlider;

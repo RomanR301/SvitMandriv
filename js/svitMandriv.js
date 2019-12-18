@@ -139,7 +139,6 @@ let modal = {
   },
 
   events: function () {
-
       $(document).on('click', '.modalTrigger', function (e) {
           e.preventDefault();
           let self = $(this),
