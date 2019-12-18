@@ -72,7 +72,6 @@
 }
 
 // SINGLE NEWS
-
 .single-news {
   margin: 36px 0;
   &-content {
@@ -83,7 +82,10 @@
         max-width: 100%
       }
     }
-    h1, h2, h3, blockquote {
+    blockquote {
+      margin: 36px auto 24px auto;
+    }
+    h1, h2, h3, blockquote { 
       text-align: center;
     }
     p {
@@ -242,5 +244,11 @@
         transform: rotate(180deg);
       }
     }
+  }
+}
+.page-heading {
+  margin: 60px 0 36px 0;
+  @media (max-width: $breakpoint-md) {
+    margin: 24px 0 8px 0;
   }
 }

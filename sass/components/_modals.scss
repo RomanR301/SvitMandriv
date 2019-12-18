@@ -17,61 +17,75 @@
   &__body {
     position: absolute;
     display: flex;
-    right: -55px;
+    right: 0;
     top: 0;
     bottom: 0;
     left: 0;
     overflow-y: hidden;
   }
+  &__close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40px;
+    height: 100%;
+    cursor: pointer;
+    &:before, &:after {
+      content: '';
+      display: block;
+      width: 18px;
+      height: 2px;
+      background: #fff;
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: rotate(45deg);
+      @include transition(.3);
+    }
+    &:after {
+      transform: rotate(-45deg);
+    }
+    &:hover {
+      &:before, &:after {
+        transform: rotate(-135deg);
+      }
+      &:after {
+        transform: rotate(-225deg);
+      }
+    }
+  }
   &__content {
     position: relative;
     margin: auto;
     width: 100%;
-    padding: 60px 8%;
     max-width: 700px;
     background: $whiteColor;
     color: $defaultTextColor;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
-    border-radius: 0;
-    &.table-sizes {
-      padding: 35px;
-      max-width: 75%;
-      margin: auto 60px 0 auto;
-      height: calc(100% - 60px);
-      background: #FFFFFF;
-      overflow-x: auto;
-      @media (max-width: $breakpoint-md) {
-        padding: 15px;
-        max-width: 100%;
-        margin: auto 0 0 0;
-        height: calc(100% - 60px);
-        background: #FFFFFF;
-        overflow-x: auto;
-      }
-    }
+    border-radius: 3px;
+    overflow: hidden;
+  }
+}
 
-    &::-webkit-scrollbar-track, .select-items::-webkit-scrollbar-track {
-      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-      border-radius: 0;
-      background-color: rgba(180, 152, 102, .25);
+.callback-modal {
+  width: 100%;
+  max-width: 480px;
+  &__header {
+    background: #B78131;
+    padding: 10px 0;
+    text-align: center;
+    color: $whiteColor;
+    position: relative;
+  }
+  &-content {
+    padding: 24px 30px 30px 30px;
+    @media (max-width: 400px) {
+      padding: 15px;
     }
-
-    &::-webkit-scrollbar, .select-items::-webkit-scrollbar {
-      width: 5px;
-      background-color: transparent;
-    }
-
-    &::-webkit-scrollbar-thumb, .select-items::-webkit-scrollbar-thumb {
-      border-radius: 0;
-      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-      background-color: #fff;
-    }
-    @media (max-width: 767px) {
-      margin: auto 15px;
-      padding: 30px 15px 15px 15px;
-      overflow-y: auto;
-      height: auto;
-      max-height: 100%;
-    }
+  }
+  &__title {
+    @include fontSize(12, 14);
+    line-height: 20px;
+    margin-bottom: 24px;
   }
 }

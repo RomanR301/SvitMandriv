@@ -714,7 +714,7 @@
           </div>
         </div>
         <div class="footer-contacts__callback d-flex align-middle align-center">
-          <button class="btn btn-spaced">ЗАМОВИТИ ЗВОРОТНІЙ ДЗВІНОК</button>
+          <button class="btn btn-spaced modalTrigger" data-modal="#callback-modal">ЗАМОВИТИ ЗВОРОТНІЙ ДЗВІНОК</button>
         </div>
       </div>
 
@@ -850,8 +850,44 @@
 
 
 
+  <div class="modal" id="callback-modal">
+    <div class="modal__body">
+      <div class="modal__content callback-modal">
+        <div class="callback-modal__header heading-5 --bold">
+          Зворотній звязок
+          <span class="modal__close"></span>
+        </div>
+        <div class="callback-modal-content">
+          <div class="callback-modal__title text-center">
+            Наші спеціалісти завжди на зв’язку та готові
+            допомогти з вибором! Залиште ваші дані для зв’язку
+          </div>
+          <div class="callback-form">
+            <form action="">
+              <div class="form-control error-ms">
+                <!-- add "error-ms class" to a input parent container if not valid -->
+                <input type="text" name="callback_name" class="form-input" placeholder="Ваше ім'я" required>
+                <p>*Заповність будь ласка це поле</p>
+              </div>
+              <div class="form-control error-ms">
+                <input type="tel" name="callback_phone" class="form-input" placeholder="Ваш телефон" required>
+                <p>*Введіть будь ласка корректний номер телефону</p>
+              </div>
+              <div class="form-control">
+                <input type="email" name="callback_email" class="form-input" placeholder="Ваш Email" required>
+                <p>*Введіть будь ласка корректний Email</p>
+              </div>
+              <div class="form-control">
+                <input type="submit" class="btn btn-primary form-submit" value="Забронювати тур">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-
+  
 
   <script src="js/libs/jquery-3.4.1.js"></script>
   <script src="js/libs/jquery.magnific-popup.min.js"></script>
