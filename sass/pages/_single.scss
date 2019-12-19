@@ -516,37 +516,40 @@
     }
   }
   & .flickity-prev-next-button {
-    top: -35px;
-    left: calc(50% + 16vw - 16px);
+    top: -28px;
+    left: calc(50% + 19% - 16px);
     bottom: unset;
     width: unset;
     height: unset;
     background: transparent;
-    @media (max-width: $breakpoint-lg) {
-      left: calc(50% + 20vw - 16px);
+    @media (max-width: $breakpoint-xl) {
+      left: calc(50% + 20% - 16px);
+      top: -26px;
     }
-    @media (max-width: $breakpoint-md) {
-      left: calc(50% + 25vw - 16px);
-      top: -34px;
+    @media (max-width: $breakpoint-lg) {
+      left: calc(50% + 30% - 16px);
+      top: -24px;
     }
     @media (max-width: $breakpoint-sm) {
-      left: calc(100% - 10% - 16px);
-      top: -34px;
+      left: calc(100% - 6% - 16px);
+    }
+    @media (max-width: 400px) {
+      top: -32px;
     }
     &:after {
       display: block;
       content: "\e904";
     }
     &.previous {
-      left: calc(50% - 16vw - 16px);
-      @media (max-width: $breakpoint-lg) {
-        left: calc(50% - 20vw - 16px);
+      left: calc(50% - 19% - 16px);
+      @media (max-width: $breakpoint-xl) {
+        left: calc(50% - 20% - 16px);
       }
-      @media (max-width: $breakpoint-md) {
-        left: calc(50% - 25vw - 16px);
+      @media (max-width: $breakpoint-lg) {
+        left: calc(50% - 30% - 16px);
       }
       @media (max-width: $breakpoint-sm) {
-        left: calc(0% + 10% - 16px);
+        left: calc(0% + 6% - 16px);
       }
       &:after {
         display: block;

@@ -88,16 +88,18 @@
     left: 0;
     top: calc(50% - 24px);
     &:after {
-      content: '\e800'; 
+      content: "\e913";
+      display: block;
+      transform: rotate(90deg);
       color: $defaultTextColor;
-      font-size: 20px;
+      font-size: 22px;
     }
   }
   &.next {
     left: unset;
     right: 0;
     &:after {
-      content: '\e801';
+      transform: rotate(-90deg);
     }
   }
 }

@@ -31,13 +31,15 @@ let front = {
       if (!this.hamburger.hasClass('open')) {
           this.hamburger.addClass('open');
           this.nav.toggleClass('active');
-          this.hamburgerWrap.toggleClass('active')
+          this.hamburgerWrap.toggleClass('active');
+          $('body').addClass('preventScrolling');
       } else {
           this.hamburger.removeClass('open');
           this.nav.toggleClass('active');
           this.hamburgerWrap.toggleClass('active');
           this.subMenu.removeClass('open');
           this.subMenu.find('p.nav-title').remove();
+          $('body').removeClass('preventScrolling');
       }
   },
   navMouseOver: function () {
