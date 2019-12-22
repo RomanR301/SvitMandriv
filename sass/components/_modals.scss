@@ -3,7 +3,7 @@
 
 
 .modal {
-  display: none;
+  display: block;
   position: fixed;
   top: 0;
   right: 0;
@@ -67,12 +67,12 @@
   }
 }
 
-.callback-modal {
+.callback-modal, .reserve-modal {
   width: 100%;
   max-width: 480px;
   &__header {
     background: #B78131;
-    padding: 10px 0;
+    padding: 10px;
     text-align: center;
     color: $whiteColor;
     position: relative;
@@ -88,4 +88,56 @@
     line-height: 20px;
     margin-bottom: 24px;
   }
+}
+
+.reserve-modal {
+  &__header {
+    padding: 16px;
+  }
+  &__title {
+    @include fontSize(16, 24);
+    line-height: 1.64;
+  }
+  &__form {
+    padding: 18px 30px 25px 30px;
+  }
+}
+
+.agreement {
+  &-checkbox {
+    position: relative;
+    &__input {
+      display: none;
+    }
+    &__name {
+      span {
+        margin-right: 8px;
+        width: 16px;
+        height: 16px;
+        background-color: $darkYellowColor;
+        border: none;
+        border-radius: 2px;
+        @include transition(.3);
+        position: relative;
+        &:before {
+          content: "\e918";
+          color: #b78131;
+          font-family: 'icomoon';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          font-size: 10px;
+          color: $whiteColor;
+          opacity: 0;
+          @include transition(.3);
+        }
+      }
+    }
+  }
+}
+
+.agreement-checkbox [type="checkbox"]:checked + .agreement-checkbox__name span:before {
+  opacity: 1;
+  @include transition(.3);
 }

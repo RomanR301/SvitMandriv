@@ -25,6 +25,11 @@
   width: 100%;
 }
 
+.form-select {
+  width: 100%;
+}
+
+
 .error-ms {
   & input {
     border: 1px solid #E44242;
@@ -55,7 +60,6 @@
     width: 100%;
   }
 }
-
 
 .rating {
   unicode-bidi: bidi-override;
