@@ -44,13 +44,14 @@
     @include fontSize (12, 12);
     line-height: 20px;
     position: relative;
+    outline: none;
     &:before {
       content: '';
       position: absolute;
       width: 100%;
       border-bottom: 1px dashed #B78131;
       left: 0;
-      bottom: 0;
+      bottom: -1px;
     }
   }
   &-link {

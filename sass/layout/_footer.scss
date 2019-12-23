@@ -147,6 +147,7 @@
     &__company, &__madeBy {
       color: #A29FA2;
       @include fontSize (12, 14);
+      cursor: pointer;
     }
     &__madeBy {
       @media (max-width: $breakpoint-sm) {

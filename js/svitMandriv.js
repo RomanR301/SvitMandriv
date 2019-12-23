@@ -76,11 +76,9 @@ let front = {
       for (i = 0; i < tab_links.length; i++) {
           tab_links[i].className = tab_links[i].className.replace(" active", "");
       }
-
       document.getElementById(tabName).style.display = "block";
       $(element).addClass('active');
   },
-
   events: function () {
       let self = this;
       $(document).on('click', '.hamburger-wrap', function () {
@@ -89,6 +87,7 @@ let front = {
       });
       $(document).on('click', '.open-treatment', function(){
         $('.tab-treatment').click();
+        $('.treatment-carousel').flickity('resize');
       })
 
       let langToggle = document.querySelector('.lang-select-wrapper') !== null;
@@ -263,3 +262,20 @@ $(document).on('click', '.faq__item_heading', function (){
         $this.next().slideToggle(350); 
     }
 });
+
+$(document).on('click', '.rooms-info-accordion__item', function (){
+    var $this = $(this);
+    var $thisContent = $this.parent().parent().parent().parent().parent().find('.item-content');
+    var $content = $this.parent().parent().parent().parent().parent().parent().find('.item-content');
+    if ($thisContent.hasClass('show')) {
+        $thisContent.removeClass('show')
+        $thisContent.slideUp(350);
+        
+    } else {
+        $content.removeClass('show');
+        $content.slideUp(350);
+        $thisContent.toggleClass('show');
+        $thisContent.slideToggle(350);
+    }
+});
+

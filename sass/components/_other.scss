@@ -1,0 +1,22 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+// carousel arrows
+
+.carousel-arrow {
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  & i {
+    &:before {
+      display: block;
+      font-size: 24px;
+    }
+  }
+  &.--prev {
+    & i:before {
+      transform: rotate(-180deg);
+    }
+  }
+}

@@ -272,44 +272,177 @@
 // TABS (PRICES AND ROOMS)
 
 .single-rooms {
-  
+  &__item {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.16);
+    border-radius: 6px;
+    padding: 24px;
+    margin-bottom: 16px;
+    & .mr-15 {
+      margin-right: 15px;
+    }
+    & .pl-15 {
+      padding-left: 15px;
+      @media (max-width: $breakpoint-md) {
+        padding: 0;
+      }
+    }
+  }
+  & .rooms {
+    &-carousel {
+      &-main {
+        margin-right: 15px;
+        width: 100%;
+        height: 180px;
+        & .flickity-prev-next-button {
+          background: rgba(255, 255, 255, 0.7);
+          width: 24px;
+          height: 24px;
+          top: calc(50% - 12px);
+          &:hover {
+            background: #fff;
+          }
+          &:after {
+            font-size: 13px;
+            color: #B78131
+          }
+          &.previous:after {
+            margin: 0 3px 3px 0;
+          }
+          &.next:after {
+            margin: 0 0px -3px 3px;
+          }
+        }
+        &__item {
+          width: 100%;
+          height: 100%;
+          position: relative;
+          cursor: pointer;
+        }
+      }
+      &-nav {
+        @media (max-width: $breakpoint-md) {
+          display: none;
+        }
+        &__item {
+          width: 24.5%;
+          height: 90px;
+          padding: 0 15px;
+          border-radius: 3px;
+          cursor: pointer;
+          & a {
+            display: block;
+            height: 100%;
+          }
+        }
+      }
+    }
+    &-info {
+      padding: 9px 0 0 15px;
+      @media (max-width: $breakpoint-md) {
+        padding: 9px 0 0 0;
+      }
+      &__main {
+        padding-bottom: 9px;
+      }
+      &__price {
+        padding-left: 12px;
+        color: $darkYellowColor;
+      } 
+      &__benefits {
+        & .rooms-benefits-list__item {
+          padding: 0 10px 10px 0;
+        }
+      }
+      &-accordion {
+        &__item {
+          @include fontSize (12, 14);
+          margin: 0 24px 12px 0
+        }
+      }
+    }
+  }
+  & .item {
+    &-content {
+      margin-top: 24px;
+      display: none;
+      & h2 {
+        @include fontSize(14, 18);
+        line-height: 1.32;
+        margin-bottom: 8px;
+        font-weight: 500;
+      }
+      & h3 {
+        @include fontSize(14, 16);
+        line-height: 1.64;
+        margin-bottom: 6px;
+        font-weight: 500;
+      }
+      & h4 {
+        @include fontSize(12, 14);
+        line-height: 1.6;
+        margin-bottom: 4px;
+        font-weight: 500;
+      }
+    }
+    &-table {
+      border: 1px solid $darkYellowColor;
+      width: 100%;
+    }
+    &-info {  
+      & ul {
+        & li:before {
+          background: #B78131;
+        }
+      }
+      & ol {
+        & li:before {
+          color: #B78131;
+        }
+      }
+    }
+    &-benefits {
+      &-list {
+        &__item {
+          margin: 0 13px 13px 0;
+        }
+      }
+    }
+  }
 }
+
 
 // TABS (TREATMENT)
-
-.single-treatment-carousel__item {
-  width: 24%;
-  height: 120px;
-  object-fit: cover;
-  margin-right: 10px;
-}
-.single-treatment-carousel.is-fullscreen .carousel-image {
-  height: auto;
-  max-height: 100%;
-}
-
-.carousel-image {
-  width: 24%;
-  height: 170px;
-  display: block;
-  object-fit: cover;
-  /* set min-width, allow images to set cell width */
-  min-width: 150px;
-  max-width: 100%;
-  margin-right: 10px;
-  /* vertically center */
-  top: 50%;
-  transform: translateY(-50%)
-}
-
-.carousel.is-fullscreen .carousel-image {
-  height: auto;
-  width: auto;
-  max-height: 100%;
-}
-
-.flickity-enabled.is-fullscreen {
-  z-index: 9;
+.treatment-carousel {
+  margin-bottom: 12px;
+  &__item {
+    width: 23.5%;
+    margin: 0 7.5px;
+    height: 118px;
+    & a {
+      display: block;
+      height: 100%;
+    }
+  }
+  .flickity-prev-next-button {
+    background: rgba(255, 255, 255, 0.7);
+    width: 24px;
+    height: 24px;
+    top: calc(50% - 12px);
+    &:hover {
+      background: #fff;
+    }
+    &:after {
+      font-size: 13px;
+      color: #B78131
+    }
+    &.previous:after {
+      margin: 0 3px 3px 0;
+    }
+    &.next:after {
+      margin: 0 0px -3px 3px;
+    }
+  }
 }
 
 .single-treatment {
@@ -468,6 +601,14 @@
 .single-recomendation {
   &__heading {
     margin-top: 36px;
+    & h4 {
+      padding: 0 24px;
+      @media (max-width: 400px) {
+        max-width: 70%;
+        margin: 0 auto;
+        text-align: center;
+      }
+    }
   }
   & .flickity-resize .categories-item {
     min-height: 100%;
@@ -501,45 +642,76 @@
     }
   }
   & .flickity-prev-next-button {
-    top: -28px;
-    left: calc(50% + 19% - 16px);
-    bottom: unset;
-    width: unset;
-    height: unset;
-    background: transparent;
-    @media (max-width: $breakpoint-xl) {
-      left: calc(50% + 20% - 16px);
-      top: -26px;
-    }
-    @media (max-width: $breakpoint-lg) {
-      left: calc(50% + 30% - 16px);
-      top: -24px;
-    }
-    @media (max-width: $breakpoint-sm) {
-      left: calc(100% - 6% - 16px);
-    }
-    @media (max-width: 400px) {
-      top: -32px;
-    }
-    &:after {
-      display: block;
-      content: "\e904";
-    }
-    &.previous {
-      left: calc(50% - 19% - 16px);
-      @media (max-width: $breakpoint-xl) {
-        left: calc(50% - 20% - 16px);
-      }
-      @media (max-width: $breakpoint-lg) {
-        left: calc(50% - 30% - 16px);
-      }
-      @media (max-width: $breakpoint-sm) {
-        left: calc(0% + 6% - 16px);
-      }
-      &:after {
-        display: block;
-        transform: rotate(180deg);
-      }
+    // opacity: 0;
+    // visibility: hidden;
+    // top: -28px;
+    // left: calc(50% + 19% - 16px);
+    // bottom: unset;
+    // width: unset;
+    // height: unset;
+    // background: transparent;
+    // @media (max-width: $breakpoint-xl) {
+    //   left: calc(50% + 20% - 16px);
+    //   top: -26px;
+    // }
+    // @media (max-width: $breakpoint-lg) {
+    //   left: calc(50% + 30% - 16px);
+    //   top: -24px;
+    // }
+    // @media (max-width: $breakpoint-sm) {
+    //   left: calc(100% - 6% - 16px);
+    // }
+    // @media (max-width: 400px) {
+    //   top: -32px;
+    // }
+    // &:after {
+    //   display: block;
+    //   content: "\e904";
+    // }
+    // &.previous {
+    //   left: calc(50% - 19% - 16px);
+    //   @media (max-width: $breakpoint-xl) {
+    //     left: calc(50% - 20% - 16px);
+    //   }
+    //   @media (max-width: $breakpoint-lg) {
+    //     left: calc(50% - 30% - 16px);
+    //   }
+    //   @media (max-width: $breakpoint-sm) {
+    //     left: calc(0% + 6% - 16px);
+    //   }
+    //   &:after {
+    //     display: block;
+    //     transform: rotate(180deg);
+    //   }
+    // }
+    // &.next:after {
+    //   transform: rotate(0deg);
+    // }
+  }
+}
+
+
+
+.carousel-hover {
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    background: rgba(0, 0, 0, 0.3);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    @include transition(.3);
+    pointer-events: none;
+  }
+  &:after {
+    content: '';
+    background: url('../../img/vektor/zoom-in.svg') no-repeat center;
+  }
+  &:hover {
+    &:before, &:after {
+      opacity: 1;
     }
   }
 }

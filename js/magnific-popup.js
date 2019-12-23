@@ -1,4 +1,4 @@
-$(".infrastructure-gallery").each(function(){
+$(".photo-gallery").each(function(){
   $(this).magnificPopup({
     delegate: "a",
     type: "image",

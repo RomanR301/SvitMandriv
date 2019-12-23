@@ -66,6 +66,9 @@
   line-height: 1.6;
 }
 
+.icon-check-symbol:before {
+  content: "\e900";
+}
 .icon-cheveron-down:before {
   content: "\e929";
   color: #fff;

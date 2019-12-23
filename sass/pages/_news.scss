@@ -133,9 +133,13 @@
     margin: 60px 0 10px 0;
   }
   &__heading {
-    @media (max-width: $breakpoint-sm) {
-      max-width: 60%;
-      text-align: center;
+    & h4 {
+      padding: 0 24px;
+      @media (max-width: 400px) {
+        max-width: 70%;
+        margin: 0 auto;
+        text-align: center;
+      }
     }
   }
   &__item {
@@ -207,43 +211,7 @@
     }
   }
   & .flickity-prev-next-button {
-    top: -35px;
-    left: calc(50% + 16vw - 16px);
-    bottom: unset;
-    width: unset;
-    height: unset;
-    background: transparent;
-    @media (max-width: $breakpoint-lg) {
-      left: calc(50% + 20vw - 16px);
-    }
-    @media (max-width: $breakpoint-md) {
-      left: calc(50% + 25vw - 16px);
-      top: -34px;
-    }
-    @media (max-width: $breakpoint-sm) {
-      left: calc(100% - 10% - 16px);
-      top: -34px;
-    }
-    &:after {
-      display: block;
-      content: "\e904";
-    }
-    &.previous {
-      left: calc(50% - 16vw - 16px);
-      @media (max-width: $breakpoint-lg) {
-        left: calc(50% - 20vw - 16px);
-      }
-      @media (max-width: $breakpoint-md) {
-        left: calc(50% - 25vw - 16px);
-      }
-      @media (max-width: $breakpoint-sm) {
-        left: calc(0% + 10% - 16px);
-      }
-      &:after {
-        display: block;
-        transform: rotate(180deg);
-      }
-    }
+    opacity: 0;
   }
 }
 .page-heading {

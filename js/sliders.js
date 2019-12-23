@@ -20,6 +20,13 @@ jQuery(function () {
       prevNextButtons: true,
     })
   }
+  $(document).on('click', '.--prev', function(){
+    $('.previous').click();
+  })
+  $(document).on('click', '.--next', function(){
+    $('.next').click();
+  })
+
   let recomendationSlider = document.querySelector('.single-recomendation') !== null;
   let recomendationCarousel;
   if (recomendationSlider) {
@@ -29,8 +36,10 @@ jQuery(function () {
     })
   }
 
+  $(document).on('click', '.--prev', function(){
+    $('.single-recomendation .previous').click();
+  })
   
-
   let bannerCarousel = document.querySelector('.banner-carousel-desktop') !== null;
   let bannerSlider;
   if (bannerCarousel) {
@@ -49,27 +58,42 @@ jQuery(function () {
     })
   }
 
-  let treatmentCarousel = document.querySelector('.single-treatment-carousel') !== null;
-  let treatmentSlider;
-  if (treatmentCarousel) {
-    treatmentSlider = front.newSlider('.single-treatment-carousel', {
-      cellAlign: 'left', 
-      prevNextButtons: true,
-      fullscreen: true
-    })
-  }
+  $(document).on('click', '.tab-treatment', function(){
+    let treatmentCarousel = document.querySelector('.treatment-carousel') !== null;
+    let treatmentSlider;
+    if (treatmentCarousel) {
+      treatmentSlider = front.newSlider('.treatment-carousel', {
+        cellAlign: 'left', 
+        prevNextButtons: true
+      })
+    }
+  })
 
-  let roomsMain = document.querySelectorAll('.rooms-main-carousel');
+
+  
+  let roomsMain = document.querySelectorAll('.rooms-carousel-main');
+  let roomsNav = document.querySelectorAll('.rooms-carousel-nav');
   for ( var i=0, len = roomsMain.length; i < len; i++ ) {
-      let productSlider = roomsMain[i];
-      new Flickity( productSlider, {
-          cellSelector: '.rooms-main-carousel__item',
+    for ( var i=0, len = roomsNav.length; i < len; i++ ) {
+      let roomsSlider = roomsMain[i];
+      let roomsSliderNav = roomsNav[i];
+      new Flickity( roomsSlider, {
+          cellSelector: '.rooms-carousel-main__item',
           cellAlign: 'left',
           contain: true,
           prevNextButtons: true,
           pageDots: false,
           wrapAround: true
+      }),
+      new Flickity (roomsSliderNav, {
+        asNavFor: roomsMain[i],
+        pageDots: false,
+        cellAlign: 'left',
+        wrapAround: true,
+        prevNextButtons: false,
+        draggable: false
       });
+    }
   }
 });
 
