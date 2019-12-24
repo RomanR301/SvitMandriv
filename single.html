@@ -538,11 +538,11 @@
                   <ul class="tabs-list tabs-ul d-flex align-middle">
                     <li class="tabs-list__item">
                       <a onclick="front.openTab(this, 'tab-0','.tabs')"
-                        class="btn btn-transparent tabs-list__item_link tab-links">Опис</a>
+                        class="btn btn-transparent tabs-list__item_link active tab-links">Опис</a>
                     </li>
                     <li class="tabs-list__item">
-                      <a onclick="front.openTab(this, 'tab-1','.tabs')"
-                        class="btn btn-transparent tabs-list__item_link active tab-links">Ціни та номери</a>
+                      <a href="#hotels" onclick="front.openTab(this, 'tab-1','.tabs')"
+                        class="btn btn-transparent tabs-list__item_link tab-links tab-rooms">Ціни та номери</a>
                     </li>
                     <li class="tabs-list__item">
                       <a onclick="front.openTab(this, 'tab-2','.tabs')"
@@ -562,7 +562,7 @@
                     </li>
                   </ul>
                   <div class="tabs-wrap">
-                    <div class="tab-content" id="tab-0">
+                    <div class="tab-content active" id="tab-0">
                       <div class="single-description entry-content">
                         <h2>Загальна інформація про готельний комплекс Міротель (Mirotel) Трускавець</h2>
                         <p>Новий готельний комплекс Міротель (Mirotel)​ Трускавець відкрив свої двері в 2012 році і в
@@ -597,7 +597,7 @@
                           style="border:0;" allowfullscreen=""></iframe>
                       </div>
                     </div>
-                    <div class="tab-content active" id="tab-1">
+                    <div class="tab-content" id="tab-1">
                       <div class="single-rooms">
                         <div class="single-rooms__item">
                           <div class="row">
@@ -1561,11 +1561,11 @@
       </div>
       <div class="single-recomendation-wrap d-flex align-center">
         <div class="single-recomendation__heading d-flex align-middle">
-          <button class="carousel-arrow --prev d-flex align-middle align-center">
+          <button class="carousel-arrow --prev-single d-flex align-middle align-center">
             <i class="icon-slider-arrow-small"></i>
           </button>
           <h4 class="heading-4 --bold">Вам може сподобатись</h4>
-          <button class="carousel-arrow --next d-flex align-middle align-center">
+          <button class="carousel-arrow --next-single d-flex align-middle align-center">
             <i class="icon-slider-arrow-small"></i>
           </button>
         </div>

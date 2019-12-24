@@ -14,9 +14,34 @@
       font-size: 24px;
     }
   }
-  &.--prev {
+  &.--prev, &.--prev-single {
     & i:before {
       transform: rotate(-180deg);
+    }
+  }
+}
+
+
+.carousel-hover {
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    background: rgba(0, 0, 0, 0.3);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    @include transition(.3);
+    pointer-events: none;
+  }
+  &:after {
+    content: '';
+    background: url('../../img/vektor/zoom-in.svg') no-repeat center;
+  }
+  &:hover {
+    &:before, &:after {
+      opacity: 1;
     }
   }
 }
