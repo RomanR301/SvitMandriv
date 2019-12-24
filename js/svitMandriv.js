@@ -85,6 +85,7 @@ let front = {
           self.toggleNav();
         //   self.removeTitle();
       });
+
       $(document).on('click', '.open-treatment', function(){
         $('.tab-treatment').click();
         $('.treatment-carousel').flickity('resize');
@@ -159,6 +160,7 @@ let modal = {
           let self = '#' + $(this).closest('.modal').attr('id');
           modal.closeModal(self);
       });
+
   }
 };
 
@@ -167,17 +169,17 @@ jQuery(function () {
   front.init();
   modal.init();
 
-  let sidebar = document.querySelector('#sidebar') !== null;
-  if (sidebar) {
-        sidebar = new StickySidebar('#sidebar', {
-        containerSelector: '#main-content',
-        innerWrapperSelector: '.sidebar__inner',
-        topSpacing: 10,
-        bottomSpacing: 10,
-        minWidth: 992,
-        resizeSensor: true
-        });
-    }
+//   let sidebar = document.querySelector('#sidebar') !== null;
+//   if (sidebar) {
+//         sidebar = new StickySidebar('#sidebar', {
+//         containerSelector: '#main-content',
+//         innerWrapperSelector: '.sidebar__inner',
+//         topSpacing: 10,
+//         bottomSpacing: 10,
+//         minWidth: 992,
+//         resizeSensor: true
+//         });
+//     }
 });
 
 
@@ -225,6 +227,17 @@ $(document).on('click', '.arrow', function (t) {
     });
 })
 
+$(document).click(function (e) {
+    e.stopPropagation();
+    var container = $(".secondary-menu-item");
+
+    //check if the clicked area is dropDown or not
+    if (container.has(e.target).length === 0) {
+        $('.sub-menu').removeClass('open');
+        container.removeClass('isOpen');
+    }
+})
+
 
 $(document).click(function(){
     if ($('.secondary-menu-item').hasClass('isOpen')){
@@ -237,6 +250,8 @@ $(document).click(function(){
 $(document).on('click', '.sidenav__toggle', function (e){
     e.preventDefault();
     var $this = $(this);
+    var $arrow = $this.find('.icon-arrow-bottom');
+    $this.parent().parent().find('.icon-arrow-bottom').removeClass('navOpen');
     if ($this.next().hasClass('show')) {
         $this.next().removeClass('show');
         $this.next().slideUp(350);
@@ -245,6 +260,7 @@ $(document).on('click', '.sidenav__toggle', function (e){
         $this.parent().parent().find('li .sidenav-menu').slideUp(350);
         $this.next().toggleClass('show');
         $this.next().slideToggle(350);
+        $arrow.addClass('navOpen');
     }
 });
 

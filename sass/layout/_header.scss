@@ -463,10 +463,14 @@
         right: 0;
       }
     }
+    & i {
+      padding: 0 8px;
+    }
     &.isOpen {
       background: $lightBrownColor;
-      & > a > i {
+      & > a > i:before {
         transform: rotate(180deg);
+        display: block;
       }
       & .secondary-menu-item {
         background: $lightBrownColor;
@@ -483,7 +487,7 @@
     font-weight: 600;
     display: flex;
     align-items: center;
-    padding: 12px 10px;
+    padding: 12px 0 12px 10px;
     & i {
       padding-left: 2px;
     }

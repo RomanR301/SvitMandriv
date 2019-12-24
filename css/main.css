@@ -1712,6 +1712,16 @@ input[type="search"]::-webkit-search-results-decoration {
   opacity: 1;
 }
 
+.sticky {
+  position: fixed;
+  z-index: 101;
+}
+
+.stop {
+  position: relative;
+  z-index: 101;
+}
+
 .container {
   max-width: 1320px;
   margin: auto;
@@ -3238,12 +3248,17 @@ input[type="search"]::-webkit-search-results-decoration {
   right: 0;
 }
 
+.secondary-menu-item i {
+  padding: 0 8px;
+}
+
 .secondary-menu-item.isOpen {
   background: #8E6954;
 }
 
-.secondary-menu-item.isOpen > a > i {
+.secondary-menu-item.isOpen > a > i:before {
   transform: rotate(180deg);
+  display: block;
 }
 
 .secondary-menu-item.isOpen .secondary-menu-item {
@@ -3264,7 +3279,7 @@ input[type="search"]::-webkit-search-results-decoration {
   font-weight: 600;
   display: flex;
   align-items: center;
-  padding: 12px 10px;
+  padding: 12px 0 12px 10px;
 }
 
 .secondary-menu a i {
@@ -4402,17 +4417,6 @@ html.is-flickity-fullscreen {
   }
 }
 
-.sidebar {
-  will-change: min-height;
-}
-
-.sidebar__inner {
-  transform: translate(0, 0);
-  /* For browsers don't support translate3d. */
-  transform: translate3d(0, 0, 0);
-  will-change: position, transform;
-}
-
 .single-categories {
   padding-top: 12px;
 }
@@ -4424,6 +4428,8 @@ html.is-flickity-fullscreen {
 }
 
 .single-categories__item {
+  display: flex;
+  align-items: center;
   border: 1px solid #B78131;
   border-radius: 3px;
   padding: 5px 8px;
@@ -4545,6 +4551,10 @@ html.is-flickity-fullscreen {
   cursor: pointer;
 }
 
+.single-rooms .rooms-carousel-main__item img {
+  border-radius: 3px;
+}
+
 @media (max-width: 767px) {
   .single-rooms .rooms-carousel-nav {
     display: none;
@@ -4562,6 +4572,10 @@ html.is-flickity-fullscreen {
 .single-rooms .rooms-carousel-nav__item a {
   display: block;
   height: 100%;
+}
+
+.single-rooms .rooms-carousel-nav__item img {
+  border-radius: 3px;
 }
 
 .single-rooms .rooms-info {
