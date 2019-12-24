@@ -2,13 +2,23 @@
 @import "../abstracts/variables";
 
 .footer {
+  position: relative;
+  &:before {
+    content: '';
+    background: linear-gradient(180deg, #FFFFFF 19.01%, rgba(255, 255, 255, 0.65) 57.4%, rgba(255, 255, 255, 0) 100%);
+    position: absolute;
+    width: 100%;
+    height: 70px;
+    left: 0;
+    top: -35px;
+  }
   &-contacts {
     padding-top: 80px;
     color: $defaultTextColor;
     background: url('../img/footer-top.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 1040px;
+    // height: 1040px;
     @media (max-width: $breakpoint-lg) {
       height: unset;
     }
@@ -28,9 +38,10 @@
     &__callback {
       margin-top: 300px;
       position: relative;
+      padding-bottom: 200px;
       @media (max-width: $breakpoint-lg) {
         margin-top: 0;
-        padding: 80px 0;
+        padding: 60px 0;
         position: relative;
       }
     }
@@ -150,6 +161,14 @@
       cursor: pointer;
     }
     &__madeBy {
+      line-height: 20px;
+      display: block; 
+        &:hover {
+          &:before {
+            display: none;
+          }
+        }
+      
       @media (max-width: $breakpoint-sm) {
         padding-top: 16px;
       }
@@ -167,6 +186,12 @@
     }
   }
 }
+
+.footer .footer-copyright__madeBy {
+  @include fontSize (12, 14);
+  letter-spacing: unset;
+}
+
 
 .footer-contacts__callback button:hover {
   & .footer-contacts__callback {

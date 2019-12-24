@@ -30,3 +30,30 @@
 @mixin order($number) {
   order: $number;
 }
+
+
+@mixin dividerBottom {
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    background: $whiteColor;
+    width: 100%;
+    height: 1px;
+    left: 0;
+    bottom: 0;
+  }
+}
+
+@mixin dividerRight {
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    background: $whiteColor;
+    width: 100%;
+    height: 1px;
+    left: 0;
+    bottom: 0;
+  }
+}

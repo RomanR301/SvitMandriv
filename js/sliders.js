@@ -79,6 +79,32 @@ jQuery(function () {
     $carousel.flickity('resize');
   })
 
+
+  // let roomsMain = document.querySelectorAll('.rooms-carousel-main');
+  // let roomsNav = document.querySelectorAll('.rooms-carousel-nav');
+  // for ( var i=0, len = roomsMain.length; i < len; i++ ) {
+  //   for ( var i=0, len = roomsNav.length; i < len; i++ ) {
+  //     let roomsSlider = roomsMain[i];
+  //     let roomsSliderNav = roomsNav[i];
+  //     new Flickity( roomsSlider, {
+  //         cellSelector: '.rooms-carousel-main__item',
+  //         cellAlign: 'left',
+  //         contain: true,
+  //         prevNextButtons: true,
+  //         pageDots: false,
+  //         wrapAround: true
+  //     }),
+  //     new Flickity (roomsSliderNav, {
+  //       asNavFor: roomsMain[i],
+  //       pageDots: false,
+  //       cellAlign: 'left',
+  //       wrapAround: true,
+  //       prevNextButtons: false,
+  //       draggable: false
+  //     });
+  //   }
+  // }
+
   $(document).on('click', '.tab-rooms', function(){
     let roomsMain = document.querySelectorAll('.rooms-carousel-main');
     let roomsNav = document.querySelectorAll('.rooms-carousel-nav');
@@ -105,7 +131,6 @@ jQuery(function () {
       }
     }
   });
-
 });
 
 

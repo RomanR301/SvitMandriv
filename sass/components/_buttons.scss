@@ -89,10 +89,14 @@
       background: $whiteColor;
       width: 100%;
       left: 0;
-      top: 50%;
+      top: 28px;
       height: 3px;
       z-index: -1;
       @include transition(.2);
+      pointer-events: none;
+      @media (max-width: $breakpoint-lg) {
+        top: 50%;
+      }
     }
     &:hover {
       background: transparent;

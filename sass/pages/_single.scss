@@ -234,7 +234,7 @@
       padding-right: 10px;
     }
   }
-  & .row:nth-child(3) {
+  & .single-container {
     display: flex;
     flex-direction: column;
   }
@@ -385,10 +385,6 @@
         font-weight: 500;
       }
     }
-    &-table {
-      border: 1px solid $darkYellowColor;
-      width: 100%;
-    }
     &-info {  
       & ul {
         & li:before {
@@ -410,6 +406,115 @@
     }
   }
 }
+
+// TABS (PRICES AND ROOMS) TABLE
+.table-tabs {
+  & > .row {
+    @media (max-width: $breakpoint-lg) {
+      flex-direction: column-reverse;
+    }
+  }
+  & .tabs-list {
+    &__heading {
+      width: 100%;
+      height: 54px;
+      color: $whiteColor;
+      background: $darkYellowColor;
+    }
+    &__item {
+      width: 100%;
+      &_link {
+        display: block;
+        border-radius: 0;
+        margin: 0;
+        border: none;
+        border-bottom: 1px solid #B78131;
+        border-left: 1px solid #B78131;
+        border-right: 1px solid #B78131;
+      }
+    }
+    &__item:nth-child(2) {
+      & a {
+        border-top: 1px solid #B78131;
+      }
+    }
+  }
+  & .tabs-wrap {
+    margin-right: 20px;
+    @media (max-width: $breakpoint-lg) {
+      margin: 0;
+    }
+  }
+}
+
+.price {
+  &-table {
+    &__row {
+      text-align: center;
+      border-bottom: 1px solid #EEEEEE;
+      overflow: hidden;
+      &.--header {
+        background: $darkYellowColor;
+        & .price-item {
+          color: $whiteColor;
+          &__name, &__date {
+            color: $whiteColor;
+          }
+        }
+      }
+      & .price-item:first-child {
+        background: $darkYellowColor;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+    }
+  }
+  &-item {
+    @include grid-size(33.33%);
+    position: relative;
+    padding: 7px 8px;
+    min-height: 55px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &:before {
+      content: '';
+      position: absolute;
+      top: -100px;
+      right: 0;
+      width: 1px;
+      height: 500px;
+      background: #EEEEEE;
+    }
+    &__name {
+      @include fontSize(12, 14);
+      line-height: 20px;
+      padding-bottom: 2px;
+      color: $defaultTextColor
+    }
+    &__date {
+      font-weight: 500;
+      @include fontSize(12, 14);
+      line-height: 20px;
+      color: $defaultTextColor
+    }
+  }
+}
+
+
+
+
+.dividerBottom {
+  @include dividerBottom;
+}
+
+.dividerRight {
+  @include dividerRight;
+}
+
+
 
 
 // TABS (TREATMENT)

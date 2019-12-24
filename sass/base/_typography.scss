@@ -66,6 +66,12 @@
   line-height: 1.6;
 }
 
+.icon-people:before {
+  content: "\e901";
+  color: #fff;
+  font-size: 24px;
+}
+
 .icon-check-symbol:before {
   content: "\e900";
 }
