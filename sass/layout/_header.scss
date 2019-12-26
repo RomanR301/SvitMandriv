@@ -161,6 +161,11 @@
           display: block;
           max-width: calc(100% - 80px);
           object-fit: contain;
+          @media (max-width: 440px) {
+            max-width: unset;
+            display: block;
+            width: 230px;
+          }
         }
       }
     }

@@ -1,0 +1,94 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+// Contacts page
+.contacts, .other {
+  margin: 40px 0;
+  &-form {
+    &__heading {
+      margin-bottom: 24px;
+    }
+    &__inputs {
+      margin-right: 15px;
+      & .form-control:last-child {
+        margin: 0;
+      }
+      @media (max-width: $breakpoint-md) {
+        margin: 0 0 16px 0;
+      }
+    }
+    &__textarea {
+      & textarea {
+        @media (max-width: $breakpoint-md) {
+          height: 200px;
+        }
+      }
+    }
+    &__submit {
+      margin-top: 16px;
+    }
+  }
+}
+
+// Payment page
+
+.payment {
+  &-form {
+    &__heading {
+      padding-bottom: 15px;
+    }
+    &__card {
+      @media (max-width: $breakpoint-lg) {
+        padding-top: 14px;
+      }
+    }
+    &__inputs {
+      @media (max-width: $breakpoint-lg) {
+        padding-top: 28px;
+      }
+    }
+  }
+}
+
+// 404 page
+.other-page {
+  height: calc(100vh - 274px);
+  background: rgba(0, 0, 0, 0.2);
+  @media (max-width: $breakpoint-xl) {
+    height: calc(100vh - 200px);
+  }
+  @media (max-width: 440px) {
+    height: calc(100vh - 173px);
+  }
+  &__heading {
+    color: $whiteColor;
+    margin-bottom: 24px;
+  }
+  &__text {
+    color: $whiteColor;
+    margin-bottom: 36px;
+  }
+  &__back {
+    display: block;
+    border: 2px solid transparent;
+    &:hover {
+      background: #333333;
+      color: #ffffff;
+    }
+    &:before {
+      display: none;
+    }
+  }
+}
+
+.error-page {
+  & .other-page__heading {
+    @include fontSize (100, 200);
+    line-height: 120px;
+    margin-bottom: 36px;
+    @media (max-width: $breakpoint-md) {
+      line-height: 100px;
+      margin-bottom: 16px;
+    }
+  }
+}
