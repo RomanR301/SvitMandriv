@@ -127,10 +127,20 @@
       margin-bottom: 12px;
       & button {
         width: 100%;
+        &:hover {
+          background: #B76D00;
+          color: #fff;
+        }
       }
     }
     &__more {
       width: 100%;
+      &:hover {
+        padding: 8px 22px;
+        background: #fff;
+        border: 3px solid $darkYellowColor;
+        color: $darkYellowColor;
+      }
     }
   }
 }

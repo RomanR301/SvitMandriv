@@ -71,20 +71,6 @@
   }
 
   &.previous, &.next {
-    &:after {
-      content: "";
-      @include transition(.3);
-    }
-    &:hover {
-      // background: $darkYellowColor;
-      &:after {
-        // color: rgba(183, 129, 49, 0.1);
-        // color: rgba(183, 129, 49, 1);
-      }
-    }
-  }
-
-  &.previous, &.next {
     left: 0;
     top: calc(50% - 24px);
     &:after {
@@ -93,6 +79,13 @@
       transform: rotate(90deg);
       color: $defaultTextColor;
       font-size: 22px;
+      @include transition(.3);
+    }
+    &:hover {
+      background: $darkYellowColor;
+      &:after {
+        color: $whiteColor;
+      }
     }
   }
   &.next {

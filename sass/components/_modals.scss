@@ -124,15 +124,15 @@
         @include transition(.3);
         position: relative;
         &:before {
-          content: "\e918";
+          content: "\e902";
           color: #b78131;
           background: $darkYellowColor;
           font-family: 'icomoon';
           position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          font-size: 10px;
+          height: 100%;
+          width: 100%;
+          font-size: 8px;
+          padding: 2px 0 0 1px;
           opacity: 0;
           @include transition(.3);
         }
@@ -162,5 +162,6 @@
 
 .agreement-checkbox [type="checkbox"]:checked + .agreement-checkbox__name span:before {
   opacity: 1;
+  color: #fff;
   @include transition(.3);
 }
