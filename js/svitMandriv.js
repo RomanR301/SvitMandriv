@@ -106,9 +106,9 @@ let front = {
                   })
               }
               window.addEventListener('click', function(e) {
-                  const select = document.querySelector('.lang-select')
-                  if (!select.contains(e.target)) {
-                      select.classList.remove('open');
+                  const select1 = document.querySelector('.lang-select')
+                  if (!select1.contains(e.target)) {
+                      select1.classList.remove('open');
                   }
               });
           })
@@ -228,10 +228,7 @@ $(document).on('click', '.arrow', function (t) {
 })
 
 $(document).click(function (e) {
-    e.stopPropagation();
     var container = $(".secondary-menu-item");
-
-    //check if the clicked area is dropDown or not
     if (container.has(e.target).length === 0) {
         $('.sub-menu').removeClass('open');
         container.removeClass('isOpen');

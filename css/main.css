@@ -1402,11 +1402,11 @@ input[type=number] {
 }
 
 .seo {
-  margin: 60px 0;
+  margin: 30px 0;
 }
 
 .seo-component__title {
-  margin-bottom: 30px;
+  margin-bottom: 14px;
 }
 
 .seo-component .entry-content {
@@ -2501,7 +2501,7 @@ input[type=number] {
 }
 
 .footer-main {
-  padding: 160px 0 20px 0;
+  padding: 60px 0 20px 0;
   background: url("../img/footer-bottom.jpg");
   background-repeat: no-repeat;
   background-size: cover;
