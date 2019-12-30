@@ -6,6 +6,24 @@
   height: 100vh;
   color: $whiteColor;
   position: relative;
+  &.--single {
+    background: rgba(0, 0, 0, 0.4);
+    & .header-primary-screen {
+      padding-bottom: 80px;
+    }
+    & .primary-screen-title {
+      padding-bottom: 24px;
+    }
+    & .primary-screen__discount {
+      padding: 8px 24px;
+      background: $redColor;
+      border-radius: 100px;
+      color: $whiteColor;
+      display: inline;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
   &:after {
     content: '';
     display: block;

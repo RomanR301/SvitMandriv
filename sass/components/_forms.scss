@@ -123,15 +123,6 @@
   }
   
   /* the hidden clearer */
-  & > .star-cb-clear + label {
-    text-indent: -9999px;
-    width: .5em;
-    margin-left: -.5em;
-  }
-  & > .star-cb-clear + label:before {
-    width: .5em;
-  }
-
   &:hover > input + label:before {
     content: "\e928";
   }
