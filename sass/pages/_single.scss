@@ -75,6 +75,17 @@
   }
 }
 
+// #content {
+//   position: sticky;
+//   top: 0;
+//   &.isSticky {
+//     position: fixed;
+//     top: 0;
+//   }
+// }
+
+
+
 .sidenav {
   &__toggle {
     display: block;
@@ -82,21 +93,22 @@
     background-repeat: no-repeat;
     background-size: cover;
     padding: 10px;
-    pointer-events: none;
+    // pointer-events: none;
     color: $whiteColor;
     position: relative;
     @include fontSize(16, 18);
     line-height: 1.6;
-    font-weight: bold;
+    font-weight: 600;
     text-align: center;
     overflow: hidden;
     border-radius: 3px 3px 0px 0px;
     z-index: 1;
-    position: relative;
-    @media (max-width: $breakpoint-lg) {
-      padding: 14px;
-      pointer-events: all;
-    }
+    // position: sticky;
+    // top: 0;
+    // @media (max-width: $breakpoint-lg) {
+    //   padding: 14px;
+    //   pointer-events: all;
+    // }
     &:before {
       content: '';
       position: absolute;
@@ -108,7 +120,7 @@
       background: rgba(0, 0, 0, 0.5);
     }
     & i {
-      display: none;
+      // display: none;
       position: absolute;
       top: calc(50% - 8px);
       margin-left: 8px;
@@ -121,10 +133,11 @@
     }
   }
   &-menu {
+    display: none;
     padding-left: 24px;
-    @media (max-width: $breakpoint-lg) {
-      display: none;
-    }
+    // @media (max-width: $breakpoint-lg) {
+    //   display: none;
+    // }
   }
   &__section {
     margin-top: 15px;

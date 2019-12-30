@@ -4343,7 +4343,6 @@ html.is-flickity-fullscreen {
   background-repeat: no-repeat;
   background-size: cover;
   padding: 10px;
-  pointer-events: none;
   color: #ffffff;
   position: relative;
   font-size: 18px;
@@ -4351,19 +4350,11 @@ html.is-flickity-fullscreen {
   font-size: -moz-calc(16px + (18 - 16) * ((100vw - 300px) / (1900 - 300)));
   font-size: calc(16px + (18 - 16) * ((100vw - 300px) / (1900 - 300)));
   line-height: 1.6;
-  font-weight: bold;
+  font-weight: 600;
   text-align: center;
   overflow: hidden;
   border-radius: 3px 3px 0px 0px;
   z-index: 1;
-  position: relative;
-}
-
-@media (max-width: 991px) {
-  .sidenav__toggle {
-    padding: 14px;
-    pointer-events: all;
-  }
 }
 
 .sidenav__toggle:before {
@@ -4378,7 +4369,6 @@ html.is-flickity-fullscreen {
 }
 
 .sidenav__toggle i {
-  display: none;
   position: absolute;
   top: calc(50% - 8px);
   margin-left: 8px;
@@ -4395,13 +4385,8 @@ html.is-flickity-fullscreen {
 }
 
 .sidenav-menu {
+  display: none;
   padding-left: 24px;
-}
-
-@media (max-width: 991px) {
-  .sidenav-menu {
-    display: none;
-  }
 }
 
 .sidenav__section {
