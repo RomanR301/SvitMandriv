@@ -195,22 +195,22 @@
   }
 }
 
-.main .content {
-  @media (max-width: $breakpoint-lg) {
-    display: flex;
-    flex-direction: column-reverse;
-  }
+// .main .content {
+//   @media (max-width: $breakpoint-lg) {
+//     display: flex;
+//     flex-direction: column-reverse;
+//   }
+// }
+
+.sidebar{
+  will-change: min-height;
 }
 
-// .sidebar{
-//   margin-bottom: 200px;
-// }
-
-// .sidebar__inner{
-//   transform: translate(0, 0); /* For browsers don't support translate3d. */
-//   transform: translate3d(0, 0, 0);
-//   will-change: position, transform;
-// }
+.sidebar__inner{
+  transform: translate(0, 0); /* For browsers don't support translate3d. */
+  transform: translate3d(0, 0, 0);
+  will-change: position, transform;
+}
 
 // CONTENT
 .single {

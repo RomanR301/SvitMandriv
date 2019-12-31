@@ -4,10 +4,10 @@ window.addEventListener("load", function () {
 
 jQuery(function () {
   /*home*/
-  let primaryScreenCarousel = document.querySelector('.primary-screen-carousel') !== null;
+  let mainScreenCarousel = document.querySelector('.main-screen-carousel') !== null;
   let mainCarousel;
-  if (primaryScreenCarousel) {
-      mainCarousel = front.newSlider('.primary-screen-carousel', {
+  if (mainScreenCarousel) {
+      mainCarousel = front.newSlider('.main-screen-carousel', {
           cellAlign: 'left',
           prevNextButtons: true
       });

@@ -3,7 +3,6 @@
 
 .header {
   background-size: cover;
-  height: 100vh;
   color: $whiteColor;
   position: relative;
   &.--single {
@@ -35,15 +34,6 @@
     z-index: 1;
     background: rgba(0, 0, 0, 0.2);
   }
-  &-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: block;
-    z-index: -1;
-  }
   & .column {
     z-index: 11;
     @media (max-width: $breakpoint-xl) {
@@ -71,6 +61,12 @@
     }
     & .column {
       z-index: 13;
+      &:first-child {
+        @media (max-width: $breakpoint-xl) {
+          display: flex;
+          justify-content: center;
+        }
+      }
     }
   }
 
@@ -175,7 +171,7 @@
       position: relative;
       padding: 16px 0 15px 0;
       & .column {
-        justify-content: flex-start;
+
         & img {
           display: block;
           max-width: calc(100% - 80px);
@@ -183,7 +179,7 @@
           @media (max-width: 440px) {
             max-width: unset;
             display: block;
-            width: 230px;
+            width: 200px;
           }
         }
       }
@@ -208,83 +204,6 @@
         display: none;
         z-index: 22;
       }
-    }
-    &-screen {
-      @media (max-width: $breakpoint-xl) {
-        margin-top: 40px;
-      }
-      & .primary-screen-subtitle {
-        padding-top: 15px;
-      }
-      & .primary-screen-carousel {
-        @media (max-width: $breakpoint-xl) {
-          display: none;
-        }
-      }
-      & .primary-carousel {
-        &__item {
-          position: relative;
-          width: 100%;
-        }
-        &__image img {
-          height: 360px;
-          object-fit: cover;
-          border-radius: 5px;
-          @media (max-width: $breakpoint-xl) {
-            height: 450px;
-          }
-        }
-        &-info {
-          padding-left: 22px;
-          position: absolute;
-          bottom: 0;
-          width: 100%;
-          height: 50%;
-          &:after {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 50.52%, rgba(0, 0, 0, 0) 100%);
-            border-radius: 5px 5px 0px 0px;
-            transform: rotate(-180deg);
-            z-index: -1;
-          }
-        }
-        &__title {
-          padding: 50px 0 8px 0;
-          max-width: 60%;
-          z-index: 3;
-          color: $whiteColor;
-        }
-        &__more {
-          padding-left: 40px;
-          color: $whiteColor;
-          &:before {
-            content: '';
-            width: 30px;
-            height: 2px;
-            background: $whiteColor;
-            position: absolute;
-            left: 0;
-            top: 50%;
-            @include transition (.3);
-          }
-          &:hover {
-            &:before {
-              left: -5px;
-            }
-          }
-        }
-      }
-    }
-  }
-  &-bottom {
-    background: rgba(32, 15, 21, .7);
-    @media (max-width: $breakpoint-xl) {
-      display: none;
     }
   }
   &-mobile {
@@ -416,107 +335,9 @@
   }
 }
 
-// TOP MENU ON DESKTOP
-.header-primary-navigation {
-  & .primary-menu {
-    & .menu-item {
-      z-index: 2;
-      padding: 12px 6px;
-      position: relative;
-      &:first-child {
-        padding-left: 0;
-      }
-      &:last-child {
-        padding-right: 0;
-      }
-      & a {
-        color: $whiteColor;
-        @include fontSize (14, 18);
-        line-height: 1.5;
-        font-weight: 600;
-        &:before {
-          content: '';
-          position: absolute;
-          bottom: 10px;
-          left: 50%;
-          -webkit-transform: translate(-50%, 0);
-          -ms-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
-          width: 0;
-          height: 2px;
-          background-color: $whiteColor;
-          @include transition (.3);
-        }
-        &:hover {
-          &:before {
-            width: 100%;
-          }
-        } 
-      }
-    }
-  }
-}
 
 
-// BOTTOM MENU ON DESKTOP
-.header-secondary-navigation {
-  width: 100%;
-}
 
-.secondary-menu {
-  .sub-menu {
-    opacity: 0;
-    visibility: hidden;
-    position: absolute;
-    width: 100%;
-    left: 0;
-    min-width: 200px;
-    @include transition(.3);
-    top: 50px;
-    &.open {
-    opacity: 1;
-    visibility: visible;
-    }
-  }
-  &-item {
-    @include transition(.3);
-    position: relative;
-    &:last-child {
-      & .sub-menu {
-        left: unset;
-        right: 0;
-      }
-    }
-    & i {
-      padding: 0 8px;
-    }
-    &.isOpen {
-      background: $lightBrownColor;
-      & > a > i:before {
-        transform: rotate(180deg);
-        display: block;
-      }
-      & .secondary-menu-item {
-        background: $lightBrownColor;
-        &:hover {
-          background: $darkBrownColor;
-        }
-      }
-    }
-  }
-  & a {
-    color: $whiteColor;
-    @include fontSize (14, 18);
-    line-height: 1.5;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    padding: 12px 0 12px 10px;
-    & i {
-      padding-left: 2px;
-    }
-  }
-}
 
 // HEADER MOBILE
 .header-mobile {
@@ -742,16 +563,16 @@
     width: 25px;
     height: 25px;
     right: calc(50% - 12.5px);
-    top: calc(50% - 8px);
+    top: 27px;
     display: block;
     position: absolute;
     &-wrap {
       background: $lightBrownColor;
       position: absolute;
-      top: 0;
-      right: 0;
-      height: 100%;
-      width: 50px;
+      top: calc(50% - 24px);
+      left: 0;
+      height: 48px;
+      width: 48px;
       z-index: 1000;
       cursor: pointer;
       transition: 0.3s;

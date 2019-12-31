@@ -189,7 +189,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     let childrenItem = document.querySelectorAll('.menu-item-has-children > a');
     for (let i = 0; i < childrenItem.length; i++) {
-        //console.log(childrenItem[i]);
         var btn = document.createElement("BUTTON");   // Create a <button> element
         btn.className = "nav-btn";                    // add class
         btn.innerHTML = `<i class="icon-arrow-bottom"></i>`;

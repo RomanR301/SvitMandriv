@@ -1,0 +1,11 @@
+{
+    "version": 3,
+    "mappings": "AAGA,AAAA,YAAY,CAAC;EACX,MAAM,EAAE,mBAAmB;CAC5B",
+    "sources": [
+        "../sass/components/main-screen.scss",
+        "../sass/abstracts/_mixins.scss",
+        "../sass/abstracts/_variables.scss"
+    ],
+    "names": [],
+    "file": "main-screen.css"
+}
