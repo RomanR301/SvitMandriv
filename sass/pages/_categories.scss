@@ -12,7 +12,7 @@
   }
   &-heading {
     position: relative;
-    padding: 40px 0;
+    padding: 24px 0 40px 0;
     &__background { 
       @media (max-width: $breakpoint-md) {
         img {
@@ -134,12 +134,25 @@
       }
     }
     &__more {
+      position: relative;
       width: 100%;
+      display: block;
+      &:before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        border: 0px solid transparent;
+        @include transition(.3);
+      }
       &:hover {
-        padding: 8px 22px;
         background: #fff;
-        border: 3px solid $darkYellowColor;
         color: $darkYellowColor;
+        &:before {
+          border: 2px solid $darkYellowColor;
+        }
       }
     }
   }

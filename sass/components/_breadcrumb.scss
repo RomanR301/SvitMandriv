@@ -1,8 +1,14 @@
 @import "../abstracts/mixins";
 @import "../abstracts/variables";
 
+
+
 .breadcrumb {
   margin: 24px 0 30px 0;
+}
+
+.categories .breadcrumb {
+  margin: 24px 0 0 0;
 }
 
 .breadcrumb li {
