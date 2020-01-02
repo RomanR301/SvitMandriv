@@ -37,7 +37,7 @@ let front = {
           this.hamburger.removeClass('open');
           this.nav.toggleClass('active');
           this.hamburgerWrap.toggleClass('active');
-          this.subMenu.removeClass('open');
+          this.subMenu.removeClass('menuOpen');
           this.subMenu.find('p.nav-title').remove();
           $('body').removeClass('preventScrolling');
       }
@@ -200,19 +200,19 @@ $(document).on('click', '.nav-btn', function (e) {
     e.preventDefault();
     var navTitle = document.createElement("p");   // Create a <button> element
     navTitle.className = "nav-title";                    // add class
-    navTitle.innerHTML = '<i class="icon-cheveron-left"></i>'  + $(this).parent().text();
+    navTitle.innerHTML = '<i class="icon-cheveron-left"></i>' + $(this).parent().text();
     $(this).parent().next('.sub-menu').prepend(navTitle);
-    if (!$(this).parent().next('.sub-menu').hasClass('open')) {
-        $(this).parent().next('.sub-menu').addClass('open');
+    if (!$(this).parent().next('.sub-menu').hasClass('menuOpen')) {
+        $(this).parent().next('.sub-menu').addClass('menuOpen');
     } else {
-        $(this).parent().next('.sub-menu').removeClass("open");
+        $(this).parent().next('.sub-menu').removeClass("menuOpen");
     }
 });
 
 $(document).on('click', '.nav-title', function (e) {
     e.preventDefault();
-    if ($(this).parent().hasClass('open')) {
-        $(this).parent().removeClass("open");
+    if ($(this).parent().hasClass('menuOpen')) {
+        $(this).parent().removeClass("menuOpen");
         $(this).remove();
     }
 });

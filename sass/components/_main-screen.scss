@@ -13,6 +13,9 @@
     align-items: center;
     text-align: center;
   }
+  @media (max-width: $breakpoint-md) {
+    display: none;
+  }
   &-background {
     position: absolute;
     top: 0;
@@ -21,6 +24,12 @@
     height: 100%;
     display: block;
     z-index: -1;
+    @media (max-width: $breakpoint-md) {
+      height: 198px;
+    }
+    @media (max-width: 470px) {
+      height: 168px;
+    }
   }
 }
 

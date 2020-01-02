@@ -3,6 +3,9 @@
 
 .main-banner {
   margin: 36px 0;
+  @media (max-width: $breakpoint-md) {
+    display: none;
+  }
 }
 
 .banner-carousel {
@@ -79,5 +82,16 @@
   @media (max-width: $breakpoint-md) {
     display: block;
     height: unset;
+  }
+}
+
+.main-content-heading {
+  display: none;
+  font-size: 24px;
+  line-height: 36px;
+  justify-content: center;
+  padding: 5px;
+  @media (max-width: $breakpoint-md) {
+    display: flex;
   }
 }

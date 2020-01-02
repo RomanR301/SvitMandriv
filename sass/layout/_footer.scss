@@ -59,6 +59,9 @@
     @media (max-width: $breakpoint-lg) {
       padding: 40px 0 20px 0;
     }
+    @media (max-width: $breakpoint-sm) {
+      background-position: center;
+    }
     & a {
       letter-spacing: 1px;
       color: #9B989B;
@@ -94,6 +97,9 @@
     &__contacts-box {
       @media (max-width: $breakpoint-lg) {
         align-items: flex-start;
+      }
+      @media (max-width: $breakpoint-sm) {
+        display: none;
       }
     }
     &__logo {
@@ -140,6 +146,11 @@
     @media (max-width: $breakpoint-sm) {
       padding-bottom: 24px;
     }
+    &__image {
+      @media (max-width: $breakpoint-sm) {
+        display: none;
+      }
+    }
     &__title {
       color: $whiteColor;
       letter-spacing: 3px;
@@ -148,9 +159,18 @@
       line-height: 20px;
       font-weight: 700;
       padding: 16px 0 12px 0;
+      @media (max-width: $breakpoint-sm) {
+        font-weight: 600;
+      }
     }
     & .menu-item {
       text-align: center;
+      &.--mobile {
+        display: none;
+        @media (max-width: $breakpoint-sm) {
+          display: block;
+        }
+      }
     }
   }
   &-copyright {
