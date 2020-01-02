@@ -170,7 +170,6 @@ let modal = {
 jQuery(function () {
   front.init();
   modal.init();
-
   let sidebar = document.querySelector('#sidebar') !== null;
   if (sidebar) {
         sidebar = new StickySidebar('#sidebar', {
@@ -182,6 +181,7 @@ jQuery(function () {
         resizeSensor: true
         });
     }
+
 });
 
 
@@ -198,8 +198,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 $(document).on('click', '.nav-btn', function (e) {
     e.preventDefault();
-    var navTitle = document.createElement("p");   // Create a <button> element
-    navTitle.className = "nav-title";                    // add class
+    var navTitle = document.createElement("p");
+
+    navTitle.className = "nav-title";        
     navTitle.innerHTML = '<i class="icon-cheveron-left"></i>' + $(this).parent().text();
     $(this).parent().next('.sub-menu').prepend(navTitle);
     if (!$(this).parent().next('.sub-menu').hasClass('menuOpen')) {

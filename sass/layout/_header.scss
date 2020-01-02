@@ -5,34 +5,17 @@
   background-size: cover;
   color: $whiteColor;
   position: relative;
-  &.--single {
-    background: rgba(0, 0, 0, 0.4);
-    & .header-primary-screen {
-      padding-bottom: 80px;
-    }
-    & .primary-screen-title {
-      padding-bottom: 24px;
-    }
-    & .primary-screen__discount {
-      padding: 8px 24px;
-      background: $redColor;
-      border-radius: 100px;
-      color: $whiteColor;
-      display: inline;
-      font-size: 16px;
-      line-height: 24px;
-    }
-  }
+
   &:after {
-    // content: '';
-    // display: block;
-    // top: 0;
-    // left: 0;
-    // right: 0;
-    // bottom: 0;
-    // position: absolute;
-    // z-index: 1;
-    // background: rgba(0, 0, 0, 0.2);
+    content: '';
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.5);
   }
   & .column {
     z-index: 11;
@@ -149,7 +132,7 @@
     }
   }
   &-top {
-    background: rgba(0, 0, 0, 0.5);
+    // background: rgba(0, 0, 0, 0.5);
     @media (max-width: $breakpoint-xl) {
       padding: 0 0 15px 0;
       display: flex;
