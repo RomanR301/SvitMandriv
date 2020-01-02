@@ -690,7 +690,7 @@ table {
 .btn-spaced:before {
   content: '';
   position: absolute;
-  background: #ffffff;
+  background: #fff;
   width: 100%;
   left: 0;
   top: 28px;
@@ -2817,6 +2817,7 @@ input[type=number] {
 }
 
 .footer-contacts {
+  margin-bottom: -1px;
   padding-top: 60px;
   color: #333333;
   background: url("../img/footer-top.jpg");
