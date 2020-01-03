@@ -1,6 +1,5 @@
 @import "../abstracts/mixins";
 @import "../abstracts/variables";
-
 // SIDEBAR
 .sidebar {
   &-info {
@@ -154,6 +153,7 @@
     }
   }
 }
+
 
 .sidenav-menu {
   margin-top: 16px;
@@ -559,11 +559,19 @@
       height: 100%;
     }
   }
+  
   .flickity-prev-next-button {
     background: rgba(255, 255, 255, 0.7);
     width: 24px;
     height: 24px;
     top: calc(50% - 12px);
+    &.previous, &.next {
+      &:hover {
+        &:after {
+          color: $darkYellowColor;
+        }
+      }
+    }
     &:hover {
       background: #fff;
     }

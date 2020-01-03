@@ -83,11 +83,12 @@ let front = {
       });
 
       $(document).on('click', '.open-treatment', function(){
+        $('html, body').animate({
+            scrollTop: $(".content").offset().top
+            }, 0);
         $('.tab-treatment').click();
         $('.treatment-carousel').flickity('resize');
       })
-
-
       let langToggle = document.querySelector('.lang-select-wrapper') !== null;
       if (langToggle) {
           (document).querySelector('.lang-select-wrapper').addEventListener('click', function() {
