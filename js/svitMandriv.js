@@ -64,18 +64,12 @@ let front = {
   },
   openTab: function (element, tabName, parent) {
       let i, tab_content, tab_links;
-
       tab_content = $(element).closest(parent).find('.tab-content');
 
       for (i = 0; i < tab_content.length; i++) {
           tab_content[i].style.display = "none";
       }
-    //   if (element.hasClass('active')) {
-    //       element.css.display = "block";
-    //   }
-
       tab_links = $(element).closest('.tabs-ul').find('.tab-links');
-
       for (i = 0; i < tab_links.length; i++) {
           tab_links[i].className = tab_links[i].className.replace(" active", "");
       }
@@ -92,6 +86,7 @@ let front = {
         $('.tab-treatment').click();
         $('.treatment-carousel').flickity('resize');
       })
+
 
       let langToggle = document.querySelector('.lang-select-wrapper') !== null;
       if (langToggle) {
@@ -218,6 +213,9 @@ $(document).on('click', '.nav-title', function (e) {
     }
 });
 
+$(document).on('click', '.tab-activator', function(){
+    $('.active-item').css("display", "block");
+})
 
 
 $(document).on('click', '.arrow', function (t) {

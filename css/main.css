@@ -2817,7 +2817,6 @@ input[type=number] {
 }
 
 .footer-contacts {
-  margin-bottom: -1px;
   padding-top: 60px;
   color: #333333;
   background: url("../img/footer-top.jpg");
@@ -4247,21 +4246,24 @@ html.is-flickity-fullscreen {
 
 .categories-heading {
   position: relative;
-  padding: 24px 0 40px 0;
+  margin: 24px 0 40px 0;
 }
 
 @media (max-width: 767px) {
   .categories-heading__background img {
-    height: 60px;
+    min-height: 60px;
     object-fit: cover;
   }
 }
 
 .categories-heading__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  top: 0;
+  left: 0;
+  height: 100%;
   color: #ffffff;
   width: 100%;
   text-align: center;

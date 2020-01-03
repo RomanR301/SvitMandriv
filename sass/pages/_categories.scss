@@ -12,17 +12,23 @@
   }
   &-heading {
     position: relative;
-    padding: 24px 0 40px 0;
+    margin: 24px 0 40px 0;
     &__background { 
       @media (max-width: $breakpoint-md) {
         img {
-          height: 60px;
+          min-height: 60px;
           object-fit: cover;
         }
       }
     }
     &__title {
-      @include positionCenter;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
       color: $whiteColor;
       width: 100%;
       text-align: center;

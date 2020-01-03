@@ -17,13 +17,11 @@
     }
   }
   &-contacts {
-    margin-bottom: -1px;
     padding-top: 60px;
     color: $defaultTextColor;
     background: url('../img/footer-top.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    // height: 1040px;
     @media (max-width: $breakpoint-lg) {
       height: unset;
     }

@@ -18,7 +18,6 @@
         }
       }
     }
-
   }
 
   &-wrap {
@@ -26,11 +25,9 @@
       display: none;
       animation: fadeEffect .5s;
       -webkit-animation: fadeEffect .5s;
-
       &.is-show {
         display: block;
       }
-
       &.active {
         display: block;
       }
