@@ -81,7 +81,9 @@ let front = {
       $(document).on('click', '.hamburger-wrap', function () {
           self.toggleNav();
       });
-
+      $(document).on('click', '.nav-btn', function(){
+        $('.header-mobile').scrollTop(0);
+      });
       $(document).on('click', '.open-treatment', function(){
         $('html, body').animate({
             scrollTop: $(".content").offset().top
@@ -146,7 +148,6 @@ let modal = {
           modal.openModal(target);
 
       });
-
       $(document).on('click', '.modal', function (event) {
           let self = '#' + $(this).attr('id');
           if (event.target.className == 'modal__body') {
