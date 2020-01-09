@@ -739,7 +739,7 @@ table {
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 999;
+  z-index: 1001;
   outline: 0;
   overflow: hidden;
   background-color: rgba(0, 0, 0, 0.8);
@@ -1554,7 +1554,7 @@ input[type=number] {
 }
 
 .breadcrumb {
-  margin: 24px 0 14px 0;
+  margin: 4px 0 14px 0;
 }
 
 .categories .breadcrumb {
@@ -2068,8 +2068,12 @@ input[type=number] {
 
 @media (max-width: 470px) {
   .--single {
-    height: calc(100vh - 165.55px);
+    height: calc(100vh - 170px);
   }
+}
+
+.--single .main-screen-content {
+  padding-bottom: 80px;
 }
 
 .--single .main-screen-content__title {
