@@ -2084,7 +2084,7 @@ input[type=number] {
   background: #E44242;
   border-radius: 100px;
   color: #ffffff;
-  display: inline;
+  display: block;
   font-size: 16px;
   line-height: 24px;
 }
