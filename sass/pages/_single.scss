@@ -74,16 +74,6 @@
   }
 }
 
-// #content {
-//   position: sticky;
-//   top: 0;
-//   &.isSticky {
-//     position: fixed;
-//     top: 0;
-//   }
-// }
-
-
 
 .sidenav {
   &__toggle {
@@ -92,7 +82,6 @@
     background-repeat: no-repeat;
     background-size: cover;
     padding: 10px;
-    // pointer-events: none;
     color: $whiteColor;
     position: relative;
     @include fontSize(16, 18);
@@ -102,12 +91,6 @@
     overflow: hidden;
     border-radius: 3px 3px 0px 0px;
     z-index: 1;
-    // position: sticky;
-    // top: 0;
-    // @media (max-width: $breakpoint-lg) {
-    //   padding: 14px;
-    //   pointer-events: all;
-    // }
     &:before {
       content: '';
       position: absolute;
@@ -119,7 +102,6 @@
       background: rgba(0, 0, 0, 0.5);
     }
     & i {
-      // display: none;
       position: absolute;
       top: calc(50% - 8px);
       margin-left: 8px;
@@ -134,9 +116,6 @@
   &-menu {
     display: none;
     padding-left: 24px;
-    // @media (max-width: $breakpoint-lg) {
-    //   display: none;
-    // }
   }
   &__section {
     margin-top: 15px;
@@ -195,12 +174,7 @@
   }
 }
 
-// .main .content {
-//   @media (max-width: $breakpoint-lg) {
-//     display: flex;
-//     flex-direction: column-reverse;
-//   }
-// }
+
 
 .sidebar{
   will-change: min-height;
@@ -214,7 +188,6 @@
 
 // CONTENT
 .single {
-  margin-bottom: 15px;
   &-categories {
     padding-top: 12px;
     &-list {

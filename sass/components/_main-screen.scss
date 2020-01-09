@@ -253,7 +253,7 @@
     height: calc(100vh - 165.55px);
   }
   & .main-screen-content {
-    padding-bottom: 80px;
+    // padding-bottom: 80px;
     &__title {
       padding-bottom: 24px;
     }
@@ -262,7 +262,7 @@
       background: $redColor;
       border-radius: 100px;
       color: $whiteColor;
-      display: block;
+      display: inline;
       font-size: 16px;
       line-height: 24px;
     }

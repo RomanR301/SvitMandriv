@@ -1585,6 +1585,7 @@ input[type=number] {
 .breadcrumb li:last-child {
   margin-right: 0;
   color: #333;
+  font-weight: 600;
 }
 
 .breadcrumb li:last-child:before {
@@ -2071,10 +2072,6 @@ input[type=number] {
   }
 }
 
-.--single .main-screen-content {
-  padding-bottom: 80px;
-}
-
 .--single .main-screen-content__title {
   padding-bottom: 24px;
 }
@@ -2084,7 +2081,7 @@ input[type=number] {
   background: #E44242;
   border-radius: 100px;
   color: #ffffff;
-  display: block;
+  display: inline;
   font-size: 16px;
   line-height: 24px;
 }
@@ -4771,10 +4768,6 @@ html.is-flickity-fullscreen {
   /* For browsers don't support translate3d. */
   transform: translate3d(0, 0, 0);
   will-change: position, transform;
-}
-
-.single {
-  margin-bottom: 15px;
 }
 
 .single-categories {

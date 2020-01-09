@@ -34,12 +34,13 @@
 
 .breadcrumb li:last-child {
   margin-right: 0;
-  color: #333
+  color: #333;
+  font-weight: 600;
 }
 
 .breadcrumb li:last-child:before {
   content: '';
-  display: none
+  display: none;
 }
 
 .breadcrumb li a {
