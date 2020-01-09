@@ -66,6 +66,9 @@
 
 .mb-30 {
   margin-bottom: 30px;
+  @media (max-width: $breakpoint-sm) {
+    margin-bottom: 16px;
+  }
 }
 
 .column {

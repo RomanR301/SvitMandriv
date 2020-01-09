@@ -13,6 +13,9 @@
   &-heading {
     position: relative;
     margin: 24px 0 40px 0;
+    @media (max-width: $breakpoint-sm) {
+      margin: 24px 0;
+    }
     &__background { 
       @media (max-width: $breakpoint-md) {
         img {
@@ -164,6 +167,8 @@
   }
 }
 
+
+
 .categories-more {
   padding: 10px 68px;
 }
@@ -184,7 +189,4 @@
   &-spa {
     background: #85CCAA;
   }
-} 
-
-
-
+}

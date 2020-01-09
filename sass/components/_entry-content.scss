@@ -18,13 +18,16 @@
   & h1 {
     @include fontSize(30, 48);
     line-height: 1.2;
-    margin-bottom: 50px;
+    margin: 16px 0 20px 0;
   }
 
   & h2 {
     @include fontSize(20, 24);
     line-height: 1.25;
     margin: 12px 0 16px 0;
+    @media (max-width: $breakpoint-sm) {
+      margin: 8px 0 12px 0;
+    }
   }
 
   & h3 {
@@ -36,30 +39,33 @@
   & h4 {
     @include fontSize(16, 18);
     line-height: 1.32;
-    margin: 12px 0 16px 0;
   }
 
   & h5 {
     @include fontSize(14, 16);
     line-height: 1.64;
-    margin: 12px 0 16px 0;
   }
 
   & h6 {
     @include fontSize(12, 14);
     line-height: 1.6;
-    margin: 12px 0 16px 0;
   }
 
-  & h1, & h2, & h3 {
+  & h1, & h2, & h3, h4, h5, h6 {
     font-weight: bold;
   }
 
+  & h4, h5, h6 {
+    margin-bottom: 24px;
+  }
+
   & img {
-    margin-bottom: 30px;
     object-fit: cover;
     max-height: 500px;
     margin-bottom: 36px;
+    @media (max-width: $breakpoint-sm) {
+      margin-bottom: 20px;
+    }
   }
 
   & a {
@@ -114,6 +120,7 @@
   & ol {
     margin-bottom: 24px;
     & li {
+      line-height: 24px;
       @include fontSize (14, 16);
       counter-increment: li;
       &:before {

@@ -3,6 +3,9 @@
 
 .pagination {
   margin: 44px 0 64px 0;
+  @media (max-width: $breakpoint-sm) {
+    margin: 12px 0 12px 0;
+  }
   & .current {
     color: $defaultTextColor; 
     border: 1px solid #333333;

@@ -25,6 +25,9 @@
     @media (max-width: $breakpoint-lg) {
       height: unset;
     }
+    @media (max-width: $breakpoint-sm) {
+      padding-top: 10px;
+    }
     &__subheading {
       padding: 16px 0 24px 0;
     }
@@ -102,7 +105,10 @@
       }
     }
     &__logo {
-      padding-bottom: 47px;
+      padding-bottom: 46px;
+      @media (max-width: $breakpoint-sm) {
+        padding-bottom: 24px;
+      }
     }
     &__icon {
       padding-right: 15px;

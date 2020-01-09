@@ -97,6 +97,9 @@
       @media (max-width: $breakpoint-lg) {
         top: 50%;
       }
+      @media (max-width: $breakpoint-sm) {
+        display: none;
+      }
     }
     &:hover {
       background: transparent;

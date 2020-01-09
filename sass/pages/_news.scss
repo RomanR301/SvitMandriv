@@ -2,12 +2,17 @@
 @import "../abstracts/variables";
 
 .news {
-  margin: 36px 0;
   &-heading {
-    margin-bottom: 36px;
+    margin: 36px 0;
+    @media (max-width: $breakpoint-md) {
+      margin: 24px 0;
+    }
   }
   &-item {
     margin-bottom: 40px;
+    @media (max-width: $breakpoint-sm) {
+      margin-bottom: 24px;
+    }
     & .news-image {
       & img {
         height: 330px;
@@ -73,7 +78,7 @@
 
 // SINGLE NEWS
 .single-news {
-  margin: 36px 0;
+  // margin: 36px 0;
   &-content {
     h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote {
       max-width: 70%;
@@ -84,6 +89,9 @@
     }
     blockquote {
       margin: 36px auto 24px auto;
+      @media (max-width: $breakpoint-sm) {
+        margin: 28px auto 16px auto;
+      }
     }
     h1, h2, h3, blockquote { 
       text-align: center;
@@ -98,12 +106,21 @@
       font-weight: 800;
       @include fontSize(26, 56);
       line-height: 1.2;
-      margin-bottom: 50px;
+      margin: 60px auto 50px auto;
+      @media (max-width: $breakpoint-lg) {
+        margin: 40px auto 36px auto;
+      }
+      @media (max-width: $breakpoint-sm) {
+        margin: 28px auto 24px auto;
+      }
     }
     h2 {
       @include fontSize(28, 48);
       line-height: 1.25;
       margin: 12px auto 16px auto;
+      @media (max-width: $breakpoint-sm) {
+        margin: 8px 0 12px 0;
+      }
     }
     h3 {
       @include fontSize(18, 36);
@@ -123,6 +140,9 @@
     }
     & ul, ol {
       margin-bottom: 24px;
+      @media (max-width: $breakpoint-sm) {
+        margin-bottom: 16px;
+      }
     }
   }
 }
@@ -130,7 +150,10 @@
 // SINGLE NEWS CAROUSEL
 .news-carousel {
   &-wrap {
-    margin: 60px 0 10px 0;
+    margin: 36px 0 10px 0;
+    @media (max-width: $breakpoint-sm) {
+      margin: 24px 0 10px 0;
+    }
   }
   &__heading {
     & h4 {
@@ -175,7 +198,7 @@
         margin-bottom: 12px;
         padding: 12px 4px 0 4px;
         width: 80%;
-        height: 64px;
+        height: 60px;
         overflow: hidden;
         text-overflow: ellipsis;
         display: -webkit-box;
